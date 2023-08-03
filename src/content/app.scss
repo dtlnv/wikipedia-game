@@ -1,8 +1,20 @@
 #wiki-quiz-root {
     position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 100px;
+    z-index: 1000;
     background-color: #95c76e;
+
+    // for new design
+    top: 10px;
+    right: 10px;
+    width: 206px;
+    min-height: 300px;
+}
+
+// for old design
+.skin-vector-legacy {
+    #wiki-quiz-root {
+        left: 10px;
+        right: auto;
+        width: 166px;
+    }
 }
