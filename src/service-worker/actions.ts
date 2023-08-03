@@ -1,62 +1,62 @@
 // https://ru.wikipedia.org/wiki/Special:Random
 
+import { randomPage, serializer } from './helpers';
+
 interface ActionInterface {
     params?: { [key: string]: any };
     sender?: chrome.runtime.MessageSender;
 }
 
-/**
- * {
- *  inprogress
- *  target
- *  moves
- *  startedAt
- * }
- */
+interface GameInterface {
+    state?: 'progress' | 'finish';
+    target?: { url?: string; title?: string };
+    history?: string[];
+    startedAt?: number;
+}
 
-let game: { [key: string]: any } = {};
+let game: GameInterface = {};
 
 async function gameStart({ sender }: ActionInterface): Promise<object> {
     game.target = await randomPage(sender);
-    game.inprogress = true;
-    game.moves = 0;
+    game.state = 'progress';
     game.startedAt = Date.now();
+    game.history = [];
 
-    return game;
+    return serializer(game);
 }
 
-async function gameStatus({ params }: ActionInterface): Promise<object> {
-    // console.log('game', game);
+async function addHistory({ params }: ActionInterface): Promise<object> {
+    if (game && params.link) {
+        game.history.push(params.link);
+    }
+    return serializer(game);
+}
 
-    // if (params) {
-    //     game = params;
-    // }
+async function endGame({}: ActionInterface): Promise<object> {
+    game = {};
+    return null;
+}
 
-    if (!game.inprogress) {
+async function gameStatus({}: ActionInterface): Promise<object> {
+    if (Object.keys(game).length === 0 || !game.state) {
         return null;
     }
 
-    return game;
+    if (game.target.url === decodeURIComponent(game.history[game.history.length - 1])) {
+        game.state = 'finish';
+    }
+
+    return serializer(game);
 }
 
 async function getRandomPage({ sender }: ActionInterface): Promise<object> {
     return randomPage(sender);
 }
 
-async function randomPage(sender: chrome.runtime.MessageSender): Promise<object> {
-    const randomURL = sender.origin + '/wiki/Special:Random';
-
-    const res = await fetch(randomURL);
-    console.log('res', res);
-
-    const url = decodeURIComponent(res.url);
-    const title = url.split('/').pop().replace(/_/g, ' ');
-
-    return { url, title };
-}
-
 export default {
     getRandomPage,
     gameStart,
     gameStatus,
+    addHistory,
+    endGame,
 };
