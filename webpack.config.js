@@ -13,7 +13,7 @@ const config = {
     'service-worker': path.resolve(__dirname, './src/service-worker/index'),
   },
   output: {
-    path: path.join(__dirname, './build/js'),
+    path: path.join(__dirname, './build'),
     filename: '[name].js',
   },
   module: {
@@ -39,7 +39,7 @@ const config = {
       patterns: [{ from: path.resolve(__dirname, './src/manifest.json'), to: path.resolve(__dirname, './build/manifest.json') }],
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/styles.css',
+      filename: 'styles.css',
     }),
     new CleanWebpackPlugin(),
   ],

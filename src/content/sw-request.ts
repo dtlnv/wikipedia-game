@@ -6,8 +6,6 @@ const swRequest: SwRequestInterface = (action, params): Promise<object> => {
     return new Promise((resolve, reject) => {
         try {
             chrome.runtime.sendMessage({ action, params }, (response) => {
-                console.log('response', response);
-
                 resolve(response);
             });
         } catch (e) {

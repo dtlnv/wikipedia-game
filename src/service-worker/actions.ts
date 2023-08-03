@@ -7,7 +7,6 @@ interface ActionInterface {
 
 async function getFinishPage({ sender }: ActionInterface): Promise<object> {
     const randomURL = sender.origin + '/wiki/Special:Random';
-    console.log('randomURL', randomURL);
 
     const res = await fetch(randomURL);
     console.log('res', res);
@@ -15,10 +14,7 @@ async function getFinishPage({ sender }: ActionInterface): Promise<object> {
     const url = decodeURIComponent(res.url);
     const title = url.split('/').pop().replace(/_/g, ' ');
 
-    return {
-        url,
-        title,
-    };
+    return { url, title };
 }
 
 export default {
