@@ -25,5 +25,5 @@ export function getPageTitle(url: string) {
         return match ? match[1] : '';
     }
 
-    return decodeURIComponent(getLastPartOfUrl(url)).replace(/_/g, ' ');
+    return decodeURIComponent(getLastPartOfUrl(url)).replace(/_/g, ' ').replace(/:/g, ': ');
 }

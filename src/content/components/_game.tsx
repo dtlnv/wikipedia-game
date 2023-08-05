@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import GameInterface from '../../utils/GameInterface';
 import swRequest from '../sw-request';
 import { Moves, Timer, Loader } from './';
@@ -12,6 +12,12 @@ interface GameScreenInterface {
 }
 
 const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction, endAction, setGame }) => {
+    const [showHintForHint, setShowHintForHint] = useState<boolean>(false);
+
+    useEffect(() => {
+        setShowHintForHint(false);
+    }, [loading]);
+
     const hintAction = async () => {
         const htmlString = await (await fetch(game.target.url)).text();
         const parser = new DOMParser();
@@ -25,6 +31,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
 
         setGame((prev: GameInterface) => ({ ...prev, hint }));
         swRequest('addHint', { hint });
+        setShowHintForHint(true);
     };
 
     return (
@@ -32,8 +39,8 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
             <div className='logo'>
                 <img src={chrome.runtime.getURL('images/logo-inprogress.png')} />
             </div>
-            <div className='text'>Find this page by following the links in the content:</div>
-            <div className='text target-title' title={game.target.url}>
+            <div className='text center'>Find this page by following the links in the content:</div>
+            <div className='text center target-title' title={game.target.url}>
                 {loading ? '...' : game.target.title}
             </div>
             <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
@@ -47,6 +54,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
                 >
                     Hint {!loading && game.hint && '👀'}
                 </button>
+                {showHintForHint && <div className='center'>^^ Hover the button ^^</div>}
                 {loading ? (
                     <Loader />
                 ) : (

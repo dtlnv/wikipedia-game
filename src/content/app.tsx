@@ -39,12 +39,20 @@ function App() {
     // click on links handler
     useEffect(() => {
         const contentLinkClick = (e: MouseEvent): void => {
-            const element = e.target as HTMLAnchorElement;
-            if (element && element.closest('#content') && element.tagName === 'A' && 'href' in element) {
-                const link: string | undefined = element.href;
-                if (link && link.startsWith(window.location.origin)) {
-                    swRequest('addHistory', { link });
-                }
+            const element = e.target as HTMLAnchorElement | HTMLSpanElement;
+            let link: string | undefined;
+
+            if (element.tagName === 'A' && 'href' in element) {
+                link = element.href;
+            }
+
+            if (element.parentElement.tagName === 'A') {
+                const parentLink = element.parentElement as HTMLAnchorElement;
+                link = parentLink.href;
+            }
+
+            if (link && link.startsWith(window.location.origin)) {
+                swRequest('addHistory', { link });
             }
         };
 
