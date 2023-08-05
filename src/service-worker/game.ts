@@ -1,5 +1,5 @@
-import GameInterface from '../GameInterface';
-import { getPageTitle, getRandomPage } from './helpers';
+import GameInterface from '../utils/GameInterface';
+import { getPageTitle, getRandomPage } from '../utils/helpers';
 
 class Game {
     sender: any;
@@ -21,18 +21,11 @@ class Game {
     }
 
     get(): GameInterface {
-        if (Object.keys(this.store).length === 0 || !this.store.state) {
-            return null;
-        }
-
-        // const object: GameInterface = { ...this.store };
-        // object.moves = object.history.length;
-        // delete object.history;
         return this.store;
     }
 
     check(currentUrl: string): GameInterface {
-        if (Object.keys(this.store).length === 0 || !this.store.state) {
+        if (!this.isGame()) {
             return null;
         }
 
@@ -45,8 +38,8 @@ class Game {
         return this.get();
     }
 
-    inProgress(): boolean {
-        return this.store.state === 'progress';
+    isGame(): boolean {
+        return Object.keys(this.store).length !== 0 && !!this.store.state;
     }
 
     addHistory(link: string): void {

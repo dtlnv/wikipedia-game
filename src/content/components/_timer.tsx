@@ -30,9 +30,9 @@ const Timer: React.FC<TimerInterface> = ({ startTime, endTime = 0 }) => {
     const hours = Math.floor(timeDifference / 1000 / 60 / 60);
 
     return (
-        <b>
+        <strong>
             {`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}
-        </b>
+        </strong>
     );
 };
 

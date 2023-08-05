@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import swRequest from './sw-request';
-import { derestrictions, getPageTitle, restrictions } from './helpers';
-import Timer from './timer';
-import GameInterface from '../GameInterface';
+import GameInterface from '../utils/GameInterface';
+import { FinishScreen, GameScreen, Loader, StartScreen } from './components';
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true);
@@ -14,7 +13,6 @@ function App() {
             try {
                 const game: GameInterface = await swRequest('gameStatus');
                 console.log('game', game);
-                
 
                 if (game) {
                     setGame(game);
@@ -75,91 +73,35 @@ function App() {
         swRequest('endGame');
     };
 
-    const hintAction = async () => {
-        const htmlString = await (await fetch(game.target.url)).text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlString, 'text/html');
-        const categories: string[] = [];
-        doc.querySelectorAll('#catlinks .mw-normal-catlinks ul a').forEach((element) => {
-            categories.push(element.textContent);
-        });
-
-        const hint = categories.join('; ');
-
-        setGame((prev) => ({ ...prev, hint }));
-        swRequest('addHint', { hint });
-    };
-
-    if (loading && !game.state) return '...';
+    if (loading && !game.state) return <Loader />;
 
     if (!game.state) {
-        return (
-            <div className='container'>
-                <button onClick={startAction}>Start game</button>
-            </div>
-        );
+        return <StartScreen startAction={startAction} />;
     }
 
     if (game.state === 'finish') {
-        return (
-            <div className='container'>
-                <h2>Congratulations!</h2>
-                <div className='text'>
-                    Start page: <strong>{game.startPageTitle}</strong>
-                </div>
-                <div className='text'>
-                    Target page: <strong>{game.target.title}</strong>
-                </div>
-                <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
-                <div className='text'>
-                    Moves: <strong>{game.history.length}</strong>
-                    <ul className='moves-list'>
-                        <li>0. {game.startPageTitle}</li>
-                        {game.history.map((link, index) => (
-                            <li key={link}>
-                                {index + 1}. {getPageTitle(link)}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className='buttons-block'>
-                    <button onClick={startAction}>Start new game</button>
-                    <button onClick={endAction} disabled={loading}>
-                        End game
-                    </button>
-                </div>
-            </div>
-        );
+        return <FinishScreen game={game} startAction={startAction} endAction={endAction} />;
     }
 
-    return (
-        <div className='container'>
-            <div className='text'>Find this page by following the links in the content:</div>
-            <div className='text target-title' title={game.target.url}>
-                {loading ? '...' : game.target.title}
-            </div>
-            <div className='text'>
-                Moves: <strong>{loading ? 0 : game.history.length}</strong>
-            </div>
-            <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
-            <div className='buttons-block'>
-                <button
-                    className='hint-button'
-                    onClick={hintAction}
-                    disabled={loading || !!game.hint}
-                    title={!loading && game.hint}
-                >
-                    Hint {!loading && game.hint && '👀'}
-                </button>
-                <button onClick={startAction} disabled={loading}>
-                    Reset game
-                </button>
-                <button onClick={endAction} disabled={loading}>
-                    End game
-                </button>
-            </div>
-        </div>
-    );
+    if (game.state === 'progress') {
+        return <GameScreen game={game} loading={loading} startAction={startAction} endAction={endAction} setGame={setGame} />;
+    }
+
+    return 'Something went wrong.';
+}
+
+function restrictions(): void {
+    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
+        input.disabled = true;
+    });
+}
+
+function derestrictions(): void {
+    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
+        if (input.disabled) {
+            input.disabled = false;
+        }
+    });
 }
 
 export default App;

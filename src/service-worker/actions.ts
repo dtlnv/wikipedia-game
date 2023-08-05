@@ -1,4 +1,4 @@
-import GameInterface from '../GameInterface';
+import GameInterface from '../utils/GameInterface';
 import Game from './game';
 
 interface ActionInterface {
@@ -14,14 +14,14 @@ const gameStart = async ({ sender }: ActionInterface): Promise<GameInterface> =>
 };
 
 const addHistory = ({ params }: ActionInterface): GameInterface => {
-    if (game.inProgress() && params.link) {
+    if (game.isGame() && params.link) {
         game.addHistory(params.link);
     }
     return game.get();
 };
 
 const addHint = ({ params }: ActionInterface): GameInterface => {
-    if (game.inProgress() && params.hint) {
+    if (game.isGame() && params.hint) {
         game.addHint(params.hint);
     }
     return game.get();
@@ -32,7 +32,7 @@ const endGame = ({}: ActionInterface): null => {
 };
 
 const gameStatus = ({ sender }: ActionInterface): null | GameInterface => {
-    if (game.inProgress()) {
+    if (game.isGame()) {
         return game.check(sender.url);
     }
     return null;

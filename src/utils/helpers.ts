@@ -1,5 +1,8 @@
-// background helpers
-
+/**
+ * Get the URL and title of a random page to use as the target.
+ * @param sender
+ * @returns { url: string, title: string }
+ */
 export async function getRandomPage(sender: chrome.runtime.MessageSender): Promise<object> {
     const randomURL = sender.origin + '/wiki/Special:Random'; // https://en.wikipedia.org/wiki/Special:Random
 
@@ -10,6 +13,11 @@ export async function getRandomPage(sender: chrome.runtime.MessageSender): Promi
     return { url, title };
 }
 
+/**
+ * Get page title from URL.
+ * @param url
+ * @returns title: string
+ */
 export function getPageTitle(url: string) {
     function getLastPartOfUrl(url: string) {
         const regex = /\/wiki\/(.*)$/;
