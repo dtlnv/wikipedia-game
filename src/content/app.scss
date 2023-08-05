@@ -7,92 +7,96 @@
     box-sizing: border-box;
     border-radius: 7px;
     font-size: 13.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-    .container {
+    .logo {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .text {
+        color: #4f4f4f;
+        strong {
+            color: #000;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        border: 0px;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .target-title {
+        font-weight: bold;
+        cursor: default;
+        font-size: 15.5px;
+        color: #000;
+        overflow-wrap: anywhere;
+    }
+
+    .moves-list {
+        font-size: 10px;
+        margin: 10px 0px;
+        max-height: 35vh;
+        overflow: auto;
+        li {
+            margin-bottom: 3px;
+        }
+    }
+
+    .buttons-block {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
+    }
 
-        .text {
-            color: #4f4f4f;
-            strong {
-                color: #000;
-            }
+    a {
+        text-decoration: dotted;
+        border-bottom: 1px dotted;
+        strong {
+            color: inherit !important;
         }
+    }
 
-        h2 {
-            text-align: center;
-            border: 0px;
-            font-weight: bold;
-            font-size: 20px;
-            margin: 0px;
+    button {
+        appearance: none;
+        border: 0px;
+        background: #212121;
+        color: #ffffff;
+        padding: 8px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 13px;
+        height: 34px;
+        &:hover {
+            opacity: 0.8;
         }
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        &.hint-button[title] {
+            background-color: #afa73e;
+            cursor: help;
+            opacity: 1;
+        }
+    }
 
-        .target-title {
-            font-weight: bold;
-            cursor: default;
-            font-size: 15.5px;
-            color: #000;
-            overflow-wrap: anywhere;
-        }
-
-        .moves-list {
-            font-size: 10px;
-            margin: 10px 0px;
-            max-height: 35vh;
-            overflow: auto;
-            li {
-                margin-bottom: 3px;
-            }
-        }
-
-        .buttons-block {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        a {
-            text-decoration: dotted;
-            border-bottom: 1px dotted;
-            strong {
-                color: inherit !important;
-            }
-        }
-
-        button {
-            appearance: none;
-            border: 0px;
-            background: #212121;
-            color: #ffffff;
-            padding: 8px;
-            border-radius: 7px;
-            cursor: pointer;
-            font-size: 13px;
-            height: 34px;
-            &:hover {
-                opacity: 0.8;
-            }
-            &:disabled {
-                opacity: 0.3;
-                cursor: not-allowed;
-            }
-            &.hint-button[title] {
-                background-color: #afa73e;
-                cursor: help;
-                opacity: 1;
-            }
-        }
-
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            margin: 3px auto;
-            animation: spin 1.5s linear infinite;
-        }
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin: 3px auto;
+        animation: spin 1.5s linear infinite;
     }
 
     // for new design

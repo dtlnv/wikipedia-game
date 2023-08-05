@@ -10,7 +10,10 @@ interface FinishScreenInterface {
 
 const FinishScreen: React.FC<FinishScreenInterface> = ({ game, startAction, endAction }) => {
     return (
-        <div className='container'>
+        <>
+            <div className='logo'>
+                <img src={chrome.runtime.getURL('images/logo-finish.png')} />
+            </div>
             <h2>You did it!</h2>
             <div className='text'>
                 Start page: <strong>{game.startPageTitle}</strong>
@@ -24,7 +27,7 @@ const FinishScreen: React.FC<FinishScreenInterface> = ({ game, startAction, endA
                 <button onClick={startAction}>Start new game</button>
                 <button onClick={endAction}>End game</button>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -3,7 +3,12 @@
     "name": "Wiki Quiz",
     "description": "Add the reading time to Chrome Extension documentation articles",
     "version": "1.0",
-    "icons": {},
+    "icons": {
+        "16": "images/logo-16.png",
+        "32": "images/logo-32.png",
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
+    },
     "background": {
         "service_worker": "service-worker.js"
     },
@@ -13,6 +18,12 @@
             "js": ["./content.js"],
             "matches": ["https://*.wikipedia.org/*"],
             "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["images/*"],
+            "matches": ["https://*.wikipedia.org/*"]
         }
     ]
 }

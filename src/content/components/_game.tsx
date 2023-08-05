@@ -28,7 +28,10 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
     };
 
     return (
-        <div className='container'>
+        <>
+            <div className='logo'>
+                <img src={chrome.runtime.getURL('images/logo-inprogress.png')} />
+            </div>
             <div className='text'>Find this page by following the links in the content:</div>
             <div className='text target-title' title={game.target.url}>
                 {loading ? '...' : game.target.title}
@@ -55,7 +58,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
                     End game
                 </button>
             </div>
-        </div>
+        </>
     );
 };
 
