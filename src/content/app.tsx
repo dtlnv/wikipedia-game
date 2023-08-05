@@ -8,7 +8,9 @@ interface GameInterface {
     state?: string;
     moves?: number;
     startedAt?: number;
+    endedAt?: number;
     hint?: string;
+    startPageTitle?: string;
 }
 
 function App() {
@@ -19,15 +21,15 @@ function App() {
     useEffect(() => {
         const getGameStatus = async () => {
             try {
-                const game: GameInterface = await swRequest('gameStatus', { currentUrl: window.location.href });
+                const game: GameInterface = await swRequest('gameStatus');
                 console.log('getGameStatus: game', game);
                 if (game) {
                     setGame(game);
                     restrictions();
                     if (game.state === 'finish') {
                         derestrictions();
+                        // for direct link
                         if (game.moves === 0) {
-                            // for direct link
                             endAction();
                         }
                     }
@@ -104,11 +106,23 @@ function App() {
     if (game.state === 'finish') {
         return (
             <div className='container'>
+                <h2>Congratulations!</h2>
                 <div className='text'>
-                    Done in <b>{game.moves}</b> moves and <b>{Date.now() - game.startedAt}</b>ms!
+                    Start page: <strong>{game.startPageTitle}</strong>
                 </div>
-                <button onClick={startAction}>Start new game</button>
-                <button onClick={endAction}>End game</button>
+                <div className='text'>
+                    Target page: <strong>{game.target.title}</strong>
+                </div>
+                <div className='text'>
+                    Moves: <strong>{game.moves}</strong>
+                </div>
+                <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
+                <div className='buttons-block'>
+                    <button onClick={startAction}>Start new game</button>
+                    <button onClick={endAction} disabled={loading}>
+                        End game
+                    </button>
+                </div>
             </div>
         );
     }
@@ -120,11 +134,9 @@ function App() {
                 {loading ? '...' : game.target.title}
             </div>
             <div className='text'>
-                Moves: <b>{loading ? 0 : game.moves}</b>
+                Moves: <strong>{loading ? 0 : game.moves}</strong>
             </div>
-            <div className='text'>
-                Time: {!loading && <Timer startTime={game.startedAt} />}
-            </div>
+            <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
             <div className='buttons-block'>
                 <button
                     className='hint-button'
@@ -137,7 +149,7 @@ function App() {
                 <button onClick={startAction} disabled={loading}>
                     Reset game
                 </button>
-                <button className='end-button' onClick={endAction} disabled={loading}>
+                <button onClick={endAction} disabled={loading}>
                     End game
                 </button>
             </div>

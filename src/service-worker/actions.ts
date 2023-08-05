@@ -1,6 +1,6 @@
 // https://ru.wikipedia.org/wiki/Special:Random
 
-import { randomPage, serializer } from './helpers';
+import { getPageTitle, randomPage, serializer } from './helpers';
 
 interface ActionInterface {
     params?: { [key: string]: any };
@@ -13,6 +13,8 @@ interface GameInterface {
     history?: string[];
     hint?: string | null;
     startedAt?: number;
+    endedAt?: number;
+    startPageTitle?: string;
 }
 
 let game: GameInterface = {};
@@ -22,7 +24,9 @@ async function gameStart({ sender }: ActionInterface): Promise<object> {
     game.state = 'progress';
     game.hint = null;
     game.startedAt = Date.now();
+    game.endedAt = 0;
     game.history = [];
+    game.startPageTitle = getPageTitle(sender.url);
 
     return serializer(game);
 }
@@ -46,26 +50,22 @@ async function endGame({}: ActionInterface): Promise<object> {
     return null;
 }
 
-async function gameStatus({ params }: ActionInterface): Promise<object> {
+async function gameStatus({ sender }: ActionInterface): Promise<object> {
     if (Object.keys(game).length === 0 || !game.state) {
         return null;
     }
 
-    const currentUrl = decodeURIComponent(params.currentUrl); //decodeURIComponent(game.history[game.history.length - 1]);
+    const currentUrl = decodeURIComponent(sender.url); //decodeURIComponent(game.history[game.history.length - 1]);
 
     if (game.target.url === currentUrl) {
         game.state = 'finish';
+        game.endedAt = Date.now();
     }
 
     return serializer(game);
 }
 
-async function getRandomPage({ sender }: ActionInterface): Promise<object> {
-    return randomPage(sender);
-}
-
 export default {
-    getRandomPage,
     gameStart,
     gameStatus,
     addHistory,

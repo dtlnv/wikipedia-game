@@ -2,15 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 interface TimerInterface {
     startTime: number;
+    endTime?: number;
 }
 
-const Timer: React.FC<TimerInterface> = ({ startTime }) => {
+const Timer: React.FC<TimerInterface> = ({ startTime, endTime = 0 }) => {
     const [currentTime, setCurrentTime] = useState(Date.now());
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentTime(Date.now());
-        }, 1000);
+        let intervalId: any;
+
+        if (endTime) {
+            setCurrentTime(endTime);
+        } else {
+            intervalId = setInterval(() => {
+                setCurrentTime(Date.now());
+            }, 1000);
+        }
 
         return () => {
             clearInterval(intervalId);

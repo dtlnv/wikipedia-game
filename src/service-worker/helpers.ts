@@ -5,8 +5,7 @@ export async function randomPage(sender: chrome.runtime.MessageSender): Promise<
 
     const res = await fetch(randomURL);
     const url = decodeURIComponent(res.url);
-    const title = url.split('/').pop().replace(/_/g, ' ');
-    // TODO: https://ru.wikipedia.org/wiki/ФК_«Манчестер_Юнайтед»_в_сезоне_2019/2020
+    const title = getPageTitle(url);
     // todo: ё
 
     return { url, title };
@@ -17,4 +16,14 @@ export function serializer(game: { [key: string]: any }) {
     object.moves = object.history.length;
     delete object.history;
     return object;
+}
+
+export function getPageTitle(url: string) {
+    function getLastPartOfUrl(url: string) {
+        const regex = /\/wiki\/(.*)$/;
+        const match = url.match(regex);
+        return match ? match[1] : '';
+    }
+
+    return decodeURIComponent(getLastPartOfUrl(url)).replace(/_/g, ' ');
 }
