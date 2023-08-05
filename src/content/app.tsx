@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import swRequest from './sw-request';
-import { derestrictions, restrictions } from './helpers';
+import { derestrictions, getPageTitle, restrictions } from './helpers';
 import Timer from './timer';
-
-interface GameInterface {
-    target?: { [key: string]: string };
-    state?: string;
-    moves?: number;
-    startedAt?: number;
-    endedAt?: number;
-    hint?: string;
-    startPageTitle?: string;
-}
+import GameInterface from '../GameInterface';
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true);
@@ -22,14 +13,16 @@ function App() {
         const getGameStatus = async () => {
             try {
                 const game: GameInterface = await swRequest('gameStatus');
-                console.log('getGameStatus: game', game);
+                console.log('game', game);
+                
+
                 if (game) {
                     setGame(game);
                     restrictions();
                     if (game.state === 'finish') {
                         derestrictions();
                         // for direct link
-                        if (game.moves === 0) {
+                        if (game.history.length === 0) {
                             endAction();
                         }
                     }
@@ -42,7 +35,7 @@ function App() {
             }
         };
 
-        setTimeout(getGameStatus, 100); // Timeout is required for redirects
+        getGameStatus();
     }, []);
 
     // click on links handler
@@ -65,11 +58,15 @@ function App() {
     }, []);
 
     const startAction = async () => {
-        setLoading(true);
-        const game: GameInterface = await swRequest('gameStart');
-        setGame(game);
-        restrictions();
-        setLoading(false);
+        if (!window.location.href.includes('index.php')) {
+            setLoading(true);
+            const game: GameInterface = await swRequest('gameStart');
+            if (game) {
+                setGame(game);
+                restrictions();
+                setLoading(false);
+            }
+        }
     };
 
     const endAction = async () => {
@@ -113,10 +110,18 @@ function App() {
                 <div className='text'>
                     Target page: <strong>{game.target.title}</strong>
                 </div>
-                <div className='text'>
-                    Moves: <strong>{game.moves}</strong>
-                </div>
                 <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
+                <div className='text'>
+                    Moves: <strong>{game.history.length}</strong>
+                    <ul className='moves-list'>
+                        <li>0. {game.startPageTitle}</li>
+                        {game.history.map((link, index) => (
+                            <li key={link}>
+                                {index + 1}. {getPageTitle(link)}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
                 <div className='buttons-block'>
                     <button onClick={startAction}>Start new game</button>
                     <button onClick={endAction} disabled={loading}>
@@ -134,7 +139,7 @@ function App() {
                 {loading ? '...' : game.target.title}
             </div>
             <div className='text'>
-                Moves: <strong>{loading ? 0 : game.moves}</strong>
+                Moves: <strong>{loading ? 0 : game.history.length}</strong>
             </div>
             <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
             <div className='buttons-block'>

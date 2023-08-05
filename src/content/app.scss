@@ -24,6 +24,16 @@
             font-size: 15.5px;
             overflow-wrap: anywhere;
         }
+
+        .moves-list {
+            font-size: 9px;
+            margin: 10px 0px;
+            max-height: 42vh;
+            overflow: auto;
+            li {
+                margin-bottom: 3px;
+            }
+        }
     }
 
     .buttons-block {

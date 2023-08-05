@@ -13,3 +13,13 @@ export function derestrictions(): void {
         }
     });
 }
+
+export function getPageTitle(url: string) {
+    function getLastPartOfUrl(url: string) {
+        const regex = /\/wiki\/(.*)$/;
+        const match = url.match(regex);
+        return match ? match[1] : '';
+    }
+
+    return decodeURIComponent(getLastPartOfUrl(url)).replace(/_/g, ' ');
+}
