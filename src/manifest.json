@@ -11,7 +11,8 @@
         {
             "css": ["./styles.css"],
             "js": ["./content.js"],
-            "matches": ["https://*.wikipedia.org/*"]
+            "matches": ["https://*.wikipedia.org/*"],
+            "run_at": "document_end"
         }
     ]
 }

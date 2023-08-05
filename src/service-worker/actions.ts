@@ -11,6 +11,7 @@ interface GameInterface {
     state?: 'progress' | 'finish';
     target?: { url?: string; title?: string };
     history?: string[];
+    hint?: string | null;
     startedAt?: number;
 }
 
@@ -19,6 +20,7 @@ let game: GameInterface = {};
 async function gameStart({ sender }: ActionInterface): Promise<object> {
     game.target = await randomPage(sender);
     game.state = 'progress';
+    game.hint = null;
     game.startedAt = Date.now();
     game.history = [];
 
@@ -32,17 +34,26 @@ async function addHistory({ params }: ActionInterface): Promise<object> {
     return serializer(game);
 }
 
+async function addHint({ params }: ActionInterface): Promise<object> {
+    if (game && params.hint) {
+        game.hint = params.hint;
+    }
+    return serializer(game);
+}
+
 async function endGame({}: ActionInterface): Promise<object> {
     game = {};
     return null;
 }
 
-async function gameStatus({}: ActionInterface): Promise<object> {
+async function gameStatus({ params }: ActionInterface): Promise<object> {
     if (Object.keys(game).length === 0 || !game.state) {
         return null;
     }
 
-    if (game.target.url === decodeURIComponent(game.history[game.history.length - 1])) {
+    const currentUrl = decodeURIComponent(params.currentUrl); //decodeURIComponent(game.history[game.history.length - 1]);
+
+    if (game.target.url === currentUrl) {
         game.state = 'finish';
     }
 
@@ -59,4 +70,5 @@ export default {
     gameStatus,
     addHistory,
     endGame,
+    addHint,
 };

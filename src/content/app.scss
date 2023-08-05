@@ -2,32 +2,52 @@
     position: fixed;
     z-index: 1000;
     background-color: #ffffff;
-    padding: 8px;
+    padding: 10px;
     box-shadow: 0px 0px 8px #999999;
     box-sizing: border-box;
-    border-radius: 3px;
-    font-size: 13px;
+    border-radius: 7px;
+    font-size: 13.5px;
 
     .container {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
 
         .target-title {
             font-weight: bold;
+            cursor: default;
+            font-size: 15px;
         }
+    }
+
+    .buttons-block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     button {
         appearance: none;
         border: 0px;
-        background: #438972;
+        background: #212121;
         color: #ffffff;
-        padding: 6px;
-        border-radius: 3px;
+        padding: 8px;
+        border-radius: 7px;
         cursor: pointer;
+        font-size: 13px;
+        height: 34px;
         &:hover {
             opacity: 0.8;
+        }
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        &.hint-button[title] {
+            background-color: #afa73e;
+            // color: #000000;
+            cursor: help;
+            opacity: 1;
         }
     }
 
