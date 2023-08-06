@@ -24,6 +24,10 @@ npm install
 npm run build
 ```
 
-4. Open [chrome://extensions/](chrome://extensions/), turn on `Developer mode` and upload the `/build` folder (Load unpacked).
+4. Open [chrome://extensions/](chrome://extensions/), enable `Developer mode` and upload the `/build` folder (Load unpacked).
 
 5. Open Wikipedia and start playing!
+
+### OR
+
+Download wikipedia-game.zip, open [chrome://extensions/](chrome://extensions/), enable `Developer mode` and upload the archive (Load unpacked).

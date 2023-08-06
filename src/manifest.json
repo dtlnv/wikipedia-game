@@ -4,10 +4,8 @@
     "description": "Navigate from any page to a random article by following links in Wikipedia's content. You can do it!",
     "version": "1.0",
     "icons": {
-        "16": "images/logo-icon.png",
-        "36": "images/logo-icon.png",
-        "48": "images/logo-icon.png",
-        "128": "images/logo-icon.png"
+        "48": "images/logo-48.png",
+        "128": "images/logo-128.png"
     },
     "permissions": ["storage"],
     "background": {

@@ -73,7 +73,10 @@ class Game implements GameClassInterface {
 
     async isGame(): Promise<boolean> {
         if (Object.keys(this.store).length === 0) {
-            this.store = await Storage.get();
+            const loadStorage = await Storage.get();
+            if (loadStorage) {
+                this.store = loadStorage;
+            }
         }
 
         return Object.keys(this.store).length !== 0 && !!this.store.state;

@@ -9,7 +9,8 @@
     "scripts": {
         "clean": "rm dist/bundle.js",
         "build": "rm -rf build && webpack --mode production",
-        "create-crx": "npm run build && crx pack ./build"
+        "create-crx": "npm run build && crx pack ./build",
+        "archive": "npm run build && node archive.js"
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -22,6 +23,7 @@
         "@types/node": "^20.4.6",
         "@types/react": "^18.2.18",
         "@types/react-dom": "^18.2.7",
+        "archiver": "^5.3.1",
         "babel-loader": "^9.1.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^11.0.0",
