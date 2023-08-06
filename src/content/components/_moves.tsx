@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { getPageTitle } from '../../utils/helpers';
 
 interface MovesInterface {
     history: string[];
@@ -17,9 +16,9 @@ const Moves: React.FC<MovesInterface> = ({ history, startPageTitle }) => {
             {showHistory && (
                 <ul className='moves-list'>
                     <li>0. {startPageTitle}</li>
-                    {history.map((link, index) => (
-                        <li key={link}>
-                            {index + 1}. {getPageTitle(link)}
+                    {history.map((title, index) => (
+                        <li key={title}>
+                            {index + 1}. {title}
                         </li>
                     ))}
                 </ul>

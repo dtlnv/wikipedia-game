@@ -1,3 +1,6 @@
+/**
+ * Send requests to the service worker.
+ */
 interface SwRequestInterface {
     (action: string, params?: object): Promise<any>;
 }

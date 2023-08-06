@@ -3,7 +3,7 @@ import swRequest from './sw-request';
 import GameInterface from '../utils/GameInterface';
 import { FinishScreen, GameScreen, Loader, StartScreen } from './components';
 
-function App() {
+const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [game, setGame] = useState<GameInterface>({});
 
@@ -12,7 +12,6 @@ function App() {
         const getGameStatus = async () => {
             try {
                 const game: GameInterface = await swRequest('gameStatus');
-                console.log('game', game);
 
                 if (game) {
                     setGame(game);
@@ -46,8 +45,13 @@ function App() {
                 link = element.href;
             }
 
-            if (element.parentElement?.tagName === 'A') {
+            if (element?.parentElement?.tagName === 'A') {
                 const parentLink = element.parentElement as HTMLAnchorElement;
+                link = parentLink.href;
+            }
+
+            if (element?.parentElement?.parentElement?.tagName === 'A') {
+                const parentLink = element.parentElement.parentElement as HTMLAnchorElement;
                 link = parentLink.href;
             }
 
@@ -96,7 +100,7 @@ function App() {
     }
 
     return 'Something went wrong.';
-}
+};
 
 function restrictions(): void {
     document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {

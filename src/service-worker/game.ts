@@ -2,8 +2,22 @@ import GameInterface from '../utils/GameInterface';
 import { getPageTitle, getRandomPage } from '../utils/helpers';
 import Storage from './storage';
 
-class Game {
-    sender: any;
+/**
+ * The main logic of the game.
+ */
+interface GameClassInterface {
+    store: GameInterface;
+    start: (sender: any) => Promise<void>;
+    end: () => void;
+    get: () => GameInterface;
+    check: (currentUrl: string) => Promise<GameInterface>;
+    addHistory: (link: string) => Promise<void>;
+    addHint: (hint: string) => Promise<void>;
+    isGame: () => Promise<boolean>;
+    save: () => void;
+}
+
+class Game implements GameClassInterface {
     store: GameInterface = {};
 
     async start(sender: any): Promise<void> {
@@ -17,10 +31,9 @@ class Game {
         this.save();
     }
 
-    end(): null {
+    end(): void {
         this.store = {};
         this.save();
-        return null;
     }
 
     get(): GameInterface {
@@ -49,7 +62,7 @@ class Game {
         }
 
         if (this.store.history) {
-            this.store.history.push(link);
+            this.store.history.push(getPageTitle(link));
         }
 
         this.save();
@@ -75,7 +88,7 @@ class Game {
         return Object.keys(this.store).length !== 0 && !!this.store.state;
     }
 
-    save() {
+    save(): void {
         Storage.save(this.store);
     }
 }

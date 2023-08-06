@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GameInterface from '../../utils/GameInterface';
 import swRequest from '../sw-request';
-import { Moves, Timer, Loader } from './';
+import { Moves, Timer, Loader } from '.';
 
 interface GameScreenInterface {
     game: GameInterface;

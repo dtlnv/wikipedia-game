@@ -1,5 +1,8 @@
 import actions from './actions';
 
+/**
+ * Receive and process requests from content scripts.
+ */
 interface ContentListenerInterface {
     (message: any, sender: chrome.runtime.MessageSender, sendResponse: Function): void;
 }

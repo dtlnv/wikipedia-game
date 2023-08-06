@@ -1,6 +1,10 @@
 import GameInterface from '../utils/GameInterface';
 import Game from './game';
 
+/**
+ * Such a router.
+ * Actions that get/set information from/in the Game class.
+ */
 interface ActionInterface {
     params?: { [key: string]: any };
     sender?: chrome.runtime.MessageSender;
@@ -23,7 +27,7 @@ const addHint = async ({ params }: ActionInterface): Promise<GameInterface> => {
     return game.get();
 };
 
-const endGame = ({}: ActionInterface): null => {
+const endGame = ({}: ActionInterface): void => {
     return game.end();
 };
 

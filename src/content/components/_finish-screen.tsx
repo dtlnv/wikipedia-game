@@ -1,6 +1,6 @@
 import React from 'react';
 import GameInterface from '../../utils/GameInterface';
-import { Moves, Timer } from './';
+import { Moves, Timer } from '.';
 
 interface FinishScreenInterface {
     game: GameInterface;
