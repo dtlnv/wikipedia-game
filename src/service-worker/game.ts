@@ -6,7 +6,7 @@ import Storage from './storage';
  * The main logic of the game.
  */
 interface GameClassInterface {
-    store: GameInterface;
+    _game: GameInterface;
     start: (sender: any) => Promise<void>;
     end: () => void;
     get: () => GameInterface;
@@ -17,26 +17,26 @@ interface GameClassInterface {
 }
 
 class Game implements GameClassInterface {
-    store: GameInterface = {};
+    _game: GameInterface = {};
 
     async start(sender: any): Promise<void> {
-        this.store.target = await getRandomPage(sender);
-        this.store.state = 'progress';
-        this.store.hint = null;
-        this.store.startedAt = Date.now();
-        this.store.endedAt = 0;
-        this.store.history = [];
-        this.store.startPageTitle = getPageTitle(sender.url);
+        this._game.target = await getRandomPage(sender);
+        this._game.state = 'progress';
+        this._game.hint = null;
+        this._game.startedAt = Date.now();
+        this._game.endedAt = 0;
+        this._game.history = [];
+        this._game.startPageTitle = getPageTitle(sender.url);
         this.save();
     }
 
     end(): void {
-        this.store = {};
+        this._game = {};
         this.save();
     }
 
     get(): GameInterface {
-        return this.store;
+        return this._game;
     }
 
     async check(currentUrl: string): Promise<GameInterface> {
@@ -44,17 +44,19 @@ class Game implements GameClassInterface {
             return null;
         }
 
-        if (!currentUrl.includes('index.php')) {
-            this.store.history.push(getPageTitle(currentUrl));
-        }
+        if (this._game.state === 'progress') {
+            if (!currentUrl.includes('index.php')) {
+                this._game.history.push(getPageTitle(currentUrl));
+            }
 
-        currentUrl = decodeURIComponent(currentUrl);
-        if (this.store.target && this.store.target.url === currentUrl) {
-            this.store.state = 'finish';
-            this.store.endedAt = Date.now();
-        }
+            currentUrl = decodeURIComponent(currentUrl);
+            if (this._game.target && this._game.target.url === currentUrl) {
+                this._game.state = 'finish';
+                this._game.endedAt = Date.now();
+            }
 
-        this.save();
+            this.save();
+        }
 
         return this.get();
     }
@@ -65,25 +67,25 @@ class Game implements GameClassInterface {
         }
 
         if (hint) {
-            this.store.hint = hint;
+            this._game.hint = hint;
         }
 
         this.save();
     }
 
     async isGame(): Promise<boolean> {
-        if (Object.keys(this.store).length === 0) {
+        if (Object.keys(this._game).length === 0) {
             const loadStorage = await Storage.get();
             if (loadStorage) {
-                this.store = loadStorage;
+                this._game = loadStorage;
             }
         }
 
-        return Object.keys(this.store).length !== 0 && !!this.store.state;
+        return Object.keys(this._game).length !== 0 && !!this._game.state;
     }
 
     save(): void {
-        Storage.save(this.store);
+        Storage.save(this._game);
     }
 }
 

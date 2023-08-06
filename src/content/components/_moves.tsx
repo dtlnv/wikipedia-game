@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 interface MovesInterface {
     history: string[];
     startPageTitle: string;
+    open?: boolean;
 }
 
-const Moves: React.FC<MovesInterface> = ({ history, startPageTitle }) => {
-    const [showHistory, setShowHistory] = useState<boolean>(false);
+const Moves: React.FC<MovesInterface> = ({ history, startPageTitle, open = false }) => {
+    const [showHistory, setShowHistory] = useState<boolean>(open);
 
     return (
         <div className='text'>

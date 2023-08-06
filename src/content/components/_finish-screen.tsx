@@ -22,7 +22,7 @@ const FinishScreen: React.FC<FinishScreenInterface> = ({ game, startAction, endA
                 Target page: <strong>{game.target.title}</strong>
             </div>
             <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
-            <Moves history={game.history} startPageTitle={game.startPageTitle} />
+            <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
             <div className='buttons-block'>
                 <button onClick={startAction}>Start new game</button>
                 <button onClick={endAction}>End game</button>

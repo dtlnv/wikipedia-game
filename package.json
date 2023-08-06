@@ -1,6 +1,6 @@
 {
     "name": "wiki-game",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "'Wikipedia Game' is an exciting web-based game where players start from any Wikipedia page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "main": "index.js",
     "keywords": [],
