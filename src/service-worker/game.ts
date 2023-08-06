@@ -7,11 +7,11 @@ import Storage from './storage';
  */
 interface GameClassInterface {
     _game: GameInterface;
-    start: (sender: any) => Promise<void>;
+    start: (sender: any) => Promise<GameInterface>;
     end: () => void;
     get: () => GameInterface;
     check: (currentUrl: string) => Promise<GameInterface>;
-    addHint: (hint: string) => Promise<void>;
+    addHint: (hint: string) => Promise<GameInterface>;
     isGame: () => Promise<boolean>;
     save: () => void;
 }
@@ -19,7 +19,7 @@ interface GameClassInterface {
 class Game implements GameClassInterface {
     _game: GameInterface = {};
 
-    async start(sender: any): Promise<void> {
+    async start(sender: any): Promise<GameInterface> {
         this._game.target = await getRandomPage(sender);
         this._game.state = 'progress';
         this._game.hint = null;
@@ -28,6 +28,8 @@ class Game implements GameClassInterface {
         this._game.history = [];
         this._game.startPageTitle = getPageTitle(sender.url);
         this.save();
+
+        return this.get();
     }
 
     end(): void {
@@ -66,7 +68,7 @@ class Game implements GameClassInterface {
         return this.get();
     }
 
-    async addHint(hint: string): Promise<void> {
+    async addHint(hint: string): Promise<GameInterface> {
         if (!(await this.isGame())) {
             return null;
         }
@@ -76,6 +78,8 @@ class Game implements GameClassInterface {
         }
 
         this.save();
+
+        return this.get();
     }
 
     async isGame(): Promise<boolean> {

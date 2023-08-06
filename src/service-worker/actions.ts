@@ -13,13 +13,11 @@ interface ActionInterface {
 const game = new Game();
 
 const gameStart = async ({ sender }: ActionInterface): Promise<GameInterface> => {
-    await game.start(sender);
-    return game.get();
+    return await game.start(sender);
 };
 
 const addHint = async ({ params }: ActionInterface): Promise<GameInterface> => {
-    await game.addHint(params.hint);
-    return game.get();
+    return await game.addHint(params.hint);
 };
 
 const endGame = ({}: ActionInterface): void => {
