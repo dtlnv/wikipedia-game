@@ -10,16 +10,20 @@ The Wikipedia Game offers a fun and educational experience for all users, allowi
 
 ## Building and running
 
-First install dependencies:
+1. Clone the repository and open the directory in terminal.
+
+2. Install dependencies:
 
 ```sh
 npm install
 ```
 
-Create a build:
+3. Create a build:
 
 ```sh
 npm run build
 ```
 
-Open [chrome://extensions/](chrome://extensions/), turn on `Developer mode` and upload the `/build` folder (Load unpacked).
+4. Open [chrome://extensions/](chrome://extensions/), turn on `Developer mode` and upload the `/build` folder (Load unpacked).
+
+5. Open Wikipedia and start playing!

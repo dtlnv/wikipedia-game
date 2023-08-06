@@ -35,47 +35,13 @@ const App = () => {
         getGameStatus();
     }, []);
 
-    // click on links handler
-    useEffect(() => {
-        const contentLinkClick = (e: MouseEvent): void => {
-            const element = e.target as HTMLAnchorElement | HTMLSpanElement;
-            let link: string | undefined;
-
-            if (element?.tagName === 'A' && 'href' in element) {
-                link = element.href;
-            }
-
-            if (element?.parentElement?.tagName === 'A') {
-                const parentLink = element.parentElement as HTMLAnchorElement;
-                link = parentLink.href;
-            }
-
-            if (element?.parentElement?.parentElement?.tagName === 'A') {
-                const parentLink = element.parentElement.parentElement as HTMLAnchorElement;
-                link = parentLink.href;
-            }
-
-            if (link && link.startsWith(window.location.origin)) {
-                swRequest('addHistory', { link });
-            }
-        };
-
-        document.addEventListener('click', contentLinkClick);
-
-        return () => {
-            document.removeEventListener('click', contentLinkClick);
-        };
-    }, []);
-
     const startAction = async () => {
-        if (!window.location.href.includes('index.php')) {
-            setLoading(true);
-            const game: GameInterface = await swRequest('gameStart');
-            if (game) {
-                setGame(game);
-                restrictions();
-                setLoading(false);
-            }
+        setLoading(true);
+        const game: GameInterface = await swRequest('gameStart');
+        if (game) {
+            setGame(game);
+            restrictions();
+            setLoading(false);
         }
     };
 
@@ -84,6 +50,8 @@ const App = () => {
         derestrictions();
         swRequest('endGame');
     };
+
+    if (window.location.href.includes('index.php')) return null;
 
     if (loading && !game.state) return <Loader />;
 

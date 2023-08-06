@@ -17,11 +17,6 @@ const gameStart = async ({ sender }: ActionInterface): Promise<GameInterface> =>
     return game.get();
 };
 
-const addHistory = async ({ params }: ActionInterface): Promise<GameInterface> => {
-    await game.addHistory(params.link);
-    return game.get();
-};
-
 const addHint = async ({ params }: ActionInterface): Promise<GameInterface> => {
     await game.addHint(params.hint);
     return game.get();
@@ -38,7 +33,6 @@ const gameStatus = async ({ sender }: ActionInterface): Promise<null | GameInter
 export default {
     gameStart,
     gameStatus,
-    addHistory,
     endGame,
     addHint,
 };

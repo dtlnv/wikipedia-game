@@ -11,7 +11,6 @@ interface GameClassInterface {
     end: () => void;
     get: () => GameInterface;
     check: (currentUrl: string) => Promise<GameInterface>;
-    addHistory: (link: string) => Promise<void>;
     addHint: (hint: string) => Promise<void>;
     isGame: () => Promise<boolean>;
     save: () => void;
@@ -45,6 +44,10 @@ class Game implements GameClassInterface {
             return null;
         }
 
+        if (!currentUrl.includes('index.php')) {
+            this.store.history.push(getPageTitle(currentUrl));
+        }
+
         currentUrl = decodeURIComponent(currentUrl);
         if (this.store.target && this.store.target.url === currentUrl) {
             this.store.state = 'finish';
@@ -54,18 +57,6 @@ class Game implements GameClassInterface {
         this.save();
 
         return this.get();
-    }
-
-    async addHistory(link: string): Promise<void> {
-        if (!(await this.isGame())) {
-            return null;
-        }
-
-        if (this.store.history) {
-            this.store.history.push(getPageTitle(link));
-        }
-
-        this.save();
     }
 
     async addHint(hint: string): Promise<void> {
