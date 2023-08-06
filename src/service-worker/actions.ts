@@ -13,17 +13,13 @@ const gameStart = async ({ sender }: ActionInterface): Promise<GameInterface> =>
     return game.get();
 };
 
-const addHistory = ({ params }: ActionInterface): GameInterface => {
-    if (game.isGame() && params.link) {
-        game.addHistory(params.link);
-    }
+const addHistory = async ({ params }: ActionInterface): Promise<GameInterface> => {
+    await game.addHistory(params.link);
     return game.get();
 };
 
-const addHint = ({ params }: ActionInterface): GameInterface => {
-    if (game.isGame() && params.hint) {
-        game.addHint(params.hint);
-    }
+const addHint = async ({ params }: ActionInterface): Promise<GameInterface> => {
+    await game.addHint(params.hint);
     return game.get();
 };
 
@@ -31,11 +27,8 @@ const endGame = ({}: ActionInterface): null => {
     return game.end();
 };
 
-const gameStatus = ({ sender }: ActionInterface): null | GameInterface => {
-    if (game.isGame()) {
-        return game.check(sender.url);
-    }
-    return null;
+const gameStatus = async ({ sender }: ActionInterface): Promise<null | GameInterface> => {
+    return await game.check(sender.url);
 };
 
 export default {

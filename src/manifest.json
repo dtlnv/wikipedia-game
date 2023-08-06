@@ -9,6 +9,7 @@
         "48": "images/logo-48.png",
         "128": "images/logo-128.png"
     },
+    "permissions": ["storage"],
     "background": {
         "service_worker": "service-worker.js"
     },

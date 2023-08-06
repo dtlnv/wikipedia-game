@@ -42,11 +42,11 @@ function App() {
             const element = e.target as HTMLAnchorElement | HTMLSpanElement;
             let link: string | undefined;
 
-            if (element.tagName === 'A' && 'href' in element) {
+            if (element?.tagName === 'A' && 'href' in element) {
                 link = element.href;
             }
 
-            if (element.parentElement.tagName === 'A') {
+            if (element.parentElement?.tagName === 'A') {
                 const parentLink = element.parentElement as HTMLAnchorElement;
                 link = parentLink.href;
             }

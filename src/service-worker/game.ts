@@ -1,5 +1,6 @@
 import GameInterface from '../utils/GameInterface';
 import { getPageTitle, getRandomPage } from '../utils/helpers';
+import Storage from './storage';
 
 class Game {
     sender: any;
@@ -13,10 +14,12 @@ class Game {
         this.store.endedAt = 0;
         this.store.history = [];
         this.store.startPageTitle = getPageTitle(sender.url);
+        this.save();
     }
 
     end(): null {
         this.store = {};
+        this.save();
         return null;
     }
 
@@ -24,8 +27,8 @@ class Game {
         return this.store;
     }
 
-    check(currentUrl: string): GameInterface {
-        if (!this.isGame()) {
+    async check(currentUrl: string): Promise<GameInterface> {
+        if (!(await this.isGame())) {
             return null;
         }
 
@@ -35,23 +38,45 @@ class Game {
             this.store.endedAt = Date.now();
         }
 
+        this.save();
+
         return this.get();
     }
 
-    isGame(): boolean {
-        return Object.keys(this.store).length !== 0 && !!this.store.state;
-    }
+    async addHistory(link: string): Promise<void> {
+        if (!(await this.isGame())) {
+            return null;
+        }
 
-    addHistory(link: string): void {
         if (this.store.history) {
             this.store.history.push(link);
         }
+
+        this.save();
     }
 
-    addHint(hint: string): void {
+    async addHint(hint: string): Promise<void> {
+        if (!(await this.isGame())) {
+            return null;
+        }
+
         if (hint) {
             this.store.hint = hint;
         }
+
+        this.save();
+    }
+
+    async isGame(): Promise<boolean> {
+        if (Object.keys(this.store).length === 0) {
+            this.store = await Storage.get();
+        }
+
+        return Object.keys(this.store).length !== 0 && !!this.store.state;
+    }
+
+    save() {
+        Storage.save(this.store);
     }
 }
 
