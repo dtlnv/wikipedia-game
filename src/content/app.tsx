@@ -23,9 +23,11 @@ const App = () => {
                             endAction();
                         }
                     }
+                } else {
+                    setGame({});
                 }
             } catch (err) {
-                setGame(null);
+                setGame({});
                 console.log('Error', err);
             } finally {
                 setLoading(false);
@@ -60,7 +62,7 @@ const App = () => {
     }
 
     if (game.state === 'finish') {
-        return <FinishScreen game={game} startAction={startAction} endAction={endAction} />;
+        return <FinishScreen game={game} loading={loading} startAction={startAction} endAction={endAction} />;
     }
 
     if (game.state === 'progress') {

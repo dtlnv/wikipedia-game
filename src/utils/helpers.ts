@@ -4,13 +4,16 @@
  * @returns { url: string, title: string }
  */
 export async function getRandomPage(sender: chrome.runtime.MessageSender): Promise<object> {
-    const randomURL = sender.origin + '/wiki/Special:Random'; // https://en.wikipedia.org/wiki/Special:Random
+    try {
+        const randomURL = sender.origin + '/wiki/Special:Random'; // https://en.wikipedia.org/wiki/Special:Random
+        const res = await fetch(randomURL);
+        const url = decodeURIComponent(res.url);
+        const title = getPageTitle(url);
 
-    const res = await fetch(randomURL);
-    const url = decodeURIComponent(res.url);
-    const title = getPageTitle(url);
-
-    return { url, title };
+        return { url, title };
+    } catch {
+        return null;
+    }
 }
 
 /**

@@ -45,7 +45,12 @@ class Game implements GameClassInterface {
         }
 
         if (this._game.state === 'progress') {
-            if (!currentUrl.includes('index.php')) {
+            const currentPageTitle = getPageTitle(currentUrl);
+            if (
+                !currentUrl.includes('index.php') &&
+                !currentPageTitle.startsWith(this._game.history[this._game.history.length - 1]) &&
+                this._game.startPageTitle !== currentPageTitle
+            ) {
                 this._game.history.push(getPageTitle(currentUrl));
             }
 
@@ -81,7 +86,7 @@ class Game implements GameClassInterface {
             }
         }
 
-        return Object.keys(this._game).length !== 0 && !!this._game.state;
+        return Object.keys(this._game).length !== 0 && !!this._game.state && !!this._game.target;
     }
 
     save(): void {

@@ -1,14 +1,15 @@
 import React from 'react';
 import GameInterface from '../../utils/GameInterface';
-import { Moves, Timer } from '.';
+import { Loader, Moves, Timer } from '.';
 
 interface FinishScreenInterface {
     game: GameInterface;
+    loading: boolean;
     startAction: React.MouseEventHandler<HTMLButtonElement>;
     endAction: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const FinishScreen: React.FC<FinishScreenInterface> = ({ game, startAction, endAction }) => {
+const FinishScreen: React.FC<FinishScreenInterface> = ({ game, loading, startAction, endAction }) => {
     return (
         <>
             <div className='logo'>
@@ -24,7 +25,7 @@ const FinishScreen: React.FC<FinishScreenInterface> = ({ game, startAction, endA
             <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
             <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
             <div className='buttons-block'>
-                <button onClick={startAction}>Start new game</button>
+                {loading ? <Loader /> : <button onClick={startAction}>Start new game</button>}
                 <button onClick={endAction}>End game</button>
             </div>
         </>
