@@ -53,8 +53,6 @@ const App = () => {
         swRequest('endGame');
     };
 
-    if (window.location.href.includes('index.php')) return null;
-
     if (loading && !game.state) return <Loader />;
 
     if (!game.state) {
