@@ -1,6 +1,6 @@
 # Wikipedia Game
 
-<a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">On Chrome Store</a>
+<a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">Wikipedia Game In Chrome Store</a>
 
 Welcome to the Wikipedia Game, an exciting challenge that tests your navigation skills through Wikipedia's vast knowledge base!
 
