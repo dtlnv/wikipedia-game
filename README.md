@@ -1,5 +1,7 @@
 # Wikipedia Game
 
+<a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">On Chrome Store</a>
+
 Welcome to the Wikipedia Game, an exciting challenge that tests your navigation skills through Wikipedia's vast knowledge base!
 
 The game is simple but fun - you start from any Wikipedia page, and a random article is selected as your target destination. Your objective is to reach the target article by clicking on the hyperlinks within Wikipedia's content. The catch is that you cannot use the search function; you must rely solely on the links provided in the articles.
@@ -30,4 +32,9 @@ npm run build
 
 ### OR
 
-Download wikipedia-game.zip, open [chrome://extensions/](chrome://extensions/), enable `Developer mode` and upload the archive (Load unpacked).
+Download wikipedia-game.zip, open [chrome://extensions/](chrome://extensions/), enable `Developer mode` and upload the archive (Load unpacked). 
+
+
+### OR
+
+Download from <a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">Chrome Store</a>!
