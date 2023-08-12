@@ -1,6 +1,16 @@
-# Wikipedia Game
+<h1 align="center">
+  Wikipedia Game
+</h1>
 
-<a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">Wikipedia Game In Chrome Store</a>
+<p align="center">
+  <a href="https://chrome.google.com/webstore/detail/wikipedia-game/fihnfnmnngbmceakdgccmpnihpgjipjn">Available in Chrome Store</a>
+</p>
+
+<p align="center">
+  <img src="preview.gif" alt="Scratch Map App" /> 
+</p>
+
+## Project Description
 
 Welcome to the Wikipedia Game, an exciting challenge that tests your navigation skills through Wikipedia's vast knowledge base!
 

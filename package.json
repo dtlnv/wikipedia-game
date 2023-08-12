@@ -1,6 +1,6 @@
 {
     "name": "wiki-game",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "'Wikipedia Game' is an exciting web-based game where players start from any Wikipedia page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "main": "index.js",
     "keywords": [],
@@ -9,8 +9,7 @@
     "scripts": {
         "clean": "rm dist/bundle.js",
         "build": "rm -rf build && webpack --mode production",
-        "create-crx": "npm run build && crx pack ./build",
-        "archive": "npm run build && node archive.js"
+        "create-zip": "npm run build && node archive.js"
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -27,7 +26,6 @@
         "babel-loader": "^9.1.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^11.0.0",
-        "crx": "^5.0.1",
         "css-loader": "^6.8.1",
         "css-minimizer-webpack-plugin": "^5.0.1",
         "mini-css-extract-plugin": "^2.7.6",
