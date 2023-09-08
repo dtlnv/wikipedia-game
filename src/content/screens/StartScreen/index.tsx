@@ -1,15 +1,14 @@
 import React from 'react';
+import { StartScreenInterface } from './types';
+import { Logo } from '../../components';
 
-interface StartScreenInterface {
-    startAction: React.MouseEventHandler<HTMLButtonElement>;
-}
-
+/**
+ * StartScreen component renders start screen with button to start game
+ */
 const StartScreen: React.FC<StartScreenInterface> = ({ startAction }) => {
     return (
         <>
-            <div className='logo'>
-                <img src={chrome.runtime.getURL('images/logo.png')} />
-            </div>
+            <Logo screen='start' />
             <button onClick={startAction}>Start game</button>
         </>
     );

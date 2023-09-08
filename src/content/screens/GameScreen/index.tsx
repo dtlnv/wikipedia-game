@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import GameInterface from '../../utils/GameInterface';
-import swRequest from '../sw-request';
-import { Moves, Timer, Loader } from '.';
+import { Loader, Logo, Moves, Timer } from '../../components';
+import { GameScreenInterface } from './types';
+import { serviceWorkerRequest } from '../../utils';
 
-interface GameScreenInterface {
-    game: GameInterface;
-    loading: boolean;
-    startAction: React.MouseEventHandler<HTMLButtonElement>;
-    endAction: React.MouseEventHandler<HTMLButtonElement>;
-    setGame: Function;
-}
-
+/**
+ * GameScreen component renders in progress game screen with game status and buttons to get hint, start new game or end game
+ */
 const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction, endAction, setGame }) => {
     const [showHintForHint, setShowHintForHint] = useState<boolean>(false);
 
@@ -29,16 +24,14 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
 
         const hint = categories.join('; ');
 
-        setGame((prev: GameInterface) => ({ ...prev, hint }));
-        swRequest('addHint', { hint });
+        setGame({ ...game, hint });
+        serviceWorkerRequest('addHint', { hint });
         setShowHintForHint(true);
     };
 
     return (
         <>
-            <div className='logo'>
-                <img src={chrome.runtime.getURL('images/logo-inprogress.png')} />
-            </div>
+            <Logo screen='game' />
             <div className='text center'>Find this page by following the links in the content:</div>
             <div className='text center target-title' title={game.target.url}>
                 {loading ? '...' : game.target.title}
@@ -50,7 +43,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
                     className='hint-button'
                     onClick={hintAction}
                     disabled={loading || !!game.hint}
-                    title={!loading && game.hint}
+                    title={!loading ? game.hint : ''}
                 >
                     Hint {!loading && game.hint && '👀'}
                 </button>

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import swRequest from './sw-request';
-import GameInterface from '../utils/GameInterface';
-import { FinishScreen, GameScreen, Loader, StartScreen } from './components';
+import { GameInterface } from '../common-types';
+import { Loader } from './components';
+import { FinishScreen, GameScreen, StartScreen } from './screens';
+import { serviceWorkerRequest } from './utils';
+import { derestrictions, restrictions } from './utils/helpers';
+import './app.scss';
 
 const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
@@ -11,7 +14,7 @@ const App = () => {
     useEffect(() => {
         const getGameStatus = async () => {
             try {
-                const game: GameInterface = await swRequest('gameStatus');
+                const game: GameInterface = await serviceWorkerRequest('gameStatus');
 
                 if (game) {
                     setGame(game);
@@ -39,7 +42,7 @@ const App = () => {
 
     const startAction = async () => {
         setLoading(true);
-        const game: GameInterface = await swRequest('gameStart');
+        const game: GameInterface = await serviceWorkerRequest('gameStart');
         if (game) {
             setGame(game);
             restrictions();
@@ -50,7 +53,7 @@ const App = () => {
     const endAction = async () => {
         setGame({});
         derestrictions();
-        swRequest('endGame');
+        serviceWorkerRequest('endGame');
     };
 
     if (loading && !game.state) return <Loader />;
@@ -69,19 +72,5 @@ const App = () => {
 
     return 'Something went wrong.';
 };
-
-function restrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        input.disabled = true;
-    });
-}
-
-function derestrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        if (input.disabled) {
-            input.disabled = false;
-        }
-    });
-}
 
 export default App;
