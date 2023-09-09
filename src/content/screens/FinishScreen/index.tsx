@@ -1,20 +1,14 @@
 import React from 'react';
-import GameInterface from '../../utils/GameInterface';
-import { Loader, Moves, Timer } from '.';
+import { Loader, Logo, Moves, Timer } from '../../components';
+import { FinishScreenInterface } from './types';
 
-interface FinishScreenInterface {
-    game: GameInterface;
-    loading: boolean;
-    startAction: React.MouseEventHandler<HTMLButtonElement>;
-    endAction: React.MouseEventHandler<HTMLButtonElement>;
-}
-
+/**
+ * Screen with game results and buttons to start new game or end game
+ */
 const FinishScreen: React.FC<FinishScreenInterface> = ({ game, loading, startAction, endAction }) => {
     return (
         <>
-            <div className='logo'>
-                <img src={chrome.runtime.getURL('images/logo-finish.png')} />
-            </div>
+            <Logo screen='finish' />
             <h2>You did it!</h2>
             <div className='text'>
                 Start page: <strong>{game.startPageTitle}</strong>

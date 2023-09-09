@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import GameInterface from '../../utils/GameInterface';
-import swRequest from '../sw-request';
-import { Moves, Timer, Loader } from '.';
+import { Loader, Logo, Moves, Timer } from '../../components';
+import { GameScreenInterface } from './types';
+import { serviceWorkerRequest } from '../../utils';
 
-interface GameScreenInterface {
-    game: GameInterface;
-    loading: boolean;
-    startAction: React.MouseEventHandler<HTMLButtonElement>;
-    endAction: React.MouseEventHandler<HTMLButtonElement>;
-    setGame: Function;
-}
-
+/**
+ * In progress game screen with game status and buttons to get hint, start new game or end game
+ */
 const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction, endAction, setGame }) => {
     const [showHintForHint, setShowHintForHint] = useState<boolean>(false);
 
@@ -19,26 +14,26 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
     }, [loading]);
 
     const hintAction = async () => {
+        // Do it on frontend side because it is impossible to parse html in the service worker (no DOMParser)
         const htmlString = await (await fetch(game.target.url)).text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
         const categories: string[] = [];
+        // Parse the target page to get categories from the bottom of the page
         doc.querySelectorAll('#catlinks .mw-normal-catlinks ul a').forEach((element) => {
             categories.push(element.textContent);
         });
 
         const hint = categories.join('; ');
 
-        setGame((prev: GameInterface) => ({ ...prev, hint }));
-        swRequest('addHint', { hint });
+        setGame({ ...game, hint }); // Update game state in app
+        serviceWorkerRequest('addHint', { hint }); // Update game status in service worker
         setShowHintForHint(true);
     };
 
     return (
         <>
-            <div className='logo'>
-                <img src={chrome.runtime.getURL('images/logo-inprogress.png')} />
-            </div>
+            <Logo screen='game' />
             <div className='text center'>Find this page by following the links in the content:</div>
             <div className='text center target-title' title={game.target.url}>
                 {loading ? '...' : game.target.title}
@@ -50,7 +45,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
                     className='hint-button'
                     onClick={hintAction}
                     disabled={loading || !!game.hint}
-                    title={!loading && game.hint}
+                    title={!loading ? game.hint : null}
                 >
                     Hint {!loading && game.hint && '👀'}
                 </button>

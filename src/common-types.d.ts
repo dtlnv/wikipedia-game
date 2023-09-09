@@ -1,4 +1,4 @@
-export default interface GameInterface {
+export interface GameInterface {
     state?: 'progress' | 'finish';
     target?: { url?: string; title?: string };
     history?: string[];

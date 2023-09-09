@@ -1,11 +1,9 @@
+import { ServiceWorkerRequestInterface } from './types';
+
 /**
  * Send requests to the service worker.
  */
-interface SwRequestInterface {
-    (action: string, params?: object): Promise<any>;
-}
-
-const swRequest: SwRequestInterface = (action, params): Promise<any> => {
+const serviceWorkerRequest: ServiceWorkerRequestInterface = (action, params): Promise<any> => {
     return new Promise((resolve, reject) => {
         try {
             chrome.runtime.sendMessage({ action, params }, (response) => {
@@ -17,4 +15,4 @@ const swRequest: SwRequestInterface = (action, params): Promise<any> => {
     });
 };
 
-export default swRequest;
+export default serviceWorkerRequest;

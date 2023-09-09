@@ -27,3 +27,5 @@ archive.pipe(output);
 archive.directory(folderPath, false);
 
 archive.finalize();
+
+console.log('Zip file created: ' + zipFileName);
