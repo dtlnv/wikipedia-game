@@ -40,16 +40,10 @@ describe('FinishScreen component', () => {
     it('calls the startAction and endAction functions when buttons are clicked', () => {
         const { getByRole } = render(<FinishScreen {...testProps} />);
 
-        // Click the "Start new game" button
         fireEvent.click(getByRole('button', { name: 'Start new game' }));
-
-        // Check if the startAction function was called
         expect(testProps.startAction).toHaveBeenCalled();
 
-        // Click the "End game" button
         fireEvent.click(getByRole('button', { name: 'End game' }));
-
-        // Check if the endAction function was called
         expect(testProps.endAction).toHaveBeenCalled();
     });
 

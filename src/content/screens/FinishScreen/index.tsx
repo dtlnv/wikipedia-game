@@ -3,7 +3,7 @@ import { Loader, Logo, Moves, Timer } from '../../components';
 import { FinishScreenInterface } from './types';
 
 /**
- * FinishScreen component renders finish screen with game results and buttons to start new game or end game
+ * Screen with game results and buttons to start new game or end game
  */
 const FinishScreen: React.FC<FinishScreenInterface> = ({ game, loading, startAction, endAction }) => {
     return (

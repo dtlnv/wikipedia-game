@@ -46,10 +46,7 @@ describe('GameScreen component', () => {
         // }));
         const { getByRole } = render(<GameScreen {...testProps} />);
 
-        // Click the "Hint" button
         fireEvent.click(getByRole('button', { name: 'Hint' }));
-
-        // Check if the hintAction function was called
         expect(testProps.setGame).toHaveBeenCalledWith({
             ...testProps.game,
             hint: 'Category 1',
@@ -60,7 +57,6 @@ describe('GameScreen component', () => {
         testProps.game.hint = 'Category 1';
         const { getByText } = render(<GameScreen {...testProps} />);
 
-        // Check if the "👀" icon is rendered
         expect(getByText('Hint 👀')).toBeInTheDocument();
     });
 

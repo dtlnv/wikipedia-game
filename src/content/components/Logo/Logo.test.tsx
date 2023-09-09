@@ -3,7 +3,6 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import Logo from '.';
 
-// Define a test case for each screen variant
 describe('Logo component', () => {
     beforeAll(() => {
         // Mock chrome.runtime.getURL() to return the same URL as the src attribute of the <img> element

@@ -11,7 +11,7 @@
     },
     "scripts": {
         "build": "rm -rf build && webpack --mode production",
-        "create-zip": "npm run build && node archive.js",
+        "create-zip": "npm run build && node archive.ts",
         "test": "react-scripts test --no-cache --watchAll=false --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
         "lint": "eslint \"{src/**/*,*}.{js,ts,jsx,tsx}\""
     },

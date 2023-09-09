@@ -1,15 +1,15 @@
 import React from 'react';
 import { StartScreenInterface } from './types';
-import { Logo } from '../../components';
+import { Loader, Logo } from '../../components';
 
 /**
- * StartScreen component renders start screen with button to start game
+ * Screen with button to start game
  */
-const StartScreen: React.FC<StartScreenInterface> = ({ startAction }) => {
+const StartScreen: React.FC<StartScreenInterface> = ({ startAction, loading }) => {
     return (
         <>
             <Logo screen='start' />
-            <button onClick={startAction}>Start game</button>
+            {loading ? <Loader /> : <button onClick={startAction}>Start game</button>}
         </>
     );
 };

@@ -6,6 +6,7 @@ import StartScreen from '.';
 // Sample test data
 const testProps = {
     startAction: jest.fn(),
+    loading: false,
 };
 
 describe('StartScreen component', () => {
@@ -26,10 +27,7 @@ describe('StartScreen component', () => {
     it('calls the startAction function when the "Start game" button is clicked', () => {
         const { getByText } = render(<StartScreen {...testProps} />);
 
-        // Click the "Start game" button
         fireEvent.click(getByText('Start game'));
-
-        // Check if the startAction function was called
         expect(testProps.startAction).toHaveBeenCalled();
     });
 });

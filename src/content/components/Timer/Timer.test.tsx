@@ -28,10 +28,7 @@ describe('Timer component', () => {
             jest.advanceTimersByTime(1000);
         });
 
-        // Check if the time has updated
         expect(timerElement.textContent).not.toBe('00:00:00');
-
-        // Restore the original timers
         jest.useRealTimers();
     });
 

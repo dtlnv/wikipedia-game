@@ -4,7 +4,7 @@ import { GameScreenInterface } from './types';
 import { serviceWorkerRequest } from '../../utils';
 
 /**
- * GameScreen component renders in progress game screen with game status and buttons to get hint, start new game or end game
+ * In progress game screen with game status and buttons to get hint, start new game or end game
  */
 const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction, endAction, setGame }) => {
     const [showHintForHint, setShowHintForHint] = useState<boolean>(false);
@@ -14,18 +14,20 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
     }, [loading]);
 
     const hintAction = async () => {
+        // Do it on frontend side because it is impossible to parse html in the service worker (no DOMParser)
         const htmlString = await (await fetch(game.target.url)).text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
         const categories: string[] = [];
+        // Parse the target page to get categories from the bottom of the page
         doc.querySelectorAll('#catlinks .mw-normal-catlinks ul a').forEach((element) => {
             categories.push(element.textContent);
         });
 
         const hint = categories.join('; ');
 
-        setGame({ ...game, hint });
-        serviceWorkerRequest('addHint', { hint });
+        setGame({ ...game, hint }); // Update game state in app
+        serviceWorkerRequest('addHint', { hint }); // Update game status in service worker
         setShowHintForHint(true);
     };
 
@@ -43,7 +45,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
                     className='hint-button'
                     onClick={hintAction}
                     disabled={loading || !!game.hint}
-                    title={!loading ? game.hint : ''}
+                    title={!loading ? game.hint : null}
                 >
                     Hint {!loading && game.hint && '👀'}
                 </button>

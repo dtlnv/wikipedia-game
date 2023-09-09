@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { GameInterface } from '../common-types';
-import { Loader } from './components';
 import { FinishScreen, GameScreen, StartScreen } from './screens';
 import { serviceWorkerRequest } from './utils';
 import { derestrictions, restrictions } from './utils/helpers';
@@ -10,7 +9,7 @@ const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [game, setGame] = useState<GameInterface>({});
 
-    // Receive game status.
+    // Get game status from service worker and set it to state
     useEffect(() => {
         const getGameStatus = async () => {
             try {
@@ -18,10 +17,11 @@ const App = () => {
 
                 if (game) {
                     setGame(game);
-                    restrictions();
+                    restrictions(); // Disable search
                     if (game.state === 'finish') {
-                        derestrictions();
-                        // for direct link
+                        derestrictions(); // Enable search
+
+                        // If the game is finished and the history is empty, then the game is over (for example, direct link)
                         if (game.history.length === 0) {
                             endAction();
                         }
@@ -56,10 +56,8 @@ const App = () => {
         serviceWorkerRequest('endGame');
     };
 
-    if (loading && !game.state) return <Loader />;
-
     if (!game.state) {
-        return <StartScreen startAction={startAction} />;
+        return <StartScreen startAction={startAction} loading={loading} />;
     }
 
     if (game.state === 'finish') {

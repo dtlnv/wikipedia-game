@@ -5,7 +5,7 @@ import { MovesInterface } from './types';
  * Moves component renders the number of moves and the list of visited pages (history) when the "Moves" link is clicked
  */
 const Moves: React.FC<MovesInterface> = ({ history, startPageTitle, open = false }) => {
-    const [showHistory, setShowHistory] = useState<boolean>(open); // show history state (default: false)
+    const [showHistory, setShowHistory] = useState<boolean>(open); // Should show history state (default: false)
 
     return (
         <div className='text'>

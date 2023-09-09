@@ -5,23 +5,23 @@ import { TimerInterface } from './types';
  * Timer component renders the time spent on the game
  */
 const Timer: React.FC<TimerInterface> = ({ startTime, endTime = 0 }) => {
-    const [currentTime, setCurrentTime] = useState(Date.now()); // current time state
+    const [currentTime, setCurrentTime] = useState(Date.now()); // Current time state
 
     useEffect(() => {
         let intervalId: any;
 
         if (endTime) {
-            // set current time to the end time if it's provided
+            // Set current time to the end time if it's provided
             setCurrentTime(endTime);
         } else {
-            // update current time every second
+            // Update current time every second
             intervalId = setInterval(() => {
                 setCurrentTime(Date.now());
             }, 1000);
         }
 
         return () => {
-            // clear interval when the component unmounts
+            // Clear interval when the component unmounts
             clearInterval(intervalId);
         };
 
