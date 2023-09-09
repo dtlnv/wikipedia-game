@@ -9,8 +9,13 @@
 - Add unit tests.
 - Add linting.
 - Add changelog.
+
+### Changed
+
 - Improve types.
 - Improve file structure.
+
+### Other
 - Migrate to `yarn`.
 
 ## [1.0.1] - 2023-08-12
