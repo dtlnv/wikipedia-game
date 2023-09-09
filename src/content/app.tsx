@@ -56,19 +56,14 @@ const App = () => {
         serviceWorkerRequest('endGame');
     };
 
-    if (!game.state) {
-        return <StartScreen startAction={startAction} loading={loading} />;
+    switch (game.state) {
+        case 'finish':
+            return <FinishScreen game={game} loading={loading} startAction={startAction} endAction={endAction} />;
+        case 'progress':
+            return <GameScreen game={game} loading={loading} startAction={startAction} endAction={endAction} setGame={setGame} />;
+        default:
+            return <StartScreen startAction={startAction} loading={loading} />;
     }
-
-    if (game.state === 'finish') {
-        return <FinishScreen game={game} loading={loading} startAction={startAction} endAction={endAction} />;
-    }
-
-    if (game.state === 'progress') {
-        return <GameScreen game={game} loading={loading} startAction={startAction} endAction={endAction} setGame={setGame} />;
-    }
-
-    return 'Something went wrong.';
 };
 
 export default App;
