@@ -1,24 +1,21 @@
-import GameInterface from '../utils/GameInterface';
-import { getPageTitle, getRandomPage } from '../utils/helpers';
+import { GameInterface } from '../common-types';
+import { GameClassInterface } from './types';
+import { getPageTitle, getRandomPage } from './helpers';
 import Storage from './storage';
 
 /**
  * The main logic of the game.
+ * It is responsible for starting, ending, changing and checking the game.
+ * It also stores the game state in the chrome storage.
  */
-interface GameClassInterface {
-    _game: GameInterface;
-    start: (sender: any) => Promise<GameInterface>;
-    end: () => void;
-    get: () => GameInterface;
-    check: (currentUrl: string) => Promise<GameInterface>;
-    addHint: (hint: string) => Promise<GameInterface>;
-    isGame: () => Promise<boolean>;
-    save: () => void;
-}
-
 class Game implements GameClassInterface {
     _game: GameInterface = {};
 
+    /**
+     * Start the game.
+     * @param sender
+     * @returns Full game state
+     */
     async start(sender: any): Promise<GameInterface> {
         this._game.target = await getRandomPage(sender);
         this._game.state = 'progress';
@@ -32,15 +29,27 @@ class Game implements GameClassInterface {
         return this.get();
     }
 
+    /**
+     * End the game.
+     */
     end(): void {
         this._game = {};
         this.save();
     }
 
+    /**
+     * Get the game state.
+     * @returns Full game state
+     */
     get(): GameInterface {
         return this._game;
     }
 
+    /**
+     * Check the game state.
+     * @param currentUrl
+     * @returns Null if the game is not started, otherwise the full game state
+     */
     async check(currentUrl: string): Promise<GameInterface> {
         if (!(await this.isGame())) {
             return null;
@@ -68,6 +77,11 @@ class Game implements GameClassInterface {
         return this.get();
     }
 
+    /**
+     * Add a hint to the game.
+     * @param hint
+     * @returns Null if the game is not started, otherwise the full game state
+     */
     async addHint(hint: string): Promise<GameInterface> {
         if (!(await this.isGame())) {
             return null;
@@ -82,6 +96,10 @@ class Game implements GameClassInterface {
         return this.get();
     }
 
+    /**
+     * Check if the game is started.
+     * @returns True if the game is started, otherwise false
+     */
     async isGame(): Promise<boolean> {
         if (Object.keys(this._game).length === 0) {
             const loadStorage = await Storage.get();
@@ -93,6 +111,9 @@ class Game implements GameClassInterface {
         return Object.keys(this._game).length !== 0 && !!this._game.state && !!this._game.target;
     }
 
+    /**
+     * Save the game state in the chrome storage.
+     */
     save(): void {
         Storage.save(this._game);
     }

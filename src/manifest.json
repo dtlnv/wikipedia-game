@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Wikipedia Game",
     "description": "Navigate from any page to a random article by following links in Wikipedia's content. You can do it!",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icons": {
         "48": "images/logo-48.png",
         "128": "images/logo-128.png"

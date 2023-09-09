@@ -56,12 +56,13 @@
     }
 
     .moves-list {
-        font-size: 10.5px;
+        font-size: 11px;
         margin: 10px 0px;
         max-height: 35vh;
         overflow: auto;
+        list-style-position: inside;
         li {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
     }
 
@@ -113,13 +114,13 @@
         animation: spin 1.5s linear infinite;
     }
 
-    // for new design
+    // for new design of Wikipedia
     bottom: 10px;
     right: 10px;
     width: 206px;
 }
 
-// for old design
+// for old design of Wikipedia
 .skin-vector-legacy {
     #wiki-quiz-root {
         right: auto;

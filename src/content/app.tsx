@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import swRequest from './sw-request';
-import GameInterface from '../utils/GameInterface';
-import { FinishScreen, GameScreen, Loader, StartScreen } from './components';
+import { GameInterface } from '../common-types';
+import { FinishScreen, GameScreen, StartScreen } from './screens';
+import { serviceWorkerRequest } from './utils';
+import { derestrictions, restrictions } from './utils/helpers';
+import './app.scss';
 
 const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [game, setGame] = useState<GameInterface>({});
 
-    // Receive game status.
+    // Get game status from service worker and set it to state
     useEffect(() => {
         const getGameStatus = async () => {
             try {
-                const game: GameInterface = await swRequest('gameStatus');
+                const game: GameInterface = await serviceWorkerRequest('gameStatus');
 
                 if (game) {
                     setGame(game);
-                    restrictions();
+                    restrictions(); // Disable search
                     if (game.state === 'finish') {
-                        derestrictions();
-                        // for direct link
+                        derestrictions(); // Enable search
+
+                        // If the game is finished and the history is empty, then the game is over (for example, direct link)
                         if (game.history.length === 0) {
                             endAction();
                         }
@@ -39,7 +42,7 @@ const App = () => {
 
     const startAction = async () => {
         setLoading(true);
-        const game: GameInterface = await swRequest('gameStart');
+        const game: GameInterface = await serviceWorkerRequest('gameStart');
         if (game) {
             setGame(game);
             restrictions();
@@ -50,13 +53,11 @@ const App = () => {
     const endAction = async () => {
         setGame({});
         derestrictions();
-        swRequest('endGame');
+        serviceWorkerRequest('endGame');
     };
 
-    if (loading && !game.state) return <Loader />;
-
     if (!game.state) {
-        return <StartScreen startAction={startAction} />;
+        return <StartScreen startAction={startAction} loading={loading} />;
     }
 
     if (game.state === 'finish') {
@@ -69,19 +70,5 @@ const App = () => {
 
     return 'Something went wrong.';
 };
-
-function restrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        input.disabled = true;
-    });
-}
-
-function derestrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        if (input.disabled) {
-            input.disabled = false;
-        }
-    });
-}
 
 export default App;
