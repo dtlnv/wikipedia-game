@@ -35,8 +35,8 @@ const config = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, './src/manifest.json'), to: path.resolve(__dirname, './build/manifest.json') },
-                { from: path.resolve(__dirname, './src/images'), to: path.resolve(__dirname, './build/images') },
+                { from: path.resolve(__dirname, './public/manifest.json'), to: path.resolve(__dirname, './build/manifest.json') },
+                { from: path.resolve(__dirname, './public/images'), to: path.resolve(__dirname, './build/images') },
             ],
         }),
         new MiniCssExtractPlugin({

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
-import { GameScreenInterface } from './types';
 import { serviceWorkerRequest } from '../../utils';
 
 /**

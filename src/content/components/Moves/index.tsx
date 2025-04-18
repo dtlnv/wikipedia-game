@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { MovesInterface } from './types';
 
 /**
  * Moves component renders the number of moves and the list of visited pages (history) when the "Moves" link is clicked

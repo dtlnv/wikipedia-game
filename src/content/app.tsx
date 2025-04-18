@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { GameInterface } from '../common-types';
 import { FinishScreen, GameScreen, StartScreen } from './screens';
 import { serviceWorkerRequest } from './utils';
 import { derestrictions, restrictions } from './utils/helpers';

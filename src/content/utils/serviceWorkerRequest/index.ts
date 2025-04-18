@@ -1,5 +1,3 @@
-import { ServiceWorkerRequestInterface } from './types';
-
 /**
  * Send requests to the service worker.
  */
