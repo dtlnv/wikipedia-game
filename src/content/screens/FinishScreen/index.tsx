@@ -1,6 +1,5 @@
 import React from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
-import { FinishScreenInterface } from './types';
 
 /**
  * Screen with game results and buttons to start new game or end game

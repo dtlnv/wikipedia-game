@@ -21,7 +21,7 @@ export async function getRandomPage(sender: chrome.runtime.MessageSender): Promi
  * @param url
  * @returns title: string
  */
-export function getPageTitle(url: string) {
+export function getPageTitle(url: string): string {
     function getLastPartOfUrl(url: string) {
         const regex = /\/wiki\/(.*)$/;
         const match = url.match(regex);

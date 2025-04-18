@@ -1,5 +1,4 @@
 import React from 'react';
-import { LogoInterface } from './types';
 
 /**
  * Logo component renders logo image based on the screen prop value (start, game, finish)

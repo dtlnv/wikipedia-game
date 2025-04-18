@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { TimerInterface } from './types';
 
 /**
  * Timer component renders the time spent on the game
@@ -29,7 +28,7 @@ const Timer: React.FC<TimerInterface> = ({ startTime, endTime = 0 }) => {
     }, []);
 
     const timeDifference = currentTime - startTime;
-    const seconds = Math.floor((timeDifference / 1000) % 60); 
+    const seconds = Math.floor((timeDifference / 1000) % 60);
     const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
     const hours = Math.floor(timeDifference / 1000 / 60 / 60);
 

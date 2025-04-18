@@ -1,5 +1,4 @@
 import React from 'react';
-import { StartScreenInterface } from './types';
 import { Loader, Logo } from '../../components';
 
 /**

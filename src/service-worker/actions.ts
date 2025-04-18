@@ -1,5 +1,3 @@
-import { GameInterface } from '../common-types';
-import { ActionInterface, GameClassInterface } from './types';
 import Game from './game';
 
 /**

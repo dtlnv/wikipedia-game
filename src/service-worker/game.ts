@@ -1,5 +1,3 @@
-import { GameInterface } from '../common-types';
-import { GameClassInterface } from './types';
 import { getPageTitle, getRandomPage } from './helpers';
 import Storage from './storage';
 

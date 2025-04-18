@@ -1,5 +1,4 @@
 import actions from './actions';
-import { ContentListenerInterface } from './types';
 
 /**
  * Receive and process requests from content scripts.

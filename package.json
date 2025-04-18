@@ -1,6 +1,6 @@
 {
     "name": "wiki-game",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "'Wikipedia Game' is an exciting web-based game where players start from any Wikipedia page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "keywords": [],
     "author": "dtlnv",
@@ -13,7 +13,8 @@
         "build": "rm -rf build && webpack --mode production",
         "create-zip": "npm run build && node archive.ts",
         "test": "react-scripts test --no-cache --watchAll=false --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
-        "lint": "eslint \"{src/**/*,*}.{js,ts,jsx,tsx}\""
+        "lint": "eslint \"{src/**/*,*}.{js,ts,jsx,tsx}\"",
+        "prettier": "npx prettier --write ."
     },
     "dependencies": {
         "react": "^18.2.0",
@@ -60,5 +61,6 @@
     },
     "resolutions": {
         "nth-check": "^2.0.1"
-    }
+    },
+    "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
