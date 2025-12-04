@@ -1,6 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import StartScreen from '.';
 
 // Sample test data
@@ -24,10 +25,10 @@ describe('StartScreen component', () => {
         expect(getByText('Start game')).toBeInTheDocument();
     });
 
-    it('calls the startAction function when the "Start game" button is clicked', () => {
+    it('calls the startAction function when the "Start game" button is clicked', async () => {
         const { getByText } = render(<StartScreen {...testProps} />);
 
-        fireEvent.click(getByText('Start game'));
+        await userEvent.click(getByText('Start game'));
         expect(testProps.startAction).toHaveBeenCalled();
     });
 });

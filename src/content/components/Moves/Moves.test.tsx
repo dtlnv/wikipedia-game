@@ -1,6 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import Moves from '.';
 
 // Sample test data
@@ -26,20 +27,20 @@ describe('Moves component', () => {
         expect(container.querySelector('.moves-list')).toBeInTheDocument();
     });
 
-    it('toggles the history list when the "Moves" link is clicked', () => {
+    it('toggles the history list when the "Moves" link is clicked', async () => {
         const { container, getByText } = render(<Moves {...testProps} />);
 
-        fireEvent.click(getByText('Moves:'));
+        await userEvent.click(getByText('Moves:'));
         expect(container.querySelector('.moves-list')).toBeInTheDocument();
 
-        fireEvent.click(getByText('Moves:'));
+        await userEvent.click(getByText('Moves:'));
         expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
     });
 
-    it('renders the correct number of history items', () => {
+    it('renders the correct number of history items', async () => {
         const { container, getByText } = render(<Moves {...testProps} />);
 
-        fireEvent.click(getByText('Moves:'));
+        await userEvent.click(getByText('Moves:'));
         expect(container.querySelectorAll('.moves-list li')).toHaveLength(4); // 3 history items + start page
     });
 });

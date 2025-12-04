@@ -1,6 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import GameScreen from '.';
 
 // Sample test data
@@ -51,17 +52,17 @@ describe('GameScreen component', () => {
         expect(container.querySelector('.loader')).toBeInTheDocument();
     });
 
-    it('calls startAction when the "Reset game" button is clicked', () => {
+    it('calls startAction when the "Reset game" button is clicked', async () => {
         const { getByRole } = render(<GameScreen {...testProps} />);
 
-        fireEvent.click(getByRole('button', { name: 'Reset game' }));
+        await userEvent.click(getByRole('button', { name: 'Reset game' }));
         expect(testProps.startAction).toHaveBeenCalled();
     });
 
-    it('calls endAction when the "End game" button is clicked', () => {
+    it('calls endAction when the "End game" button is clicked', async () => {
         const { getByRole } = render(<GameScreen {...testProps} />);
 
-        fireEvent.click(getByRole('button', { name: 'End game' }));
+        await userEvent.click(getByRole('button', { name: 'End game' }));
         expect(testProps.endAction).toHaveBeenCalled();
     });
 

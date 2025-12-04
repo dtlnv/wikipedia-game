@@ -1,6 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import FinishScreen from '.';
 
 // Sample test data
@@ -37,13 +38,13 @@ describe('FinishScreen component', () => {
         expect(getByRole('button', { name: 'End game' })).toBeInTheDocument();
     });
 
-    it('calls the startAction and endAction functions when buttons are clicked', () => {
+    it('calls the startAction and endAction functions when buttons are clicked', async () => {
         const { getByRole } = render(<FinishScreen {...testProps} />);
 
-        fireEvent.click(getByRole('button', { name: 'Start new game' }));
+        await userEvent.click(getByRole('button', { name: 'Start new game' }));
         expect(testProps.startAction).toHaveBeenCalled();
 
-        fireEvent.click(getByRole('button', { name: 'End game' }));
+        await userEvent.click(getByRole('button', { name: 'End game' }));
         expect(testProps.endAction).toHaveBeenCalled();
     });
 
