@@ -19,7 +19,7 @@ const GameScreen: React.FC<GameScreenInterface> = ({ game, loading, startAction,
         const doc = parser.parseFromString(htmlString, 'text/html');
         const categories: string[] = [];
         // Parse the target page to get categories from the bottom of the page
-        doc.querySelectorAll('#catlinks .mw-normal-catlinks ul a').forEach((element) => {
+        doc.querySelectorAll('#catlinks .mw-normal-catlinks ul a, #articleCategories ul.categories li.category a').forEach((element) => {
             categories.push(element.textContent);
         });
 

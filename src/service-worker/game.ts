@@ -53,6 +53,12 @@ class Game implements GameClassInterface {
             return null;
         }
 
+        const targetDomain = this._game.target?.url ? new URL(this._game.target.url).hostname : null;
+        const tabDomain = currentUrl ? new URL(currentUrl).hostname : null;
+        if (targetDomain && tabDomain && targetDomain !== tabDomain) {
+            return this.get(); // do nothing if domains are different
+        }
+
         if (this._game.state === 'progress') {
             const currentPageTitle = getPageTitle(currentUrl);
             if (

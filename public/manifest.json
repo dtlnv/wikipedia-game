@@ -2,12 +2,12 @@
     "manifest_version": 3,
     "name": "Wikipedia Game",
     "description": "Navigate from any page to a random article by following links in Wikipedia's content. You can do it!",
-    "version": "1.1.0",
+    "version": "1.1.1000",
     "icons": {
         "48": "images/logo-48.png",
         "128": "images/logo-128.png"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "tabs", "sidePanel"],
     "background": {
         "service_worker": "service-worker.js"
     },
@@ -15,14 +15,14 @@
         {
             "css": ["./styles.css"],
             "js": ["./content.js"],
-            "matches": ["https://*.wikipedia.org/*"],
+            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*"],
             "run_at": "document_end"
         }
     ],
     "web_accessible_resources": [
         {
             "resources": ["images/*"],
-            "matches": ["https://*.wikipedia.org/*"]
+            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*"]
         }
     ]
 }
