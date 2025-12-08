@@ -1,9 +1,13 @@
-import React from 'react';
+import { FC } from 'react';
+
+interface LogoInterface {
+    screen: 'start' | 'game' | 'finish';
+}
 
 /**
  * Logo component renders logo image based on the screen prop value (start, game, finish)
  */
-const Logo: React.FC<LogoInterface> = ({ screen }) => {
+const Logo: FC<LogoInterface> = ({ screen }) => {
     let logo: string = '';
 
     switch (screen) {

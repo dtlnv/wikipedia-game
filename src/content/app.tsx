@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FinishScreen, GameScreen, StartScreen } from './screens';
 import { serviceWorkerRequest } from './utils';
 import { derestrictions, restrictions } from './utils/helpers';
@@ -6,13 +6,13 @@ import './app.scss';
 
 const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
-    const [game, setGame] = useState<GameInterface>({});
+    const [game, setGame] = useState<PartialGameState>({});
 
     // Get game status from service worker and set it to state
     useEffect(() => {
         const getGameStatus = async () => {
             try {
-                const game: GameInterface = await serviceWorkerRequest('gameStatus');
+                const game: PartialGameState = await serviceWorkerRequest('gameStatus');
 
                 if (game) {
                     setGame(game);
@@ -21,7 +21,7 @@ const App = () => {
                         derestrictions(); // Enable search
 
                         // If the game is finished and the history is empty, then the game is over (for example, direct link)
-                        if (game.history.length === 0) {
+                        if (game.history?.length === 0) {
                             endAction();
                         }
                     }
@@ -41,7 +41,7 @@ const App = () => {
 
     const startAction = async () => {
         setLoading(true);
-        const game: GameInterface = await serviceWorkerRequest('gameStart');
+        const game: PartialGameState = await serviceWorkerRequest('gameStart');
         if (game) {
             setGame(game);
             restrictions();

@@ -1,4 +1,3 @@
-import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -12,7 +11,7 @@ const testProps = {
         startedAt: Date.now() - 3600000, // 1 hour ago
         endedAt: Date.now(),
         history: ['Page 1', 'Page 2', 'Page 3'],
-    } as GameInterface,
+    } as any,
     loading: false,
     startAction: jest.fn(),
     endAction: jest.fn(),

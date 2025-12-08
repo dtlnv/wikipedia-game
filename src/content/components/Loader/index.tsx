@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Simple loader component with css animation
  */

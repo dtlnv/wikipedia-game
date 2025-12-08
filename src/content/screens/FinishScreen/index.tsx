@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
+
+interface FinishScreenInterface {
+    game: PartialGameState;
+    loading: boolean;
+    startAction: React.MouseEventHandler<HTMLButtonElement>;
+    endAction: React.MouseEventHandler<HTMLButtonElement>;
+}
 
 /**
  * Screen with game results and buttons to start new game or end game
  */
-const FinishScreen: React.FC<FinishScreenInterface> = ({ game, loading, startAction, endAction }) => {
+const FinishScreen: FC<FinishScreenInterface> = ({ game, loading, startAction, endAction }) => {
     return (
         <>
             <Logo screen='finish' />
@@ -13,10 +20,12 @@ const FinishScreen: React.FC<FinishScreenInterface> = ({ game, loading, startAct
                 Start page: <strong>{game.startPageTitle}</strong>
             </div>
             <div className='text'>
-                Target page: <strong>{game.target.title}</strong>
+                Target page: <strong>{game?.target?.title}</strong>
             </div>
             <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
-            <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
+            {game.history && game.startPageTitle && (
+                <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
+            )}
             <div className='buttons-block'>
                 {loading ? <Loader /> : <button onClick={startAction}>Start new game</button>}
                 <button onClick={endAction}>End game</button>

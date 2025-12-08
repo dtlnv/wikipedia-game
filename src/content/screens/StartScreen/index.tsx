@@ -1,10 +1,15 @@
-import React from 'react';
+import { FC } from 'react';
 import { Loader, Logo } from '../../components';
+
+interface StartScreenInterface {
+    startAction: React.MouseEventHandler<HTMLButtonElement>;
+    loading: boolean;
+}
 
 /**
  * Screen with button to start game
  */
-const StartScreen: React.FC<StartScreenInterface> = ({ startAction, loading }) => {
+const StartScreen: FC<StartScreenInterface> = ({ startAction, loading }) => {
     return (
         <>
             <Logo screen='start' />

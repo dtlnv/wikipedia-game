@@ -6,24 +6,29 @@ import Storage from './storage';
  * It is responsible for starting, ending, changing and checking the game.
  * It also stores the game state in the chrome storage.
  */
-class Game implements GameClassInterface {
-    _game: GameInterface = {};
+class Game {
+    private _game: PartialGameState = {};
 
     /**
      * Start the game.
      * @param sender
      * @returns Full game state
      */
-    async start(sender: any): Promise<GameInterface> {
-        this._game.target = await getRandomPage(sender);
-        this._game.state = 'progress';
-        this._game.hint = null;
-        this._game.startedAt = Date.now();
-        this._game.endedAt = 0;
-        this._game.history = [];
-        this._game.startPageTitle = getPageTitle(sender.url);
-        this.save();
+    async start(sender: any): Promise<PartialGameState> {
+        const target = await getRandomPage(sender);
 
+        this._game = {
+            target,
+            state: 'progress',
+            hint: null,
+            startedAt: Date.now(),
+            endedAt: 0,
+            history: [],
+            startPageTitle: getPageTitle(sender.url),
+            showHistory: false,
+        };
+
+        this.save();
         return this.get();
     }
 
@@ -39,7 +44,7 @@ class Game implements GameClassInterface {
      * Get the game state.
      * @returns Full game state
      */
-    get(): GameInterface {
+    get(): PartialGameState {
         return this._game;
     }
 
@@ -48,29 +53,43 @@ class Game implements GameClassInterface {
      * @param currentUrl
      * @returns Null if the game is not started, otherwise the full game state
      */
-    async check(currentUrl: string): Promise<GameInterface> {
+    async check(currentUrl?: string): Promise<PartialGameState | null> {
         if (!(await this.isGame())) {
             return null;
         }
 
-        const targetDomain = this._game.target?.url ? new URL(this._game.target.url).hostname : null;
-        const tabDomain = currentUrl ? new URL(currentUrl).hostname : null;
-        if (targetDomain && tabDomain && targetDomain !== tabDomain) {
-            return this.get(); // do nothing if domains are different
+        if (!currentUrl) {
+            const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+            currentUrl = tabs[0].url || '';
+        }
+
+        const targetUrl = this._game.target?.url;
+        if (!targetUrl) {
+            return this.get();
+        }
+
+        const targetDomain = new URL(targetUrl).hostname;
+        const tabDomain = new URL(currentUrl).hostname;
+
+        if (targetDomain !== tabDomain) {
+            return this.get();
         }
 
         if (this._game.state === 'progress') {
             const currentPageTitle = getPageTitle(currentUrl);
+            const history = this._game.history || [];
+            const lastHistoryItem = history[history.length - 1];
+
             if (
                 !currentUrl.includes('index.php') &&
-                !currentPageTitle.startsWith(this._game.history[this._game.history.length - 1]) &&
+                !currentPageTitle.startsWith(lastHistoryItem) &&
                 this._game.startPageTitle !== currentPageTitle
             ) {
-                this._game.history.push(getPageTitle(currentUrl));
+                this._game.history = [...history, currentPageTitle];
             }
 
-            currentUrl = decodeURIComponent(currentUrl);
-            if (this._game.target && this._game.target.url === currentUrl) {
+            const decodedUrl = decodeURIComponent(currentUrl);
+            if (decodedUrl === targetUrl) {
                 this._game.state = 'finish';
                 this._game.endedAt = Date.now();
             }
@@ -86,15 +105,25 @@ class Game implements GameClassInterface {
      * @param hint
      * @returns Null if the game is not started, otherwise the full game state
      */
-    async addHint(hint: string): Promise<GameInterface> {
+    async addHint(hint: string): Promise<PartialGameState | null> {
         if (!(await this.isGame())) {
             return null;
         }
 
         if (hint) {
             this._game.hint = hint;
+            this.save();
         }
 
+        return this.get();
+    }
+
+    async showHistory(isOpened: boolean): Promise<PartialGameState | null> {
+        if (!(await this.isGame())) {
+            return null;
+        }
+
+        this._game.showHistory = isOpened;
         this.save();
 
         return this.get();
@@ -112,13 +141,13 @@ class Game implements GameClassInterface {
             }
         }
 
-        return Object.keys(this._game).length !== 0 && !!this._game.state && !!this._game.target;
+        return !!(this._game.state && this._game.target);
     }
 
     /**
      * Save the game state in the chrome storage.
      */
-    save(): void {
+    private save(): void {
         Storage.save(this._game);
     }
 }

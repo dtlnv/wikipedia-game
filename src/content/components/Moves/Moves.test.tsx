@@ -1,8 +1,13 @@
-import React from 'react';
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Moves from '.';
+import * as utils from '../../utils';
+
+// Mock the serviceWorkerRequest
+jest.mock('../../utils', () => ({
+    serviceWorkerRequest: jest.fn(),
+}));
 
 // Sample test data
 const testProps = {
@@ -12,14 +17,19 @@ const testProps = {
 };
 
 describe('Moves component', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
     it('renders the initial closed state', () => {
         const { container, getByText } = render(<Moves {...testProps} />);
 
         expect(getByText('Moves:')).toBeInTheDocument();
+        expect(getByText('3')).toBeInTheDocument();
         expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
     });
 
-    it('shows the start page title', () => {
+    it('shows the start page title when open', () => {
         const { container, getByText } = render(<Moves {...testProps} open={true} />);
 
         expect(getByText('Moves:')).toBeInTheDocument();
@@ -31,16 +41,24 @@ describe('Moves component', () => {
         const { container, getByText } = render(<Moves {...testProps} />);
 
         await userEvent.click(getByText('Moves:'));
-        expect(container.querySelector('.moves-list')).toBeInTheDocument();
+        await waitFor(() => {
+            expect(container.querySelector('.moves-list')).toBeInTheDocument();
+        });
+        expect(utils.serviceWorkerRequest).toHaveBeenCalledWith('showHistory', { opened: true });
 
         await userEvent.click(getByText('Moves:'));
-        expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
+        await waitFor(() => {
+            expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
+        });
+        expect(utils.serviceWorkerRequest).toHaveBeenCalledWith('showHistory', { opened: false });
     });
 
     it('renders the correct number of history items', async () => {
         const { container, getByText } = render(<Moves {...testProps} />);
 
         await userEvent.click(getByText('Moves:'));
-        expect(container.querySelectorAll('.moves-list li')).toHaveLength(4); // 3 history items + start page
+        await waitFor(() => {
+            expect(container.querySelectorAll('.moves-list li')).toHaveLength(4); // 3 history items + start page
+        });
     });
 });

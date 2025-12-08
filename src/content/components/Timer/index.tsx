@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, FC } from 'react';
+
+interface TimerInterface {
+    startTime?: number;
+    endTime?: number;
+}
 
 /**
  * Timer component renders the time spent on the game
  */
-const Timer: React.FC<TimerInterface> = ({ startTime, endTime = 0 }) => {
+const Timer: FC<TimerInterface> = ({ startTime = 0, endTime = 0 }) => {
     const [currentTime, setCurrentTime] = useState(Date.now()); // Current time state
 
     useEffect(() => {

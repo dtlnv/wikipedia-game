@@ -3,7 +3,7 @@
  * @param sender
  * @returns { url: string, title: string }
  */
-export async function getRandomPage(sender: chrome.runtime.MessageSender): Promise<object> {
+export async function getRandomPage(sender: chrome.runtime.MessageSender): Promise<{ url: string; title: string } | null> {
     try {
         const randomURL = sender.origin + '/wiki/Special:Random'; // https://en.wikipedia.org/wiki/Special:Random
         const res = await fetch(randomURL);

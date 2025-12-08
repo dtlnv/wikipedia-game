@@ -15,14 +15,14 @@
         {
             "css": ["./styles.css"],
             "js": ["./content.js"],
-            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*"],
+            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*", "https://*.wiktionary.org/*"],
             "run_at": "document_end"
         }
     ],
     "web_accessible_resources": [
         {
             "resources": ["images/*"],
-            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*"]
+            "matches": ["https://*.wikipedia.org/*", "https://*.fandom.com/*", "https://*.wiktionary.org/*"]
         }
     ]
 }
