@@ -1,8 +1,8 @@
 const fs = require('node:fs');
 const archiver = require('archiver');
 
-const folderPath = __dirname + '/build';
-const zipFileName = 'wikipedia-game.zip';
+const folderPath = `${__dirname}/../build`;
+const zipFileName = 'wiki-game.zip';
 
 const output = fs.createWriteStream(zipFileName);
 
@@ -10,7 +10,7 @@ const archive = archiver('zip', {
     zlib: { level: 9 }, // Compression level (0-9)
 });
 
-archive.on('warning', function (err: any) {
+archive.on('warning', (err: any) => {
     if (err.code === 'ENOENT') {
         console.warn(err);
     } else {
@@ -18,7 +18,7 @@ archive.on('warning', function (err: any) {
     }
 });
 
-archive.on('error', function (err: any) {
+archive.on('error', (err: any) => {
     throw err;
 });
 
@@ -28,4 +28,4 @@ archive.directory(folderPath, false);
 
 archive.finalize();
 
-console.log('Zip file created: ' + zipFileName);
+console.log(`Zip file created: ${zipFileName}`);

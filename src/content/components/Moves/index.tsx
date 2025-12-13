@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { type FC, useState, useEffect, useRef } from 'react';
 import { serviceWorkerRequest } from '../../utils';
 
 interface MovesInterface {

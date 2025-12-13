@@ -1,13 +1,13 @@
 {
     "name": "wiki-game",
     "version": "1.0.3",
-    "description": "'Wikipedia Game' is an exciting web-based game where players start from any Wikipedia page and aim to reach a random target article by clicking on hyperlinks within the content.",
+    "description": "'Wiki Game' is an exciting web-based game where players start from any Wiki page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "keywords": [],
     "author": "dtlnv",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dtlnv/wikipedia-game"
+        "url": "https://github.com/dtlnv/wiki-game"
     },
     "scripts": {
         "build": "rm -rf build && webpack --mode production",
@@ -15,7 +15,7 @@
         "test": "react-scripts test --no-cache --watchAll=false --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
         "prettier": "npx prettier --write .",
         "lint": "biome check",
-        "lint:fix": "biome check --apply",
+        "lint:fix": "biome check --write",
         "format": "biome format --write",
         "typescript": "tsc --noEmit"
     },

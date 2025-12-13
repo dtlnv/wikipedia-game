@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Wikipedia Game",
-    "description": "Navigate from any page to a random article by following links in Wikipedia's content. You can do it!",
+    "name": "Wiki Game",
+    "description": "'Wiki Game' is an exciting web-based game where players start from any Wiki page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "version": "1.1.1000",
     "icons": {
         "48": "images/logo-48.png",

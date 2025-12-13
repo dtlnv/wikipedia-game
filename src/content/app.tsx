@@ -115,7 +115,9 @@ const App = () => {
         </div>
     ) : (
         <div className='wiki-quiz-show'>
-            <button onClick={onShowClick}>Show Wiki Game</button>
+            <button type='button' onClick={onShowClick}>
+                Show Wiki Game
+            </button>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
 import { serviceWorkerRequest } from '../../utils';
 
@@ -48,8 +48,8 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
         <>
             <Logo screen='game' />
             <div className='text center'>Find this page by following the links in the content:</div>
-            <div className='text center target-title' title={game.target && game.target.url ? game.target.url : ''}>
-                {loading ? '...' : game.target && game.target.title ? game.target.title : ''}
+            <div className='text center target-title' title={game?.target?.url ? game.target.url : ''}>
+                {loading ? '...' : game?.target?.title ? game.target.title : ''}
             </div>
             <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
             {game.history && game.startPageTitle && (
@@ -57,6 +57,7 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
             )}
             <div className='buttons-block'>
                 <button
+                    type='button'
                     className='hint-button'
                     onClick={hintAction}
                     disabled={loading || !!game.hint}
@@ -65,8 +66,8 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
                     Hint {!loading && game.hint && '👀'}
                 </button>
                 {showHintForHint && <div className='center'>^^ Hover the button ^^</div>}
-                {loading ? <Loader /> : <button onClick={startAction}>Reset game</button>}
-                <button onClick={endAction} disabled={loading}>
+                {loading ? <Loader /> : <button type='button' onClick={startAction}>Reset game</button>}
+                <button type='button' onClick={endAction} disabled={loading}>
                     End game
                 </button>
             </div>

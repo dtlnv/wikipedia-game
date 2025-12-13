@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface LogoInterface {
     screen: 'start' | 'game' | 'finish';
@@ -17,7 +17,6 @@ const Logo: FC<LogoInterface> = ({ screen }) => {
         case 'finish':
             logo = 'logo-finish.png';
             break;
-        case 'start':
         default:
             logo = 'logo.png';
             break;
@@ -25,7 +24,7 @@ const Logo: FC<LogoInterface> = ({ screen }) => {
 
     return (
         <div className='logo'>
-            <img src={chrome.runtime.getURL(`images/${logo}`)} title='Wikipedia Game' />
+            <img src={chrome.runtime.getURL(`images/${logo}`)} title='Wikipedia Game' alt='Wikipedia Game' />
         </div>
     );
 };

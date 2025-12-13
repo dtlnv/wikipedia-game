@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import type React from 'react';
+import type { FC } from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
 
 interface FinishScreenInterface {
@@ -27,8 +28,16 @@ const FinishScreen: FC<FinishScreenInterface> = ({ game, loading, startAction, e
                 <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
             )}
             <div className='buttons-block'>
-                {loading ? <Loader /> : <button onClick={startAction}>Start new game</button>}
-                <button onClick={endAction}>End game</button>
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <button type='button' onClick={startAction}>
+                        Start new game
+                    </button>
+                )}
+                <button type='button' onClick={endAction}>
+                    End game
+                </button>
             </div>
         </>
     );
