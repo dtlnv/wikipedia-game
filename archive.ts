@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('node:fs');
 const archiver = require('archiver');
 
 const folderPath = __dirname + '/build';
@@ -10,7 +10,7 @@ const archive = archiver('zip', {
     zlib: { level: 9 }, // Compression level (0-9)
 });
 
-archive.on('warning', function (err) {
+archive.on('warning', function (err: any) {
     if (err.code === 'ENOENT') {
         console.warn(err);
     } else {
@@ -18,7 +18,7 @@ archive.on('warning', function (err) {
     }
 });
 
-archive.on('error', function (err) {
+archive.on('error', function (err: any) {
     throw err;
 });
 
