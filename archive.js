@@ -1,10 +1,8 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import archiver from 'archiver';
+const fs = require('fs');
+const archiver = require('archiver');
+const { version } = require('./package.json');
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const folderPath = `${__dirname}/../build`;
+const folderPath = `${__dirname}/build`;
 const zipFileName = 'wiki-game.zip';
 
 const output = fs.createWriteStream(zipFileName);
@@ -13,7 +11,7 @@ const archive = archiver('zip', {
     zlib: { level: 9 }, // Compression level (0-9)
 });
 
-archive.on('warning', (err) => {
+archive.on('warning', function (err) {
     if (err.code === 'ENOENT') {
         console.warn(err);
     } else {
@@ -21,7 +19,7 @@ archive.on('warning', (err) => {
     }
 });
 
-archive.on('error', (err) => {
+archive.on('error', function (err) {
     throw err;
 });
 
@@ -31,4 +29,4 @@ archive.directory(folderPath, false);
 
 archive.finalize();
 
-console.log(`Zip file created: ${zipFileName}`);
+console.log(`Zip file created: ${zipFileName}, version: ${version}`);

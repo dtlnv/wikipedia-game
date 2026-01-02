@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "विकी गेम दाखवा"
+    },
+    "hide_wiki_game": {
+        "message": "विकी गेम लपवा"
+    },
+    "start_game": {
+        "message": "खेळ सुरू करा"
+    },
+    "end_game": {
+        "message": "खेळ समाप्त करा"
+    },
+    "start_new_game": {
+        "message": "नवीन खेळ सुरू करा"
+    },
+    "congratulations_you_did_it": {
+        "message": "अभिनंदन! तुम्ही यशस्वी झाला!"
+    },
+    "start_page": {
+        "message": "प्रारंभ पृष्ठ"
+    },
+    "target_page": {
+        "message": "लक्ष्य पृष्ठ"
+    },
+    "time": {
+        "message": "वेळ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "सामग्रीतील दुवे अनुसरून हे पृष्ठ शोधा"
+    },
+    "hint": {
+        "message": "सूचना"
+    },
+    "hover_the_button": {
+        "message": "बटनवर हलवा"
+    },
+    "reset_game": {
+        "message": "खेळ रीसेट करा"
+    },
+    "moves": {
+        "message": "चाल"
+    },
+    "manifest_description": {
+        "message": "'विकी गेम' हा एक अन्वेषण खेळ आहे जिथे तुम्ही विकी पृष्ठांमध्ये नेव्हिगेट करून एक यादृच्छिक लेख गाठता."
+    }
+}

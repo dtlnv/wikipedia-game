@@ -1,6 +1,6 @@
 {
     "name": "wiki-game",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "'Wiki Game' is an exciting web-based game where players start from any Wiki page and aim to reach a random target article by clicking on hyperlinks within the content.",
     "keywords": [],
     "author": "dtlnv",
@@ -11,7 +11,7 @@
     },
     "scripts": {
         "build": "rm -rf build && webpack --mode production",
-        "create-zip": "npm run build && node archive.mjs",
+        "create-zip": "npm run build && node archive.js",
         "test": "react-scripts test --no-cache --watchAll=false --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
         "prettier": "npx prettier --write .",
         "lint": "biome check",

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "വിക്കി ഗെയിം കാണിക്കുക"
+    },
+    "hide_wiki_game": {
+        "message": "വിക്കി ഗെയിം മറയ്ക്കുക"
+    },
+    "start_game": {
+        "message": "ഗെയിം ആരംഭിക്കുക"
+    },
+    "end_game": {
+        "message": "ഗെയിം അവസാനിപ്പിക്കുക"
+    },
+    "start_new_game": {
+        "message": "പുതിയ ഗെയിം ആരംഭിക്കുക"
+    },
+    "congratulations_you_did_it": {
+        "message": "നിങ്ങൾ വിജയിച്ചു!"
+    },
+    "start_page": {
+        "message": "ആരംഭ പേജ്"
+    },
+    "target_page": {
+        "message": "ലക്ഷ്യ പേജ്"
+    },
+    "time": {
+        "message": "സമയം"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ഉള്ളടക്കത്തിലെ ലിങ്കുകൾ പിന്തുടർന്ന് ഈ പേജ് കണ്ടെത്തുക"
+    },
+    "hint": {
+        "message": "സൂചന"
+    },
+    "hover_the_button": {
+        "message": "ബട്ടണിൽ ഹോവർ ചെയ്യുക"
+    },
+    "reset_game": {
+        "message": "ഗെയിം റീസെറ്റ് ചെയ്യുക"
+    },
+    "moves": {
+        "message": "ചലനങ്ങൾ"
+    },
+    "manifest_description": {
+        "message": "'വിക്കി ഗെയിം' എന്നത് നിങ്ങൾ വിക്കി പേജുകൾക്കിടയിൽ സഞ്ചരിച്ച് ഒരു യാദൃശ്ചിക ലേഖനം കണ്ടെത്തേണ്ട ഒരു എക്സ്പ്ലോറേഷൻ ഗെയിമാണ്."
+    }
+}
