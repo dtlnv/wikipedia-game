@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-01-02
+
+### Changed
+
+- Update dependencies.
+- Improve UI/UX.
+- Add localization support.
+
 ## [1.0.3] - 2025-04-18
 
 ### Changed

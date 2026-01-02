@@ -47,11 +47,13 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
     return (
         <>
             <Logo screen='game' />
-            <div className='text center'>{chrome.i18n.getMessage('find_this_page_by_following_links')}:</div>
-            <div className='text center target-title' title={game?.target?.url ? game.target.url : ''}>
+            <div className='text center' data-testid='instruction-text'>
+                {chrome.i18n.getMessage('find_this_page_by_following_links')}:
+            </div>
+            <div className='text center target-title' data-testid='target-title' title={game?.target?.url ? game.target.url : ''}>
                 {loading ? '...' : game?.target?.title ? game.target.title : ''}
             </div>
-            <div className='text'>
+            <div className='text' data-testid='timer-text'>
                 {chrome.i18n.getMessage('time')}: {!loading && <Timer startTime={game.startedAt} />}
             </div>
             {game.history && game.startPageTitle && (
@@ -64,18 +66,23 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
                     onClick={hintAction}
                     disabled={loading || !!game.hint}
                     title={!loading ? (game?.hint ?? undefined) : undefined}
+                    data-testid='hint-button'
                 >
                     {chrome.i18n.getMessage('hint')} {!loading && game.hint && '👀'}
                 </button>
-                {showHintForHint && <div className='center'>^^ {chrome.i18n.getMessage('hover_the_button')} ^^</div>}
+                {showHintForHint && (
+                    <div className='center' data-testid='hint-message'>
+                        ^^ {chrome.i18n.getMessage('hover_the_button')} ^^
+                    </div>
+                )}
                 {loading ? (
                     <Loader />
                 ) : (
-                    <button type='button' onClick={startAction}>
+                    <button type='button' onClick={startAction} data-testid='reset-game-button'>
                         {chrome.i18n.getMessage('reset_game')}
                     </button>
                 )}
-                <button type='button' onClick={endAction} disabled={loading}>
+                <button type='button' onClick={endAction} disabled={loading} data-testid='end-game-button'>
                     {chrome.i18n.getMessage('end_game')}
                 </button>
             </div>

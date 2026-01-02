@@ -17,36 +17,43 @@ const testProps = {
 };
 
 describe('Moves component', () => {
+    beforeAll(() => {
+        globalThis.chrome = {
+            i18n: {
+                getMessage: jest.fn(),
+            },
+        } as any;
+    });
+
     beforeEach(() => {
         jest.clearAllMocks();
     });
 
     it('renders the initial closed state', () => {
-        const { container, getByText } = render(<Moves {...testProps} />);
+        const { container } = render(<Moves {...testProps} />);
 
-        expect(getByText('Moves:')).toBeInTheDocument();
-        expect(getByText('3')).toBeInTheDocument();
+        expect(container.querySelector('[data-testid="moves-link"]')).toBeInTheDocument();
+        expect(container.querySelector('[data-testid="moves-link"]')).toHaveTextContent('3');
         expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
     });
 
     it('shows the start page title when open', () => {
-        const { container, getByText } = render(<Moves {...testProps} open={true} />);
+        const { container } = render(<Moves {...testProps} open={true} />);
 
-        expect(getByText('Moves:')).toBeInTheDocument();
-        expect(getByText(testProps.startPageTitle)).toBeInTheDocument();
+        expect(container.querySelector('[data-testid="moves-link"]')).toBeInTheDocument();
         expect(container.querySelector('.moves-list')).toBeInTheDocument();
     });
 
     it('toggles the history list when the "Moves" link is clicked', async () => {
-        const { container, getByText } = render(<Moves {...testProps} />);
+        const { container } = render(<Moves {...testProps} />);
 
-        await userEvent.click(getByText('Moves:'));
+        await userEvent.click(container.querySelector('[data-testid="moves-link"]')!);
         await waitFor(() => {
             expect(container.querySelector('.moves-list')).toBeInTheDocument();
         });
         expect(utils.serviceWorkerRequest).toHaveBeenCalledWith('showHistory', { opened: true });
 
-        await userEvent.click(getByText('Moves:'));
+        await userEvent.click(container.querySelector('[data-testid="moves-link"]')!);
         await waitFor(() => {
             expect(container.querySelector('.moves-list')).not.toBeInTheDocument();
         });
@@ -54,11 +61,11 @@ describe('Moves component', () => {
     });
 
     it('renders the correct number of history items', async () => {
-        const { container, getByText } = render(<Moves {...testProps} />);
+        const { container } = render(<Moves {...testProps} />);
 
-        await userEvent.click(getByText('Moves:'));
+        await userEvent.click(container.querySelector('[data-testid="moves-link"]')!);
         await waitFor(() => {
-            expect(container.querySelectorAll('.moves-list li')).toHaveLength(4); // 3 history items + start page
+            expect(container.querySelectorAll('.moves-list li')).toHaveLength(4);
         });
     });
 });

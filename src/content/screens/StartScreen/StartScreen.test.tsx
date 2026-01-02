@@ -15,19 +15,22 @@ describe('StartScreen component', () => {
             runtime: {
                 getURL: (name: string) => name,
             },
+            i18n: {
+                getMessage: jest.fn(),
+            },
         } as any;
     });
 
     it('renders the start screen with a "Start game" button', () => {
-        const { getByText } = render(<StartScreen {...testProps} />);
+        const { getByTestId } = render(<StartScreen {...testProps} />);
 
-        expect(getByText('Start game')).toBeInTheDocument();
+        expect(getByTestId('start-game-button')).toBeInTheDocument();
     });
 
     it('calls the startAction function when the "Start game" button is clicked', async () => {
-        const { getByText } = render(<StartScreen {...testProps} />);
+        const { getByTestId } = render(<StartScreen {...testProps} />);
 
-        await userEvent.click(getByText('Start game'));
+        await userEvent.click(getByTestId('start-game-button'));
         expect(testProps.startAction).toHaveBeenCalled();
     });
 });

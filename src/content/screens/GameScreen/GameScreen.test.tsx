@@ -24,50 +24,53 @@ describe('GameScreen component', () => {
             runtime: {
                 getURL: (name: string) => name,
             },
+            i18n: {
+                getMessage: jest.fn(),
+            },
         } as any;
     });
 
     it('renders the in-progress game screen with game status and buttons', () => {
-        const { getByText, getByRole } = render(<GameScreen {...testProps} />);
+        const { getByTestId } = render(<GameScreen {...testProps} />);
 
-        expect(getByText('Find this page by following the links in the content:')).toBeInTheDocument();
-        expect(getByText('Target Page')).toBeInTheDocument();
-        expect(getByText('Time:')).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Hint' })).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Reset game' })).toBeInTheDocument();
-        expect(getByRole('button', { name: 'End game' })).toBeInTheDocument();
+        expect(getByTestId('instruction-text')).toBeInTheDocument();
+        expect(getByTestId('target-title')).toBeInTheDocument();
+        expect(getByTestId('timer-text')).toBeInTheDocument();
+        expect(getByTestId('hint-button')).toBeInTheDocument();
+        expect(getByTestId('reset-game-button')).toBeInTheDocument();
+        expect(getByTestId('end-game-button')).toBeInTheDocument();
     });
 
     it('renders the "👀" icon next to the "Hint" button when a hint is available', () => {
         testProps.game.hint = 'Category 1';
-        const { getByText } = render(<GameScreen {...testProps} />);
+        const { getByTestId } = render(<GameScreen {...testProps} />);
 
-        expect(getByText('Hint 👀')).toBeInTheDocument();
+        expect(getByTestId('hint-button')).toHaveTextContent('👀');
     });
 
     it('renders a loader when loading is true', () => {
-        const { container } = render(<GameScreen {...testProps} loading={true} />);
+        const { queryByRole } = render(<GameScreen {...testProps} loading={true} />);
 
-        expect(container.querySelector('.loader')).toBeInTheDocument();
+        expect(queryByRole('progressbar')).toBeInTheDocument();
     });
 
     it('calls startAction when the "Reset game" button is clicked', async () => {
-        const { getByRole } = render(<GameScreen {...testProps} />);
+        const { getByTestId } = render(<GameScreen {...testProps} />);
 
-        await userEvent.click(getByRole('button', { name: 'Reset game' }));
+        await userEvent.click(getByTestId('reset-game-button'));
         expect(testProps.startAction).toHaveBeenCalled();
     });
 
     it('calls endAction when the "End game" button is clicked', async () => {
-        const { getByRole } = render(<GameScreen {...testProps} />);
+        const { getByTestId } = render(<GameScreen {...testProps} />);
 
-        await userEvent.click(getByRole('button', { name: 'End game' }));
+        await userEvent.click(getByTestId('end-game-button'));
         expect(testProps.endAction).toHaveBeenCalled();
     });
 
     it('disables the "Hint" button when loading is true', () => {
-        const { getByRole } = render(<GameScreen {...testProps} loading={true} />);
+        const { getByTestId } = render(<GameScreen {...testProps} loading={true} />);
 
-        expect(getByRole('button', { name: 'Hint' })).toBeDisabled();
+        expect(getByTestId('hint-button')).toBeDisabled();
     });
 });
