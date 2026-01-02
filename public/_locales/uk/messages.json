@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Показати Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Сховати Wiki Game"
+    },
+    "start_game": {
+        "message": "Почати гру"
+    },
+    "end_game": {
+        "message": "Завершити гру"
+    },
+    "start_new_game": {
+        "message": "Почати нову гру"
+    },
+    "congratulations_you_did_it": {
+        "message": "Ви це зробили!"
+    },
+    "start_page": {
+        "message": "Стартова сторінка"
+    },
+    "target_page": {
+        "message": "Цільова сторінка"
+    },
+    "time": {
+        "message": "Час"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Знайдіть цю сторінку, переходячи за посиланнями в контенті"
+    },
+    "hint": {
+        "message": "Підказка"
+    },
+    "hover_the_button": {
+        "message": "Наведіть курсор на кнопку"
+    },
+    "reset_game": {
+        "message": "Скинути гру"
+    },
+    "moves": {
+        "message": "Ходи"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' — це гра-дослідження, в якій ви переходите між вікі-сторінками, щоб досягти випадкової статті."
+    }
+}

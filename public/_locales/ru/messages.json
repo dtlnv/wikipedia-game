@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Показать Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Скрыть Wiki Game"
+    },
+    "start_game": {
+        "message": "Начать игру"
+    },
+    "end_game": {
+        "message": "Завершить игру"
+    },
+    "start_new_game": {
+        "message": "Начать новую игру"
+    },
+    "congratulations_you_did_it": {
+        "message": "Вы сделали это!"
+    },
+    "start_page": {
+        "message": "Начальная страница"
+    },
+    "target_page": {
+        "message": "Целевая страница"
+    },
+    "time": {
+        "message": "Время"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Найдите эту страницу, переходя по ссылкам в контенте"
+    },
+    "hint": {
+        "message": "Подсказка"
+    },
+    "hover_the_button": {
+        "message": "Наведите на кнопку"
+    },
+    "reset_game": {
+        "message": "Сбросить игру"
+    },
+    "moves": {
+        "message": "Ходы"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' — это игра-исследование, где вы переходите между страницами вики, чтобы достичь случайной статьи."
+    }
+}

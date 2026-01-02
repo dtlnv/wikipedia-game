@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "הצג Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "הסתר Wiki Game"
+    },
+    "start_game": {
+        "message": "התחל משחק"
+    },
+    "end_game": {
+        "message": "סיים משחק"
+    },
+    "start_new_game": {
+        "message": "התחל משחק חדש"
+    },
+    "congratulations_you_did_it": {
+        "message": "עשית זאת!"
+    },
+    "start_page": {
+        "message": "עמוד התחלה"
+    },
+    "target_page": {
+        "message": "עמוד יעד"
+    },
+    "time": {
+        "message": "זמן"
+    },
+    "find_this_page_by_following_links": {
+        "message": "מצא את העמוד הזה בעקבות הקישורים בתוכן"
+    },
+    "hint": {
+        "message": "רמז"
+    },
+    "hover_the_button": {
+        "message": "העבר את העכבר על הכפתור"
+    },
+    "reset_game": {
+        "message": "אפס משחק"
+    },
+    "moves": {
+        "message": "מהלכים"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' היא משחק חקר שבו אתה נווט בין עמודי ויקי כדי להגיע לכתבה אקראית."
+    }
+}

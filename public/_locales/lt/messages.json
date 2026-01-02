@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Rodyti Wiki žaidimą"
+    },
+    "hide_wiki_game": {
+        "message": "Slėpti Wiki žaidimą"
+    },
+    "start_game": {
+        "message": "Pradėti žaidimą"
+    },
+    "end_game": {
+        "message": "Baigti žaidimą"
+    },
+    "start_new_game": {
+        "message": "Pradėti naują žaidimą"
+    },
+    "congratulations_you_did_it": {
+        "message": "Pavyko!"
+    },
+    "start_page": {
+        "message": "Pradžios puslapis"
+    },
+    "target_page": {
+        "message": "Tikslo puslapis"
+    },
+    "time": {
+        "message": "Laikas"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Raskite šį puslapį sekdami nuorodas turinyje"
+    },
+    "hint": {
+        "message": "Užuomina"
+    },
+    "hover_the_button": {
+        "message": "Užveskite pelę ant mygtuko"
+    },
+    "reset_game": {
+        "message": "Iš naujo nustatyti žaidimą"
+    },
+    "moves": {
+        "message": "Žingsniai"
+    },
+    "manifest_description": {
+        "message": "'Wiki žaidimas' yra žvalgybos žaidimas, kuriame naršote wiki puslapius, siekdami pasiekti atsitiktinį straipsnį."
+    }
+}

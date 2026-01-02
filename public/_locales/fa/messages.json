@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "نمایش بازی ویکی"
+    },
+    "hide_wiki_game": {
+        "message": "پنهان کردن بازی ویکی"
+    },
+    "start_game": {
+        "message": "شروع بازی"
+    },
+    "end_game": {
+        "message": "پایان بازی"
+    },
+    "start_new_game": {
+        "message": "شروع بازی جدید"
+    },
+    "congratulations_you_did_it": {
+        "message": "موفق شدی!"
+    },
+    "start_page": {
+        "message": "صفحه شروع"
+    },
+    "target_page": {
+        "message": "صفحه هدف"
+    },
+    "time": {
+        "message": "زمان"
+    },
+    "find_this_page_by_following_links": {
+        "message": "این صفحه را با دنبال کردن پیوندها در محتوا پیدا کنید"
+    },
+    "hint": {
+        "message": "راهنمایی"
+    },
+    "hover_the_button": {
+        "message": "ماوس را روی دکمه ببرید"
+    },
+    "reset_game": {
+        "message": "بازنشانی بازی"
+    },
+    "moves": {
+        "message": "حرکات"
+    },
+    "manifest_description": {
+        "message": "«بازی ویکی» یک بازی کاوشی است که در آن شما بین صفحات ویکی حرکت می‌کنید تا به یک مقاله تصادفی برسید."
+    }
+}

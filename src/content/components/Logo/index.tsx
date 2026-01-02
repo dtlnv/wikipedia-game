@@ -24,7 +24,7 @@ const Logo: FC<LogoInterface> = ({ screen }) => {
 
     return (
         <div className='logo'>
-            <img src={chrome.runtime.getURL(`images/${logo}`)} title='Wikipedia Game' alt='Wikipedia Game' />
+            <img src={chrome.runtime.getURL(`images/${logo}`)} title='Wiki Game' alt='Wiki Game' />
         </div>
     );
 };

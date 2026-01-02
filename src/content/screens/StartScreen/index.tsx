@@ -13,7 +13,7 @@ const StartScreen: FC<StartScreenInterface> = ({ startAction, loading }) => {
     return (
         <>
             <Logo screen='start' />
-            {loading ? <Loader /> : <button onClick={startAction}>Start game</button>}
+            {loading ? <Loader /> : <button onClick={startAction}>{chrome.i18n.getMessage('start_game')}</button>}
         </>
     );
 };

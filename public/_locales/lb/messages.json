@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Spill weisen"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Spill verstoppen"
+    },
+    "start_game": {
+        "message": "Spill starten"
+    },
+    "end_game": {
+        "message": "Spill beenden"
+    },
+    "start_new_game": {
+        "message": "Neit Spill starten"
+    },
+    "congratulations_you_did_it": {
+        "message": "Du hues et gemaacht!"
+    },
+    "start_page": {
+        "message": "Startsiicht"
+    },
+    "target_page": {
+        "message": "Zielsiicht"
+    },
+    "time": {
+        "message": "Zäit"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Fann dës Siicht andeems du de Linken am Inhalt folgst"
+    },
+    "hint": {
+        "message": "Hëllef"
+    },
+    "hover_the_button": {
+        "message": "Féier d'Maus iwwert de Knäppchen"
+    },
+    "reset_game": {
+        "message": "Spill zrécksetzen"
+    },
+    "moves": {
+        "message": "Züg"
+    },
+    "manifest_description": {
+        "message": "'Wiki Spill' ass e Exploratiounsspill wou du zwësche Wiki-Säiten navigéiers fir en zoufälleg Artikel z'erreechen."
+    }
+}

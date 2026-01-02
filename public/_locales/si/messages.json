@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki ක්‍රීඩාව පෙන්වන්න"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki ක්‍රීඩාව සඟවන්න"
+    },
+    "start_game": {
+        "message": "ක්‍රීඩාව ආරම්භ කරන්න"
+    },
+    "end_game": {
+        "message": "ක්‍රීඩාව අවසන් කරන්න"
+    },
+    "start_new_game": {
+        "message": "නව ක්‍රීඩාව ආරම්භ කරන්න"
+    },
+    "congratulations_you_did_it": {
+        "message": "ඔබ එය කළා!"
+    },
+    "start_page": {
+        "message": "ආරම්භක පිටුව"
+    },
+    "target_page": {
+        "message": "ඉලක්ක පිටුව"
+    },
+    "time": {
+        "message": "කාලය"
+    },
+    "find_this_page_by_following_links": {
+        "message": "අන්තර්ගතයේ සබැඳි අනුගමනය කරමින් මෙම පිටුව සොයා ගන්න"
+    },
+    "hint": {
+        "message": "ඉඟිය"
+    },
+    "hover_the_button": {
+        "message": "බොත්තම මතට එකතු කරන්න"
+    },
+    "reset_game": {
+        "message": "ක්‍රීඩාව යළි සකසන්න"
+    },
+    "moves": {
+        "message": "චලනයන්"
+    },
+    "manifest_description": {
+        "message": "'Wiki ක්‍රීඩාව' යනු ඔබ අහඹු ලेඛනයකට ළඟා වීම සඳහා විකි පිටු අතර සංචාලනය කරන ගවේෂණ ක්‍රීඩාවකි."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Rādīt Wiki spēli"
+    },
+    "hide_wiki_game": {
+        "message": "Paslēpt Wiki spēli"
+    },
+    "start_game": {
+        "message": "Sākt spēli"
+    },
+    "end_game": {
+        "message": "Beigt spēli"
+    },
+    "start_new_game": {
+        "message": "Sākt jaunu spēli"
+    },
+    "congratulations_you_did_it": {
+        "message": "Tu to izdarīji!"
+    },
+    "start_page": {
+        "message": "Sākuma lapa"
+    },
+    "target_page": {
+        "message": "Mērķa lapa"
+    },
+    "time": {
+        "message": "Laiks"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Atrodiet šo lapu, sekojot saitēm saturā"
+    },
+    "hint": {
+        "message": "Padoms"
+    },
+    "hover_the_button": {
+        "message": "Novietojiet kursoru virs pogas"
+    },
+    "reset_game": {
+        "message": "Atiestatīt spēli"
+    },
+    "moves": {
+        "message": "Gājieni"
+    },
+    "manifest_description": {
+        "message": "'Wiki spēle' ir izpētes spēle, kurā jūs navigējat starp wiki lapām, lai sasniegtu nejaušu rakstu."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Oyununu Göster"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Oyununu Gizle"
+    },
+    "start_game": {
+        "message": "Oyunu Başlat"
+    },
+    "end_game": {
+        "message": "Oyunu Bitir"
+    },
+    "start_new_game": {
+        "message": "Yeni Oyun Başlat"
+    },
+    "congratulations_you_did_it": {
+        "message": "Başardın!"
+    },
+    "start_page": {
+        "message": "Başlangıç Sayfası"
+    },
+    "target_page": {
+        "message": "Hedef Sayfa"
+    },
+    "time": {
+        "message": "Zaman"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Bu sayfayı içerikteki bağlantıları takip ederek bulun"
+    },
+    "hint": {
+        "message": "İpucu"
+    },
+    "hover_the_button": {
+        "message": "Düğmenin üzerine gelin"
+    },
+    "reset_game": {
+        "message": "Oyunu Sıfırla"
+    },
+    "moves": {
+        "message": "Hamle"
+    },
+    "manifest_description": {
+        "message": "'Wiki Oyunu', rastgele bir makaleye ulaşmak için wiki sayfaları arasında gezinen bir keşif oyunudur."
+    }
+}

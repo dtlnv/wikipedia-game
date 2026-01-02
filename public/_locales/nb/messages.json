@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Vis Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Skjul Wiki Game"
+    },
+    "start_game": {
+        "message": "Start spill"
+    },
+    "end_game": {
+        "message": "Avslutt spill"
+    },
+    "start_new_game": {
+        "message": "Start nytt spill"
+    },
+    "congratulations_you_did_it": {
+        "message": "Du klarte det!"
+    },
+    "start_page": {
+        "message": "Startside"
+    },
+    "target_page": {
+        "message": "Målside"
+    },
+    "time": {
+        "message": "Tid"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Finn denne siden ved å følge lenker i innholdet"
+    },
+    "hint": {
+        "message": "Hint"
+    },
+    "hover_the_button": {
+        "message": "Beveg musepekeren over knappen"
+    },
+    "reset_game": {
+        "message": "Tilbakestill spill"
+    },
+    "moves": {
+        "message": "Trekk"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' er et utforskelsesspill hvor du navigerer mellom wiki-sider for å nå en tilfeldig artikkel."
+    }
+}

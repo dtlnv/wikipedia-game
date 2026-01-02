@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Kuva Wiki mäng"
+    },
+    "hide_wiki_game": {
+        "message": "Peida Wiki mäng"
+    },
+    "start_game": {
+        "message": "Alusta mängu"
+    },
+    "end_game": {
+        "message": "Lõpeta mäng"
+    },
+    "start_new_game": {
+        "message": "Alusta uut mängu"
+    },
+    "congratulations_you_did_it": {
+        "message": "Saad hakkama!"
+    },
+    "start_page": {
+        "message": "Algusleht"
+    },
+    "target_page": {
+        "message": "Sihtleht"
+    },
+    "time": {
+        "message": "Aeg"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Leia see leht sisu linkidele järgides"
+    },
+    "hint": {
+        "message": "Vihje"
+    },
+    "hover_the_button": {
+        "message": "Hiirega nupu kohal"
+    },
+    "reset_game": {
+        "message": "Lähesta mäng"
+    },
+    "moves": {
+        "message": "Käigud"
+    },
+    "manifest_description": {
+        "message": "'Wiki mäng' on uurimismäng, kus navigeerite wiki lehtede vahel, et jõuda juhuslikule artiklile."
+    }
+}

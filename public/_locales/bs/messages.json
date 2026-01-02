@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Prikaži Wiki igru"
+    },
+    "hide_wiki_game": {
+        "message": "Sakrij Wiki igru"
+    },
+    "start_game": {
+        "message": "Počni igru"
+    },
+    "end_game": {
+        "message": "Završi igru"
+    },
+    "start_new_game": {
+        "message": "Počni novu igru"
+    },
+    "congratulations_you_did_it": {
+        "message": "Čestitam, uspio si!"
+    },
+    "start_page": {
+        "message": "Početna stranica"
+    },
+    "target_page": {
+        "message": "Ciljna stranica"
+    },
+    "time": {
+        "message": "Vrijeme"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Pronađi ovu stranicu prateći linkove u sadržaju"
+    },
+    "hint": {
+        "message": "Savjet"
+    },
+    "hover_the_button": {
+        "message": "Prosljeđi pokazivač preko dugmeta"
+    },
+    "reset_game": {
+        "message": "Resetuj igru"
+    },
+    "moves": {
+        "message": "Potezi"
+    },
+    "manifest_description": {
+        "message": "'Wiki igra' je igra istraživanja gdje se krećeš između wiki stranica kako bi dostigao slučajni članak."
+    }
+}

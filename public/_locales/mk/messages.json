@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Прикажи Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Скрий Wiki Game"
+    },
+    "start_game": {
+        "message": "Почни игра"
+    },
+    "end_game": {
+        "message": "Завршi игра"
+    },
+    "start_new_game": {
+        "message": "Почни нова игра"
+    },
+    "congratulations_you_did_it": {
+        "message": "Успеа!"
+    },
+    "start_page": {
+        "message": "Почетна страна"
+    },
+    "target_page": {
+        "message": "Целна страна"
+    },
+    "time": {
+        "message": "Време"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Пронајди ја оваа страна со следење на врски во содржината"
+    },
+    "hint": {
+        "message": "Совет"
+    },
+    "hover_the_button": {
+        "message": "Задржи го показивачот над копчето"
+    },
+    "reset_game": {
+        "message": "Ресетирај игра"
+    },
+    "moves": {
+        "message": "Потези"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' е истражувачка игра каде што се движиш помеѓу wiki страни за да достигнеш случајна статија."
+    }
+}

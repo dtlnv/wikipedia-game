@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Jokoa Erakutsi"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Jokoa Ezkutatu"
+    },
+    "start_game": {
+        "message": "Jokoa hasi"
+    },
+    "end_game": {
+        "message": "Jokoa amaitu"
+    },
+    "start_new_game": {
+        "message": "Joko berria hasi"
+    },
+    "congratulations_you_did_it": {
+        "message": "Lortu duzu!"
+    },
+    "start_page": {
+        "message": "Hasierako orria"
+    },
+    "target_page": {
+        "message": "Helburu orria"
+    },
+    "time": {
+        "message": "Denbora"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Bilatu orri hau edukiaren loturak jarraitsiz"
+    },
+    "hint": {
+        "message": "Laguntza"
+    },
+    "hover_the_button": {
+        "message": "Botoia gainean jarri"
+    },
+    "reset_game": {
+        "message": "Jokoa berrezarri"
+    },
+    "moves": {
+        "message": "Mugimenduak"
+    },
+    "manifest_description": {
+        "message": "'Wiki Jokoa' wiki orrien artean nabigatzen diren eta ausazko artikulu batera iristeko jokoa da."
+    }
+}

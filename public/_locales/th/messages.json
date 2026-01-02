@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "แสดง Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "ซ่อน Wiki Game"
+    },
+    "start_game": {
+        "message": "เริ่มเกม"
+    },
+    "end_game": {
+        "message": "จบเกม"
+    },
+    "start_new_game": {
+        "message": "เริ่มเกมใหม่"
+    },
+    "congratulations_you_did_it": {
+        "message": "ยินดีด้วย!"
+    },
+    "start_page": {
+        "message": "หน้าเริ่มต้น"
+    },
+    "target_page": {
+        "message": "หน้าเป้าหมาย"
+    },
+    "time": {
+        "message": "เวลา"
+    },
+    "find_this_page_by_following_links": {
+        "message": "หาหน้านี้โดยติดตามลิงก์ในเนื้อหา"
+    },
+    "hint": {
+        "message": "คำใบ้"
+    },
+    "hover_the_button": {
+        "message": "วางเมาส์บนปุ่ม"
+    },
+    "reset_game": {
+        "message": "รีเซ็ตเกม"
+    },
+    "moves": {
+        "message": "การเคลื่อนไหว"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' เป็นเกมสำรวจที่คุณนำทางระหว่างหน้า wiki เพื่อไปยังบทความแบบสุ่ม"
+    }
+}

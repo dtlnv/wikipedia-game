@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ਵਿਕੀ ਗੇਮ ਦਿਖਾਓ"
+    },
+    "hide_wiki_game": {
+        "message": "ਵਿਕੀ ਗੇਮ ਲੁਕਾਓ"
+    },
+    "start_game": {
+        "message": "ਗੇਮ ਸ਼ੁਰੂ ਕਰੋ"
+    },
+    "end_game": {
+        "message": "ਗੇਮ ਖਤਮ ਕਰੋ"
+    },
+    "start_new_game": {
+        "message": "ਨਵੀ ਗੇਮ ਸ਼ੁਰੂ ਕਰੋ"
+    },
+    "congratulations_you_did_it": {
+        "message": "ਤੁਸੀਂ ਇਹ ਕਰ ਗਏ!"
+    },
+    "start_page": {
+        "message": "ਸ਼ੁਰੂਆਤੀ ਪੰਨਾ"
+    },
+    "target_page": {
+        "message": "ਟੀ targetਰਗੇਟ ਪੰਨਾ"
+    },
+    "time": {
+        "message": "ਸਮਾਂ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ਸਮੱਗਰੀ ਵਿੱਚ ਲਿੰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰਕੇ ਇਹ ਪੰਨਾ ਲੱਭੋ"
+    },
+    "hint": {
+        "message": "ਸੰਕੇਤ"
+    },
+    "hover_the_button": {
+        "message": "ਬਟਨ ਦੇ ਉਪਰ ਹੋਵਰ ਕਰੋ"
+    },
+    "reset_game": {
+        "message": "ਗੇਮ ਮੁੜੇ ਸ਼ੁਰੂ ਕਰੋ"
+    },
+    "moves": {
+        "message": "ਚਾਲਾਂ"
+    },
+    "manifest_description": {
+        "message": "'ਵਿਕੀ ਗੇਮ' ਇੱਕ ਖੋਜ ਖੇਡ ਹੈ ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਬੇਤਰਤੀਬ ਲੇਖ ਤੱਕ ਪਹੁੰਚਣ ਲਈ ਵਿਕੀ ਪੰਨਿਆਂ ਵਿਚਕਾਰ ਨੇਵੀਗੇਟ ਕਰਦੇ ਹੋ।"
+    }
+}

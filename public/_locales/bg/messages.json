@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Покази Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Скрий Wiki Game"
+    },
+    "start_game": {
+        "message": "Начни игра"
+    },
+    "end_game": {
+        "message": "Край на игра"
+    },
+    "start_new_game": {
+        "message": "Начни нова игра"
+    },
+    "congratulations_you_did_it": {
+        "message": "Успя ти!"
+    },
+    "start_page": {
+        "message": "Начална страница"
+    },
+    "target_page": {
+        "message": "Целева страница"
+    },
+    "time": {
+        "message": "Време"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Намери тази страница, следвайки линковете в съдържанието"
+    },
+    "hint": {
+        "message": "Подсказка"
+    },
+    "hover_the_button": {
+        "message": "Наведи върху бутона"
+    },
+    "reset_game": {
+        "message": "Нулиране на игра"
+    },
+    "moves": {
+        "message": "Ходове"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' е игра за разследване, где навигираш между wiki страници, за да достигнеш случайна статия."
+    }
+}

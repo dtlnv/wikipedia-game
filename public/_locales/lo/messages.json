@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ສະແດງ Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "ເຊື່ອງ Wiki Game"
+    },
+    "start_game": {
+        "message": "ເລີ່ມເກມ"
+    },
+    "end_game": {
+        "message": "ສິ້ນສຸດເກມ"
+    },
+    "start_new_game": {
+        "message": "ເລີ່ມເກມໃໝ່"
+    },
+    "congratulations_you_did_it": {
+        "message": "ທ່ານໄດ້ສຳເລັດແລ້ວ!"
+    },
+    "start_page": {
+        "message": "ໜ້າເລີ່ມຕົ້ນ"
+    },
+    "target_page": {
+        "message": "ໜ້າເປົ້າໝາຍ"
+    },
+    "time": {
+        "message": "ເວລາ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ຊອກຫາໜ້ານີ້ໂດຍປະຕິບັດຕາມລິງໃນເນື້ອຫາ"
+    },
+    "hint": {
+        "message": "ຄຳແນະນຳ"
+    },
+    "hover_the_button": {
+        "message": "ວາງໂຕກະບອກເມົາສ໌ຢູ່ເທິງປຸ່ມ"
+    },
+    "reset_game": {
+        "message": "ຣີເຊັດເກມ"
+    },
+    "moves": {
+        "message": "ການເຄື່ອນໄຫວ"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' ແມ່ນເກມສຳຫຼວດທີ່ທ່ານນຳທາງລະຫວ່າງໜ້າ wiki ເພື່ອບັນລຸບົດຄວາມແບບສຸ່ມ."
+    }
+}

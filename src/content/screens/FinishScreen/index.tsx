@@ -16,14 +16,16 @@ const FinishScreen: FC<FinishScreenInterface> = ({ game, loading, startAction, e
     return (
         <>
             <Logo screen='finish' />
-            <h2>You did it!</h2>
+            <h2>{chrome.i18n.getMessage('congratulations_you_did_it')}</h2>
             <div className='text'>
-                Start page: <strong>{game.startPageTitle}</strong>
+                {chrome.i18n.getMessage('start_page')}: <strong>{game.startPageTitle}</strong>
             </div>
             <div className='text'>
-                Target page: <strong>{game?.target?.title}</strong>
+                {chrome.i18n.getMessage('target_page')}: <strong>{game?.target?.title}</strong>
             </div>
-            <div className='text'>Time: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}</div>
+            <div className='text'>
+                {chrome.i18n.getMessage('time')}: {<Timer startTime={game.startedAt} endTime={game.endedAt} />}
+            </div>
             {game.history && game.startPageTitle && (
                 <Moves history={game.history} startPageTitle={game.startPageTitle} open={true} />
             )}
@@ -32,11 +34,11 @@ const FinishScreen: FC<FinishScreenInterface> = ({ game, loading, startAction, e
                     <Loader />
                 ) : (
                     <button type='button' onClick={startAction}>
-                        Start new game
+                        {chrome.i18n.getMessage('start_new_game')}
                     </button>
                 )}
                 <button type='button' onClick={endAction}>
-                    End game
+                    {chrome.i18n.getMessage('end_game')}
                 </button>
             </div>
         </>

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ウィキゲームを表示"
+    },
+    "hide_wiki_game": {
+        "message": "ウィキゲームを非表示"
+    },
+    "start_game": {
+        "message": "ゲームを開始"
+    },
+    "end_game": {
+        "message": "ゲームを終了"
+    },
+    "start_new_game": {
+        "message": "新しいゲームを開始"
+    },
+    "congratulations_you_did_it": {
+        "message": "やりましたね！"
+    },
+    "start_page": {
+        "message": "スタートページ"
+    },
+    "target_page": {
+        "message": "ターゲットページ"
+    },
+    "time": {
+        "message": "時間"
+    },
+    "find_this_page_by_following_links": {
+        "message": "コンテンツ内のリンクをたどってこのページを見つけてください"
+    },
+    "hint": {
+        "message": "ヒント"
+    },
+    "hover_the_button": {
+        "message": "ボタンをホバー"
+    },
+    "reset_game": {
+        "message": "ゲームをリセット"
+    },
+    "moves": {
+        "message": "移動"
+    },
+    "manifest_description": {
+        "message": "「ウィキゲーム」はウィキページ間を移動してランダムな記事に到達するエクスプロレーションゲームです。"
+    }
+}

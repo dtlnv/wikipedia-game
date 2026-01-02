@@ -47,11 +47,13 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
     return (
         <>
             <Logo screen='game' />
-            <div className='text center'>Find this page by following the links in the content:</div>
+            <div className='text center'>{chrome.i18n.getMessage('find_this_page_by_following_links')}:</div>
             <div className='text center target-title' title={game?.target?.url ? game.target.url : ''}>
                 {loading ? '...' : game?.target?.title ? game.target.title : ''}
             </div>
-            <div className='text'>Time: {!loading && <Timer startTime={game.startedAt} />}</div>
+            <div className='text'>
+                {chrome.i18n.getMessage('time')}: {!loading && <Timer startTime={game.startedAt} />}
+            </div>
             {game.history && game.startPageTitle && (
                 <Moves history={game.history} startPageTitle={game.startPageTitle} open={game.showHistory} />
             )}
@@ -63,18 +65,18 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
                     disabled={loading || !!game.hint}
                     title={!loading ? (game?.hint ?? undefined) : undefined}
                 >
-                    Hint {!loading && game.hint && '👀'}
+                    {chrome.i18n.getMessage('hint')} {!loading && game.hint && '👀'}
                 </button>
-                {showHintForHint && <div className='center'>^^ Hover the button ^^</div>}
+                {showHintForHint && <div className='center'>^^ {chrome.i18n.getMessage('hover_the_button')} ^^</div>}
                 {loading ? (
                     <Loader />
                 ) : (
                     <button type='button' onClick={startAction}>
-                        Reset game
+                        {chrome.i18n.getMessage('reset_game')}
                     </button>
                 )}
                 <button type='button' onClick={endAction} disabled={loading}>
-                    End game
+                    {chrome.i18n.getMessage('end_game')}
                 </button>
             </div>
         </>

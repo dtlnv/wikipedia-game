@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Game weergeven"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Game verbergen"
+    },
+    "start_game": {
+        "message": "Spel starten"
+    },
+    "end_game": {
+        "message": "Spel beëindigen"
+    },
+    "start_new_game": {
+        "message": "Nieuw spel starten"
+    },
+    "congratulations_you_did_it": {
+        "message": "Je hebt het gedaan!"
+    },
+    "start_page": {
+        "message": "Startpagina"
+    },
+    "target_page": {
+        "message": "Doelpagina"
+    },
+    "time": {
+        "message": "Tijd"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Vind deze pagina door de koppelingen in de inhoud te volgen"
+    },
+    "hint": {
+        "message": "Hint"
+    },
+    "hover_the_button": {
+        "message": "Beweeg over de knop"
+    },
+    "reset_game": {
+        "message": "Spel resetten"
+    },
+    "moves": {
+        "message": "Zetten"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' is een verkenningsspel waarbij je tussen wikipagina's navigeert om een willekeurig artikel te bereiken."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ويکي لوبه ښکاره کړه"
+    },
+    "hide_wiki_game": {
+        "message": "ويکي لوبه پنهان کړه"
+    },
+    "start_game": {
+        "message": "لوبه پيل کړه"
+    },
+    "end_game": {
+        "message": "لوبه پای ته رسوله"
+    },
+    "start_new_game": {
+        "message": "نوې لوبه پيل کړه"
+    },
+    "congratulations_you_did_it": {
+        "message": "تم شوې!"
+    },
+    "start_page": {
+        "message": "پيل صفحه"
+    },
+    "target_page": {
+        "message": "هدف صفحه"
+    },
+    "time": {
+        "message": "وخت"
+    },
+    "find_this_page_by_following_links": {
+        "message": "د محتوا کې لينکونه تعقيب کړي او دې صفحه ومومه"
+    },
+    "hint": {
+        "message": "لارښود"
+    },
+    "hover_the_button": {
+        "message": "د بټن پر مخ کرسور بګذاره"
+    },
+    "reset_game": {
+        "message": "لوبه بيا سيت کړه"
+    },
+    "moves": {
+        "message": "حرکتونه"
+    },
+    "manifest_description": {
+        "message": "'ويکي لوبه' یو ټولگې لوبه ده چې پکې تاسو د ويکي صفحو تر منځ نقل کيدو او یو تصادفي مقاله ته رسيدو لپاره نقل کوی."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Ցույց տալ Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Թաքցնել Wiki Game"
+    },
+    "start_game": {
+        "message": "Սկսել խաղ"
+    },
+    "end_game": {
+        "message": "Ավարտել խաղ"
+    },
+    "start_new_game": {
+        "message": "Սկսել նոր խաղ"
+    },
+    "congratulations_you_did_it": {
+        "message": "Դու դա անեցիր!"
+    },
+    "start_page": {
+        "message": "Մեկնարկային էջ"
+    },
+    "target_page": {
+        "message": "Թիրախային էջ"
+    },
+    "time": {
+        "message": "Ժամանակ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Գտեք այս էջը հետևելով բովանդակության հղումներին"
+    },
+    "hint": {
+        "message": "Հուշում"
+    },
+    "hover_the_button": {
+        "message": "Պահեք կուրսորը կոճակի վրա"
+    },
+    "reset_game": {
+        "message": "Վերականգնել խաղ"
+    },
+    "moves": {
+        "message": "Քայլեր"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game'-ը ուսումնասիրական խաղ է, որտեղ դուք նավարկում եք վիկիի էջերի միջև՝ հասնելու պատահական հոդվածի:"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Vís Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Fjal Wiki Game"
+    },
+    "start_game": {
+        "message": "Start leik"
+    },
+    "end_game": {
+        "message": "Enda leik"
+    },
+    "start_new_game": {
+        "message": "Start nýggjan leik"
+    },
+    "congratulations_you_did_it": {
+        "message": "Tú gerdi tað!"
+    },
+    "start_page": {
+        "message": "Upphavssíða"
+    },
+    "target_page": {
+        "message": "Málosíða"
+    },
+    "time": {
+        "message": "Tíð"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Finn hesa síðu við at fylgja linkum í innihaldinum"
+    },
+    "hint": {
+        "message": "Vísbending"
+    },
+    "hover_the_button": {
+        "message": "Haltu músarøkuanum yvir knappinum"
+    },
+    "reset_game": {
+        "message": "Endurstilla leik"
+    },
+    "moves": {
+        "message": "Flytingar"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' er rannsóknaleikur, þar sem tú navigerar millum wiki-síður til at koma til ein tilvilkiliga grein."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Oyununu Göstər"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Oyununu Gizlət"
+    },
+    "start_game": {
+        "message": "Oyunu başla"
+    },
+    "end_game": {
+        "message": "Oyunu bitir"
+    },
+    "start_new_game": {
+        "message": "Yeni oyun başla"
+    },
+    "congratulations_you_did_it": {
+        "message": "Bunu başardın!"
+    },
+    "start_page": {
+        "message": "Başlanğıc səhifəsi"
+    },
+    "target_page": {
+        "message": "Hədəf səhifəsi"
+    },
+    "time": {
+        "message": "Zaman"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Bu səhifəni məzmundakı keçidləri izləməklə tapın"
+    },
+    "hint": {
+        "message": "İpucu"
+    },
+    "hover_the_button": {
+        "message": "Düymənin üzərində gəzin"
+    },
+    "reset_game": {
+        "message": "Oyunu sıfırla"
+    },
+    "moves": {
+        "message": "Hərəkətlər"
+    },
+    "manifest_description": {
+        "message": "'Wiki Oyunu' sizi təsadüfi məqalələrə çatmaq üçün wiki səhifələri arasında naviqasiya etməli olduğunuz bir kəşfiyyat oyunudur."
+    }
+}

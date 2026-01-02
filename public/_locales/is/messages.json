@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Sýna Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Fela Wiki Game"
+    },
+    "start_game": {
+        "message": "Byrja leik"
+    },
+    "end_game": {
+        "message": "Enda leik"
+    },
+    "start_new_game": {
+        "message": "Byrja nýjan leik"
+    },
+    "congratulations_you_did_it": {
+        "message": "Þú gerðir það!"
+    },
+    "start_page": {
+        "message": "Upphafssíða"
+    },
+    "target_page": {
+        "message": "Marksíða"
+    },
+    "time": {
+        "message": "Tími"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Finndu þessa síðu með því að fylgja tenglum í efninu"
+    },
+    "hint": {
+        "message": "Vísbending"
+    },
+    "hover_the_button": {
+        "message": "Haltu bendlinum yfir hnappinn"
+    },
+    "reset_game": {
+        "message": "Endurstilla leik"
+    },
+    "moves": {
+        "message": "Hreyfingar"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' er könnunarleikur þar sem þú sigrar á milli wiki-síðna til að komast að handahófskenndu greinunum."
+    }
+}

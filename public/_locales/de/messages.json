@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki-Spiel anzeigen"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki-Spiel ausblenden"
+    },
+    "start_game": {
+        "message": "Spiel starten"
+    },
+    "end_game": {
+        "message": "Spiel beenden"
+    },
+    "start_new_game": {
+        "message": "Neues Spiel starten"
+    },
+    "congratulations_you_did_it": {
+        "message": "Du hast es geschafft!"
+    },
+    "start_page": {
+        "message": "Startseite"
+    },
+    "target_page": {
+        "message": "Zielseite"
+    },
+    "time": {
+        "message": "Zeit"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Finde diese Seite, indem du den Links im Inhalt folgst"
+    },
+    "hint": {
+        "message": "Hinweis"
+    },
+    "hover_the_button": {
+        "message": "Fahre mit der Maus über die Schaltfläche"
+    },
+    "reset_game": {
+        "message": "Spiel zurücksetzen"
+    },
+    "moves": {
+        "message": "Züge"
+    },
+    "manifest_description": {
+        "message": "„Wiki-Spiel“ ist ein Erkundungsspiel, bei dem du zwischen Wiki-Seiten navigierst, um einen zufälligen Artikel zu erreichen."
+    }
+}

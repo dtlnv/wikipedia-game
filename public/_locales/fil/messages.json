@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Ipakita ang Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Itago ang Wiki Game"
+    },
+    "start_game": {
+        "message": "Simulan ang laro"
+    },
+    "end_game": {
+        "message": "Tapusin ang laro"
+    },
+    "start_new_game": {
+        "message": "Simulan ang bagong laro"
+    },
+    "congratulations_you_did_it": {
+        "message": "Nakamit mo ito!"
+    },
+    "start_page": {
+        "message": "Panimulang pahina"
+    },
+    "target_page": {
+        "message": "Target na pahina"
+    },
+    "time": {
+        "message": "Oras"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Hanapin ang pahinang ito sa pamamagitan ng pagsunod sa mga link sa nilalaman"
+    },
+    "hint": {
+        "message": "Pahiwatig"
+    },
+    "hover_the_button": {
+        "message": "I-hover ang pindutan"
+    },
+    "reset_game": {
+        "message": "Ibalik sa simula ang laro"
+    },
+    "moves": {
+        "message": "Mga galaw"
+    },
+    "manifest_description": {
+        "message": "Ang 'Wiki Game' ay isang exploration game kung saan kang nag-navigate sa pagitan ng wiki pages upang maabot ang isang random na artikulo."
+    }
+}

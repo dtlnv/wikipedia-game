@@ -108,7 +108,7 @@ const App = () => {
 
     return isVisible ? (
         <div className='wiki-quiz-app-container'>
-            <div className='wiki-quiz-close' onClick={onCloseClick} title='Hide Wiki Game'>
+            <div className='wiki-quiz-close' onClick={onCloseClick} title={chrome.i18n.getMessage('hide_wiki_game')}>
                 ×
             </div>
             {content}
@@ -116,7 +116,7 @@ const App = () => {
     ) : (
         <div className='wiki-quiz-show'>
             <button type='button' onClick={onShowClick}>
-                Show Wiki Game
+                🌽 {chrome.i18n.getMessage('show_wiki_game')}
             </button>
         </div>
     );

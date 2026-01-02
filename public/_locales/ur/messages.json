@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki گیم دکھائیں"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki گیم چھپائیں"
+    },
+    "start_game": {
+        "message": "گیم شروع کریں"
+    },
+    "end_game": {
+        "message": "گیم ختم کریں"
+    },
+    "start_new_game": {
+        "message": "نئی گیم شروع کریں"
+    },
+    "congratulations_you_did_it": {
+        "message": "آپ نے کر دیا!"
+    },
+    "start_page": {
+        "message": "شروعاتی صفحہ"
+    },
+    "target_page": {
+        "message": "ہدف کا صفحہ"
+    },
+    "time": {
+        "message": "وقت"
+    },
+    "find_this_page_by_following_links": {
+        "message": "مواد میں روابط کی پیروی کر کے یہ صفحہ تلاش کریں"
+    },
+    "hint": {
+        "message": "اشارہ"
+    },
+    "hover_the_button": {
+        "message": "بٹن پر ہوور کریں"
+    },
+    "reset_game": {
+        "message": "گیم دوبارہ شروع کریں"
+    },
+    "moves": {
+        "message": "حرکتیں"
+    },
+    "manifest_description": {
+        "message": "'Wiki گیم' ایک تلاش کی گیم ہے جہاں آپ بے ترتیب مضمون تک پہنچنے کے لیے wiki صفحات کے درمیان نیویگیٹ کرتے ہیں۔"
+    }
+}

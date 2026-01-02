@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Lîstikên Wiki Nîşan Bide"
+    },
+    "hide_wiki_game": {
+        "message": "Lîstikên Wiki Veşêre"
+    },
+    "start_game": {
+        "message": "Lîstik Dest Pê Bike"
+    },
+    "end_game": {
+        "message": "Lîstik Qedand Bike"
+    },
+    "start_new_game": {
+        "message": "Lîstikek Nû Dest Pê Bike"
+    },
+    "congratulations_you_did_it": {
+        "message": "Tu karî!"
+    },
+    "start_page": {
+        "message": "Rûpela Destpêkê"
+    },
+    "target_page": {
+        "message": "Rûpela Armancê"
+    },
+    "time": {
+        "message": "Dem"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Bi şûnda girêdanan vê rûpelê bibîne"
+    },
+    "hint": {
+        "message": "Nîşane"
+    },
+    "hover_the_button": {
+        "message": "Mişkokê li ser botonan wehilêne"
+    },
+    "reset_game": {
+        "message": "Lîstik Ji Nû ve Ava Bike"
+    },
+    "moves": {
+        "message": "Livîn"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' lîstikek vekolînê ye ku tê de tu navber rûpelên wîkî vediguherî da ku te xweber werdeya ye."
+    }
+}

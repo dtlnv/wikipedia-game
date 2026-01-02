@@ -28,7 +28,7 @@ const Moves: FC<MovesInterface> = ({ history, startPageTitle, open = false }) =>
     return (
         <div className='text'>
             <a onClick={toggleHistory}>
-                Moves: <strong>{history.length}</strong>
+                {chrome.i18n.getMessage('moves')}: <strong>{history.length}</strong>
             </a>
             {showHistory && (
                 <ol className='moves-list' start={0} ref={listRef}>
