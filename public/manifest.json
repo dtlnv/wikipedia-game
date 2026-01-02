@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Wiki Game",
     "description": "'Wiki Game' is an exciting web-based game where players start from any Wiki page and aim to reach a random target article by clicking on hyperlinks within the content.",
-    "version": "1.1.1000",
+    "version": "1.1.0",
     "icons": {
         "48": "images/logo-48.png",
         "128": "images/logo-128.png"

@@ -66,7 +66,13 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
                     Hint {!loading && game.hint && '👀'}
                 </button>
                 {showHintForHint && <div className='center'>^^ Hover the button ^^</div>}
-                {loading ? <Loader /> : <button type='button' onClick={startAction}>Reset game</button>}
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <button type='button' onClick={startAction}>
+                        Reset game
+                    </button>
+                )}
                 <button type='button' onClick={endAction} disabled={loading}>
                     End game
                 </button>

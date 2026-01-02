@@ -11,7 +11,7 @@
     },
     "scripts": {
         "build": "rm -rf build && webpack --mode production",
-        "create-zip": "npm run build && node archive.ts",
+        "create-zip": "npm run build && node archive.mjs",
         "test": "react-scripts test --no-cache --watchAll=false --coverage --collectCoverageFrom=src/**/*.{js,jsx,ts,tsx}",
         "prettier": "npx prettier --write .",
         "lint": "biome check",
