@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "위키 게임 표시"
+    },
+    "hide_wiki_game": {
+        "message": "위키 게임 숨기기"
+    },
+    "start_game": {
+        "message": "게임 시작"
+    },
+    "end_game": {
+        "message": "게임 종료"
+    },
+    "start_new_game": {
+        "message": "새 게임 시작"
+    },
+    "congratulations_you_did_it": {
+        "message": "성공했습니다!"
+    },
+    "start_page": {
+        "message": "시작 페이지"
+    },
+    "target_page": {
+        "message": "목표 페이지"
+    },
+    "time": {
+        "message": "시간"
+    },
+    "find_this_page_by_following_links": {
+        "message": "콘텐츠의 링크를 따라 이 페이지를 찾으세요"
+    },
+    "hint": {
+        "message": "힌트"
+    },
+    "hover_the_button": {
+        "message": "버튼에 마우스를 올리세요"
+    },
+    "reset_game": {
+        "message": "게임 재설정"
+    },
+    "moves": {
+        "message": "이동"
+    },
+    "manifest_description": {
+        "message": "'위키 게임'은 위키 페이지 간을 탐색하여 무작위 문서에 도달하는 탐험 게임입니다."
+    }
+}

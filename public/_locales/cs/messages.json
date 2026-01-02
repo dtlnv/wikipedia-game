@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Zobrazit Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Skrýt Wiki Game"
+    },
+    "start_game": {
+        "message": "Začít hru"
+    },
+    "end_game": {
+        "message": "Skončit hru"
+    },
+    "start_new_game": {
+        "message": "Začít novou hru"
+    },
+    "congratulations_you_did_it": {
+        "message": "Vdělal jsi to!"
+    },
+    "start_page": {
+        "message": "Úvodní stránka"
+    },
+    "target_page": {
+        "message": "Cílová stránka"
+    },
+    "time": {
+        "message": "Čas"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Najdi tuto stránku následováním odkazů v obsahu"
+    },
+    "hint": {
+        "message": "Nápověda"
+    },
+    "hover_the_button": {
+        "message": "Najeď myší na tlačítko"
+    },
+    "reset_game": {
+        "message": "Resetovat hru"
+    },
+    "moves": {
+        "message": "Tahy"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' je hrou průzkumu, kde se pohybuješ mezi wiki stránkami, aby ses dostal na náhodný článek."
+    }
+}

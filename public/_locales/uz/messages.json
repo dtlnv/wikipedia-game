@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki O'yinini Ko'rsatish"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki O'yinini Yashirish"
+    },
+    "start_game": {
+        "message": "O'yinni Boshlash"
+    },
+    "end_game": {
+        "message": "O'yinni Tugatish"
+    },
+    "start_new_game": {
+        "message": "Yangi O'yin Boshlash"
+    },
+    "congratulations_you_did_it": {
+        "message": "Siz buni qildi!"
+    },
+    "start_page": {
+        "message": "Bosh Sahifa"
+    },
+    "target_page": {
+        "message": "Maqsad Sahifasi"
+    },
+    "time": {
+        "message": "Vaqt"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Kontentdagi Havolalarni Kuzatib Bu Sahifani Toping"
+    },
+    "hint": {
+        "message": "Maslahat"
+    },
+    "hover_the_button": {
+        "message": "Tugmani Ustiga Qo'ying"
+    },
+    "reset_game": {
+        "message": "O'yinni Qayta Boshlash"
+    },
+    "moves": {
+        "message": "Harakatlar"
+    },
+    "manifest_description": {
+        "message": "'Wiki O'yini' - tasodifiy maqolaga yetish uchun viki sahifalari o'rtasida harakatlanaish kerak bo'ladigan o'zlashtirish o'yinidir."
+    }
+}

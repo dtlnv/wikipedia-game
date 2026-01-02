@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Tampilkan Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Sembunyikan Wiki Game"
+    },
+    "start_game": {
+        "message": "Mulai permainan"
+    },
+    "end_game": {
+        "message": "Akhiri permainan"
+    },
+    "start_new_game": {
+        "message": "Mulai permainan baru"
+    },
+    "congratulations_you_did_it": {
+        "message": "Anda berhasil!"
+    },
+    "start_page": {
+        "message": "Halaman awal"
+    },
+    "target_page": {
+        "message": "Halaman target"
+    },
+    "time": {
+        "message": "Waktu"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Temukan halaman ini dengan mengikuti tautan di konten"
+    },
+    "hint": {
+        "message": "Petunjuk"
+    },
+    "hover_the_button": {
+        "message": "Arahkan ke tombol"
+    },
+    "reset_game": {
+        "message": "Atur ulang permainan"
+    },
+    "moves": {
+        "message": "Gerakan"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' adalah permainan eksplorasi di mana Anda menavigasi antar halaman wiki untuk mencapai artikel acak."
+    }
+}

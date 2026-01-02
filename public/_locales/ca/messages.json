@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Mostrar Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Amagar Wiki Game"
+    },
+    "start_game": {
+        "message": "Començar partida"
+    },
+    "end_game": {
+        "message": "Acabar partida"
+    },
+    "start_new_game": {
+        "message": "Començar nova partida"
+    },
+    "congratulations_you_did_it": {
+        "message": "Ho has aconseguit!"
+    },
+    "start_page": {
+        "message": "Pàgina inicial"
+    },
+    "target_page": {
+        "message": "Pàgina objectiu"
+    },
+    "time": {
+        "message": "Temps"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Troba aquesta pàgina seguint els enllaços del contingut"
+    },
+    "hint": {
+        "message": "Pista"
+    },
+    "hover_the_button": {
+        "message": "Passa el ratolí sobre el botó"
+    },
+    "reset_game": {
+        "message": "Reiniciar partida"
+    },
+    "moves": {
+        "message": "Moviments"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' és un joc d'exploració on navegues entre pàgines wiki per arribar a un article aleatori."
+    }
+}

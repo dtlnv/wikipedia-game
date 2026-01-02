@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "વિકી ગેમ બતાવો"
+    },
+    "hide_wiki_game": {
+        "message": "વિકી ગેમ છુપાવો"
+    },
+    "start_game": {
+        "message": "ગેમ શરૂ કરો"
+    },
+    "end_game": {
+        "message": "ગેમ પૂર્ણ કરો"
+    },
+    "start_new_game": {
+        "message": "નવી ગેમ શરૂ કરો"
+    },
+    "congratulations_you_did_it": {
+        "message": "અભિનંદન! તમે કરી બતાવ્યું!"
+    },
+    "start_page": {
+        "message": "શરૂઆત પાનું"
+    },
+    "target_page": {
+        "message": "લક્ષ્ય પાનું"
+    },
+    "time": {
+        "message": "સમય"
+    },
+    "find_this_page_by_following_links": {
+        "message": "આ પાનું સામગ્રીમાંના લિંક્સને અનુસરીને શોધો"
+    },
+    "hint": {
+        "message": "ઇશારો"
+    },
+    "hover_the_button": {
+        "message": "બટન પર હવર કરો"
+    },
+    "reset_game": {
+        "message": "ગેમ રીસેટ કરો"
+    },
+    "moves": {
+        "message": "ચાલો"
+    },
+    "manifest_description": {
+        "message": "'વિકી ગેમ' એ એક અન્વેષણ ગેમ છે જેમાં તમે રેન્ડમ લેખ સુધી પહોંચવા માટે વિકિ પેજ વચ્ચે નેવિગેટ કરો છો."
+    }
+}

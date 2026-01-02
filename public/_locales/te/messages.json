@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "వికీ గేమ్ చూపించు"
+    },
+    "hide_wiki_game": {
+        "message": "వికీ గేమ్ దukపించు"
+    },
+    "start_game": {
+        "message": "గేమ్ ప్రారంభించు"
+    },
+    "end_game": {
+        "message": "గేమ్ ముగించు"
+    },
+    "start_new_game": {
+        "message": "కొత్త గేమ్ ప్రారంభించు"
+    },
+    "congratulations_you_did_it": {
+        "message": "మీరు చేసారు!"
+    },
+    "start_page": {
+        "message": "ప్రారంభ పేజీ"
+    },
+    "target_page": {
+        "message": "లక్ష్య పేజీ"
+    },
+    "time": {
+        "message": "సమయం"
+    },
+    "find_this_page_by_following_links": {
+        "message": "కంటెంట్‌లోని లింకులను అనుసరించి ఈ పేజీని కనుగొనండి"
+    },
+    "hint": {
+        "message": "సూచన"
+    },
+    "hover_the_button": {
+        "message": "బటన్ పై హోవర్ చేయండి"
+    },
+    "reset_game": {
+        "message": "గేమ్ రీసెట్ చేయండి"
+    },
+    "moves": {
+        "message": "కదలికలు"
+    },
+    "manifest_description": {
+        "message": "'విকీ గేమ్' అనేది విక్కీ పేజీల మధ్య నావిగేట్ చేయడం ద్వారా యాదృచ్ఛిక కథనానికి చేరుకోవడానికి ఒక అన్వేషణ గేమ్."
+    }
+}

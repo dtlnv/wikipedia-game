@@ -1,6 +1,6 @@
-import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import FinishScreen from '.';
 
 // Sample test data
@@ -11,7 +11,7 @@ const testProps = {
         startedAt: Date.now() - 3600000, // 1 hour ago
         endedAt: Date.now(),
         history: ['Page 1', 'Page 2', 'Page 3'],
-    },
+    } as PartialGameState,
     loading: false,
     startAction: jest.fn(),
     endAction: jest.fn(),
@@ -23,27 +23,30 @@ describe('FinishScreen component', () => {
             runtime: {
                 getURL: (name: string) => name,
             },
+            i18n: {
+                getMessage: jest.fn(),
+            },
         } as any;
     });
 
     it('renders the finish screen with game results', () => {
-        const { getByText, getByRole } = render(<FinishScreen {...testProps} />);
+        const { getByTestId } = render(<FinishScreen {...testProps} />);
 
-        expect(getByText('You did it!')).toBeInTheDocument();
-        expect(getByText('Start page:')).toBeInTheDocument();
-        expect(getByText('Target page:')).toBeInTheDocument();
-        expect(getByText('Time:')).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Start new game' })).toBeInTheDocument();
-        expect(getByRole('button', { name: 'End game' })).toBeInTheDocument();
+        expect(getByTestId('finish-congratulations')).toBeInTheDocument();
+        expect(getByTestId('finish-start-page')).toBeInTheDocument();
+        expect(getByTestId('finish-target-page')).toBeInTheDocument();
+        expect(getByTestId('finish-time')).toBeInTheDocument();
+        expect(getByTestId('finish-start-new-game')).toBeInTheDocument();
+        expect(getByTestId('finish-end-game')).toBeInTheDocument();
     });
 
-    it('calls the startAction and endAction functions when buttons are clicked', () => {
-        const { getByRole } = render(<FinishScreen {...testProps} />);
+    it('calls the startAction and endAction functions when buttons are clicked', async () => {
+        const { getByTestId } = render(<FinishScreen {...testProps} />);
 
-        fireEvent.click(getByRole('button', { name: 'Start new game' }));
+        await userEvent.click(getByTestId('finish-start-new-game'));
         expect(testProps.startAction).toHaveBeenCalled();
 
-        fireEvent.click(getByRole('button', { name: 'End game' }));
+        await userEvent.click(getByTestId('finish-end-game'));
         expect(testProps.endAction).toHaveBeenCalled();
     });
 

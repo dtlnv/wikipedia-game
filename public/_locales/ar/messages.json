@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "عرض لعبة ويكي"
+    },
+    "hide_wiki_game": {
+        "message": "إخفاء لعبة ويكي"
+    },
+    "start_game": {
+        "message": "ابدأ اللعبة"
+    },
+    "end_game": {
+        "message": "إنهاء اللعبة"
+    },
+    "start_new_game": {
+        "message": "ابدأ لعبة جديدة"
+    },
+    "congratulations_you_did_it": {
+        "message": "لقد فعلتها!"
+    },
+    "start_page": {
+        "message": "صفحة البداية"
+    },
+    "target_page": {
+        "message": "الصفحة المستهدفة"
+    },
+    "time": {
+        "message": "الوقت"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ابحث عن هذه الصفحة باتباع الروابط في المحتوى"
+    },
+    "hint": {
+        "message": "تلميح"
+    },
+    "hover_the_button": {
+        "message": "مرر مؤشر الماوس على الزر"
+    },
+    "reset_game": {
+        "message": "إعادة تعيين اللعبة"
+    },
+    "moves": {
+        "message": "الحركات"
+    },
+    "manifest_description": {
+        "message": "'لعبة ويكي' هي لعبة استكشاف حيث تتنقل بين صفحات ويكي للوصول إلى مقالة عشوائية."
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ዊኪ ጨዋታ አሳይ"
+    },
+    "hide_wiki_game": {
+        "message": "ዊኪ ጨዋታ ደብቅ"
+    },
+    "start_game": {
+        "message": "ጨዋታ ጀምር"
+    },
+    "end_game": {
+        "message": "ጨዋታ አቁም"
+    },
+    "start_new_game": {
+        "message": "አዲስ ጨዋታ ጀምር"
+    },
+    "congratulations_you_did_it": {
+        "message": "እንኳን ደስ አለዎት! ተሳክቷል!"
+    },
+    "start_page": {
+        "message": "መነሻ ገፅ"
+    },
+    "target_page": {
+        "message": "የመድረሻ ገፅ"
+    },
+    "time": {
+        "message": "ጊዜ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ይህን ገፅ በውስጥ ካሉት አገናኞች ተከትለው ያግኙ"
+    },
+    "hint": {
+        "message": "ጥቆማ"
+    },
+    "hover_the_button": {
+        "message": "ቁልፉን ላይ ያቆዩ"
+    },
+    "reset_game": {
+        "message": "ጨዋታ ዳግም አስጀምር"
+    },
+    "moves": {
+        "message": "አገናኞች"
+    },
+    "manifest_description": {
+        "message": "'ዊኪ ጨዋታ' በውስጥ ያሉ የዊኪ ገፆችን በመከተል ወደ የተደረገ ጽሑፍ ማድረሻ የሚደርሱበት የማስተዋወቅ ጨዋታ ነው።"
+    }
+}

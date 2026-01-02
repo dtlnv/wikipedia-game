@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Hiển thị Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Ẩn Wiki Game"
+    },
+    "start_game": {
+        "message": "Bắt đầu trò chơi"
+    },
+    "end_game": {
+        "message": "Kết thúc trò chơi"
+    },
+    "start_new_game": {
+        "message": "Bắt đầu trò chơi mới"
+    },
+    "congratulations_you_did_it": {
+        "message": "Bạn đã làm được!"
+    },
+    "start_page": {
+        "message": "Trang bắt đầu"
+    },
+    "target_page": {
+        "message": "Trang đích"
+    },
+    "time": {
+        "message": "Thời gian"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Tìm trang này bằng cách theo các liên kết trong nội dung"
+    },
+    "hint": {
+        "message": "Gợi ý"
+    },
+    "hover_the_button": {
+        "message": "Di chuột qua nút"
+    },
+    "reset_game": {
+        "message": "Đặt lại trò chơi"
+    },
+    "moves": {
+        "message": "Lượt di chuyển"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' là một trò chơi khám phá nơi bạn điều hướng giữa các trang wiki để đến một bài viết ngẫu nhiên."
+    }
+}

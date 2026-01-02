@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Shfaq Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Fsheh Wiki Game"
+    },
+    "start_game": {
+        "message": "Fillo lojën"
+    },
+    "end_game": {
+        "message": "Përfundo lojën"
+    },
+    "start_new_game": {
+        "message": "Fillo lojë të re"
+    },
+    "congratulations_you_did_it": {
+        "message": "E bëre!"
+    },
+    "start_page": {
+        "message": "Faqja fillestare"
+    },
+    "target_page": {
+        "message": "Faqja e synimit"
+    },
+    "time": {
+        "message": "Koha"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Gjej këtë faqe duke ndjekur lidhjet në përmbajtje"
+    },
+    "hint": {
+        "message": "Ndihmë"
+    },
+    "hover_the_button": {
+        "message": "Kalon mbi butonin"
+    },
+    "reset_game": {
+        "message": "Rivendos lojën"
+    },
+    "moves": {
+        "message": "Lëvizjet"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' është një lojë eksplorimi ku navigoni ndërmjet faqeve wiki për të arritur një artikull të rastësishëm."
+    }
+}

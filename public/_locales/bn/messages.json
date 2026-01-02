@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "উইকি গেম দেখান"
+    },
+    "hide_wiki_game": {
+        "message": "উইকি গেম লুকান"
+    },
+    "start_game": {
+        "message": "গেম শুরু করুন"
+    },
+    "end_game": {
+        "message": "গেম শেষ করুন"
+    },
+    "start_new_game": {
+        "message": "নতুন গেম শুরু করুন"
+    },
+    "congratulations_you_did_it": {
+        "message": "আপনি করেছেন!"
+    },
+    "start_page": {
+        "message": "শুরু পাতা"
+    },
+    "target_page": {
+        "message": "লক্ষ্য পাতা"
+    },
+    "time": {
+        "message": "সময়"
+    },
+    "find_this_page_by_following_links": {
+        "message": "বিষয়বস্তুতে লিঙ্কগুলি অনুসরণ করে এই পাতাটি খুঁজুন"
+    },
+    "hint": {
+        "message": "ইঙ্গিত"
+    },
+    "hover_the_button": {
+        "message": "বোতামের উপর হোভার করুন"
+    },
+    "reset_game": {
+        "message": "গেম রিসেট করুন"
+    },
+    "moves": {
+        "message": "পদক্ষেপ"
+    },
+    "manifest_description": {
+        "message": "'উইকি গেম' একটি অন্বেষণ গেম যেখানে আপনি একটি র্যান্ডম নিবন্ধে পৌঁছাতে উইকি পাতাগুলির মধ্যে নেভিগেট করেন।"
+    }
+}

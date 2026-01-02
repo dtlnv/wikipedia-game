@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "விக்கி விளையாட்டைக் காட்டு"
+    },
+    "hide_wiki_game": {
+        "message": "விக்கி விளையாட்டை மறை"
+    },
+    "start_game": {
+        "message": "விளையாட்டைத் தொடங்கு"
+    },
+    "end_game": {
+        "message": "விளையாட்டை முடி"
+    },
+    "start_new_game": {
+        "message": "புதிய விளையாட்டைத் தொடங்கு"
+    },
+    "congratulations_you_did_it": {
+        "message": "நீ செய்து விட்டாய்!"
+    },
+    "start_page": {
+        "message": "தொடக்கப் பக்கம்"
+    },
+    "target_page": {
+        "message": "இலக்குப் பக்கம்"
+    },
+    "time": {
+        "message": "நேரம்"
+    },
+    "find_this_page_by_following_links": {
+        "message": "உள்ளடக்கத்தில் உள்ள இணைப்புகளைப் பின்தொடர்ந்து இந்தப் பக்கத்தைக் கண்டுபிடி"
+    },
+    "hint": {
+        "message": "குறிப்பு"
+    },
+    "hover_the_button": {
+        "message": "பொத்தானின் மீது நகர்த்து"
+    },
+    "reset_game": {
+        "message": "விளையாட்டை மீட்டமை"
+    },
+    "moves": {
+        "message": "நகர்வுகள்"
+    },
+    "manifest_description": {
+        "message": "'விக்கி விளையாட்டு' என்பது விக்கி பக்கங்களுக்கு இடையே செல்லும் ஒரு অনுসரண விளையாட்டு ஆகும், இதில் நீ சீரற்ற கட்டுரையை சென்றடைய வேண்டும்."
+    }
+}

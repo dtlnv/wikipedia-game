@@ -1,18 +1,37 @@
-#wiki-quiz-root {
-    position: fixed;
-    z-index: 1000;
-    background-color: #ffffff;
-    padding: 10px;
-    box-shadow: 0px 0px 8px #999999;
-    box-sizing: border-box;
-    border-radius: 7px;
-    font-size: 13.5px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+$wiki-quiz-panel-width: 210px;
 
-    &:empty {
+#wiki-quiz-root {
+    .wiki-quiz-app-container {
+        position: fixed;
+        z-index: 1000;
+        padding: 10px;
+        box-shadow: 0px 0px 8px #777;
+        box-sizing: border-box;
+        font-size: 13.5px;
+        background-color: var(--background-color-neutral-subtle, #f8f9fa);
+        color: var(--color-base, #202122);
+        width: $wiki-quiz-panel-width;
+        height: 100vh;
+        top: 0px;
+        right: 0px;
         display: none;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: center;
+        align-items: stretch;
+
+        .wiki-quiz-close {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            cursor: pointer;
+            font-size: 24px;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
     * {
@@ -22,15 +41,18 @@
 
     .logo {
         text-align: center;
+        background-color: #f8f9fa;
+        padding: 6px;
+        border-radius: 6px;
+
         img {
             max-width: 100%;
         }
     }
 
     .text {
-        color: #4f4f4f;
+        opacity: 0.9;
         strong {
-            color: #000;
             font-weight: 600;
         }
     }
@@ -51,16 +73,18 @@
         font-weight: bold;
         cursor: default;
         font-size: 15.5px;
-        color: #000;
         overflow-wrap: anywhere;
     }
 
     .moves-list {
         font-size: 11px;
         margin: 10px 0px;
+        padding: 0px;
         max-height: 35vh;
         overflow: auto;
         list-style-position: inside;
+        list-style-type: decimal;
+
         li {
             margin-bottom: 4px;
         }
@@ -83,8 +107,8 @@
     button {
         appearance: none;
         border: 0px;
-        background: #212121;
-        color: #ffffff;
+        background-color: var(--color-base, #202122);
+        color: var(--background-color-neutral-subtle, #f8f9fa);
         padding: 8px;
         border-radius: 7px;
         cursor: pointer;
@@ -114,18 +138,28 @@
         animation: spin 1.5s linear infinite;
     }
 
-    // for new design of Wikipedia
-    bottom: 10px;
-    right: 10px;
-    width: 206px;
+    .wiki-quiz-show {
+        position: fixed;
+        z-index: 1000;
+        bottom: 4px;
+        left: 4px;
+    }
 }
 
-// for old design of Wikipedia
-.skin-vector-legacy {
-    #wiki-quiz-root {
-        right: auto;
-        left: 4px;
-        width: 172px;
+// move body (html) to the right to not overlap with the quiz panel
+html.wiki-gaming {
+    width: calc(100% - $wiki-quiz-panel-width) !important;
+    margin-right: $wiki-quiz-panel-width !important;
+
+    #wiki-quiz-root .wiki-quiz-app-container {
+        display: flex;
+    }
+
+    #mw-head,
+    #global-top-navigation,
+    #community-navigation {
+        width: calc(100% - $wiki-quiz-panel-width) !important;
+        margin-right: $wiki-quiz-panel-width !important;
     }
 }
 

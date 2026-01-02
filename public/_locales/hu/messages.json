@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki Játék megjelenítése"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki Játék elrejtése"
+    },
+    "start_game": {
+        "message": "Játék indítása"
+    },
+    "end_game": {
+        "message": "Játék befejezése"
+    },
+    "start_new_game": {
+        "message": "Új játék indítása"
+    },
+    "congratulations_you_did_it": {
+        "message": "Sikerült!"
+    },
+    "start_page": {
+        "message": "Kezdőoldal"
+    },
+    "target_page": {
+        "message": "Céloldal"
+    },
+    "time": {
+        "message": "Idő"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Keresse meg ezt az oldalt a tartalom linkjeinek követésével"
+    },
+    "hint": {
+        "message": "Tipp"
+    },
+    "hover_the_button": {
+        "message": "Vigye a kurzort a gomb fölé"
+    },
+    "reset_game": {
+        "message": "Játék alaphelyzetbe állítása"
+    },
+    "moves": {
+        "message": "Lépések"
+    },
+    "manifest_description": {
+        "message": "A 'Wiki Játék' egy felfedezési játék, ahol wiki oldalak között navigálsz, hogy elérj egy véletlenszerű cikket."
+    }
+}

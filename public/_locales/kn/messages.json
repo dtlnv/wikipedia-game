@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "ವಿಕಿ ಆಟವನ್ನು ತೋರಿಸಿ"
+    },
+    "hide_wiki_game": {
+        "message": "ವಿಕಿ ಆಟವನ್ನು ಮರೆಮಾಡಿ"
+    },
+    "start_game": {
+        "message": "ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸಿ"
+    },
+    "end_game": {
+        "message": "ಆಟವನ್ನು ಮುಗಿಸಿ"
+    },
+    "start_new_game": {
+        "message": "ಹೊಸ ಆಟವನ್ನು ಪ್ರಾರಂಭಿಸಿ"
+    },
+    "congratulations_you_did_it": {
+        "message": "ಅಭಿನಂದನೆಗಳು! ನೀವು ಸಾಧಿಸಿದ್ದೀರಿ!"
+    },
+    "start_page": {
+        "message": "ಪ್ರಾರಂಭ ಪುಟ"
+    },
+    "target_page": {
+        "message": "ಗುರಿ ಪುಟ"
+    },
+    "time": {
+        "message": "ಸಮಯ"
+    },
+    "find_this_page_by_following_links": {
+        "message": "ವಿಷಯದಲ್ಲಿನ ಲಿಂಕ್‌ಗಳನ್ನು ಅನುಸರಿಸಿ ಈ ಪುಟವನ್ನು ಹುಡುಕಿ"
+    },
+    "hint": {
+        "message": "ಸೂಚನೆ"
+    },
+    "hover_the_button": {
+        "message": "ಬಟನ್ ಮೇಲೆ ಹಾರಿಸಿ"
+    },
+    "reset_game": {
+        "message": "ಆಟವನ್ನು ಮರುಹೊಂದಿಸಿ"
+    },
+    "moves": {
+        "message": "ಚಲನೆಗಳು"
+    },
+    "manifest_description": {
+        "message": "'ವಿಕಿ ಆಟ' ಒಂದು ಅನ್ವೇಷಣಾ ಆಟವಾಗಿದ್ದು, ನೀವು ವಿಕಿಪೀಡಿಯ ಪುಟಗಳ ನಡುವೆ ಸಂಚರಿಸಿ ಯಾದೃಚ್ಛಿಕ ಲೇಖನವನ್ನು ತಲುಪಬೇಕು."
+    }
+}

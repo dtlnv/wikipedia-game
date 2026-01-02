@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Wiki თამაშის ჩვენება"
+    },
+    "hide_wiki_game": {
+        "message": "Wiki თამაშის დამალვა"
+    },
+    "start_game": {
+        "message": "თამაშის დაწყება"
+    },
+    "end_game": {
+        "message": "თამაშის დასრულება"
+    },
+    "start_new_game": {
+        "message": "ახალი თამაშის დაწყება"
+    },
+    "congratulations_you_did_it": {
+        "message": "თქვენ გავაკეთეთ!"
+    },
+    "start_page": {
+        "message": "საწყისი გვერდი"
+    },
+    "target_page": {
+        "message": "სამიზნე გვერდი"
+    },
+    "time": {
+        "message": "დრო"
+    },
+    "find_this_page_by_following_links": {
+        "message": "იპოვნეთ ეს გვერდი კონტენტის ბმულების მიყოლებით"
+    },
+    "hint": {
+        "message": "მინიშნება"
+    },
+    "hover_the_button": {
+        "message": "ღილაკზე მაუსის გატარება"
+    },
+    "reset_game": {
+        "message": "თამაშის გადატვირთვა"
+    },
+    "moves": {
+        "message": "ходы"
+    },
+    "manifest_description": {
+        "message": "'Wiki თამაში' არის კვლების თამაში, სადაც თქვენ ნავიგაცია გააკეთებთ wiki გვერდებს შორის შემთხვევითი სტატიაში მისასვლელად."
+    }
+}

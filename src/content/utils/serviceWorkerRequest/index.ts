@@ -1,3 +1,5 @@
+type ServiceWorkerRequestInterface = (action: string, params?: object) => Promise<any>;
+
 /**
  * Send requests to the service worker.
  */

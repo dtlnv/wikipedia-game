@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Pokaži Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Skrij Wiki Game"
+    },
+    "start_game": {
+        "message": "Začni igro"
+    },
+    "end_game": {
+        "message": "Konči igro"
+    },
+    "start_new_game": {
+        "message": "Začni novo igro"
+    },
+    "congratulations_you_did_it": {
+        "message": "Uspelo ti je!"
+    },
+    "start_page": {
+        "message": "Začetna stran"
+    },
+    "target_page": {
+        "message": "Ciljna stran"
+    },
+    "time": {
+        "message": "Čas"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Najdi to stran z sledjenjem povezavam v vsebini"
+    },
+    "hint": {
+        "message": "Namig"
+    },
+    "hover_the_button": {
+        "message": "Premiči miško čez gumb"
+    },
+    "reset_game": {
+        "message": "Resetiraj igro"
+    },
+    "moves": {
+        "message": "Poteze"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' je raziskovalna igra, v kateri se krmilaš med wiki stranmi, da dosežeš naključni članek."
+    }
+}

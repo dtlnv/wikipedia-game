@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './app';
 
@@ -7,5 +6,7 @@ newElement.id = 'wiki-quiz-root';
 document.body.appendChild(newElement);
 
 const container = document.getElementById('wiki-quiz-root');
-const root = ReactDOM.createRoot(container);
-root.render(<App />);
+if (container) {
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+}

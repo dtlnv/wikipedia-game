@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Onyesha Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Ficha Wiki Game"
+    },
+    "start_game": {
+        "message": "Anza mchezo"
+    },
+    "end_game": {
+        "message": "Maliza mchezo"
+    },
+    "start_new_game": {
+        "message": "Anza mchezo mpya"
+    },
+    "congratulations_you_did_it": {
+        "message": "Umefanikisha!"
+    },
+    "start_page": {
+        "message": "Ukurasa wa kuanza"
+    },
+    "target_page": {
+        "message": "Ukurasa wa lengo"
+    },
+    "time": {
+        "message": "Wakati"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Tafuta ukurasa huu kwa kufuata viungo katika maudhui"
+    },
+    "hint": {
+        "message": "Kidokezo"
+    },
+    "hover_the_button": {
+        "message": "Onyesha kitufe"
+    },
+    "reset_game": {
+        "message": "Weka upya mchezo"
+    },
+    "moves": {
+        "message": "Hatua"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' ni mchezo wa utafiti ambapo unabadilika kati ya kurasa za wiki kufikia makala bila mpangilio."
+    }
+}

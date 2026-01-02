@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "显示维基游戏"
+    },
+    "hide_wiki_game": {
+        "message": "隐藏维基游戏"
+    },
+    "start_game": {
+        "message": "开始游戏"
+    },
+    "end_game": {
+        "message": "结束游戏"
+    },
+    "start_new_game": {
+        "message": "开始新游戏"
+    },
+    "congratulations_you_did_it": {
+        "message": "你成功了！"
+    },
+    "start_page": {
+        "message": "起始页面"
+    },
+    "target_page": {
+        "message": "目标页面"
+    },
+    "time": {
+        "message": "时间"
+    },
+    "find_this_page_by_following_links": {
+        "message": "通过跟随内容中的链接来查找此页面"
+    },
+    "hint": {
+        "message": "提示"
+    },
+    "hover_the_button": {
+        "message": "悬停按钮"
+    },
+    "reset_game": {
+        "message": "重置游戏"
+    },
+    "moves": {
+        "message": "移动次数"
+    },
+    "manifest_description": {
+        "message": "'维基游戏'是一个探索游戏，你需要在维基页面之间导航以到达随机文章。"
+    }
+}

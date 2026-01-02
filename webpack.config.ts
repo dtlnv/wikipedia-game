@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('node:path');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -37,6 +37,7 @@ const config = {
             patterns: [
                 { from: path.resolve(__dirname, './public/manifest.json'), to: path.resolve(__dirname, './build/manifest.json') },
                 { from: path.resolve(__dirname, './public/images'), to: path.resolve(__dirname, './build/images') },
+                { from: path.resolve(__dirname, './public/_locales'), to: path.resolve(__dirname, './build/_locales') },
             ],
         }),
         new MiniCssExtractPlugin({

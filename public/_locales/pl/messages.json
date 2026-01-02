@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Pokaż Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Ukryj Wiki Game"
+    },
+    "start_game": {
+        "message": "Rozpocznij grę"
+    },
+    "end_game": {
+        "message": "Zakończ grę"
+    },
+    "start_new_game": {
+        "message": "Rozpocznij nową grę"
+    },
+    "congratulations_you_did_it": {
+        "message": "Udało się!"
+    },
+    "start_page": {
+        "message": "Strona początkowa"
+    },
+    "target_page": {
+        "message": "Strona docelowa"
+    },
+    "time": {
+        "message": "Czas"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Znajdź tę stronę, podążając za linkami w zawartości"
+    },
+    "hint": {
+        "message": "Podpowiedź"
+    },
+    "hover_the_button": {
+        "message": "Najedź na przycisk"
+    },
+    "reset_game": {
+        "message": "Zresetuj grę"
+    },
+    "moves": {
+        "message": "Ruchy"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' to gra eksploracyjna, w której nawigujesz między stronami wiki, aby dotrzeć do losowego artykułu."
+    }
+}

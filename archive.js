@@ -1,8 +1,9 @@
 const fs = require('fs');
 const archiver = require('archiver');
+const { version } = require('./package.json');
 
-const folderPath = __dirname + '/build';
-const zipFileName = 'wikipedia-game.zip';
+const folderPath = `${__dirname}/build`;
+const zipFileName = 'wiki-game.zip';
 
 const output = fs.createWriteStream(zipFileName);
 
@@ -28,4 +29,4 @@ archive.directory(folderPath, false);
 
 archive.finalize();
 
-console.log('Zip file created: ' + zipFileName);
+console.log(`Zip file created: ${zipFileName}, version: ${version}`);

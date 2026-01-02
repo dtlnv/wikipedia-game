@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Εμφάνιση Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Απόκρυψη Wiki Game"
+    },
+    "start_game": {
+        "message": "Έναρξη παιχνιδιού"
+    },
+    "end_game": {
+        "message": "Τέλος παιχνιδιού"
+    },
+    "start_new_game": {
+        "message": "Έναρξη νέου παιχνιδιού"
+    },
+    "congratulations_you_did_it": {
+        "message": "Το κατάφερες!"
+    },
+    "start_page": {
+        "message": "Αρχική σελίδα"
+    },
+    "target_page": {
+        "message": "Σελίδα στόχου"
+    },
+    "time": {
+        "message": "Χρόνος"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Βρες αυτή τη σελίδα ακολουθώντας τους συνδέσμους στο περιεχόμενο"
+    },
+    "hint": {
+        "message": "Υπόδειξη"
+    },
+    "hover_the_button": {
+        "message": "Ναι το κουμπί"
+    },
+    "reset_game": {
+        "message": "Επαναφορά παιχνιδιού"
+    },
+    "moves": {
+        "message": "Κινήσεις"
+    },
+    "manifest_description": {
+        "message": "Το 'Wiki Game' είναι ένα παιχνίδι εξερεύνησης όπου πλοηγείσαι μεταξύ σελίδων wiki για να φτάσεις σε ένα τυχαίο άρθρο."
+    }
+}

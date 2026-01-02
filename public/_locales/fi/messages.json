@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Näytä Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Piilota Wiki Game"
+    },
+    "start_game": {
+        "message": "Aloita peli"
+    },
+    "end_game": {
+        "message": "Lopeta peli"
+    },
+    "start_new_game": {
+        "message": "Aloita uusi peli"
+    },
+    "congratulations_you_did_it": {
+        "message": "Onnistuit!"
+    },
+    "start_page": {
+        "message": "Aloitussivu"
+    },
+    "target_page": {
+        "message": "Tavoitesivu"
+    },
+    "time": {
+        "message": "Aika"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Etsi tätä sivua seuraamalla sisällön linkkejä"
+    },
+    "hint": {
+        "message": "Vihje"
+    },
+    "hover_the_button": {
+        "message": "Vie osoitin painikkeen yli"
+    },
+    "reset_game": {
+        "message": "Nollaa peli"
+    },
+    "moves": {
+        "message": "Siirrot"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' on tutkimuspeli, jossa navigoit wiki-sivujen välillä saavuttaaksesi satunnaisen artikkelin."
+    }
+}

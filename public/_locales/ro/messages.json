@@ -1,0 +1,47 @@
+{
+    "show_wiki_game": {
+        "message": "Afișează Wiki Game"
+    },
+    "hide_wiki_game": {
+        "message": "Ascunde Wiki Game"
+    },
+    "start_game": {
+        "message": "Începe jocul"
+    },
+    "end_game": {
+        "message": "Termină jocul"
+    },
+    "start_new_game": {
+        "message": "Începe un joc nou"
+    },
+    "congratulations_you_did_it": {
+        "message": "Ai reușit!"
+    },
+    "start_page": {
+        "message": "Pagina de început"
+    },
+    "target_page": {
+        "message": "Pagina țintă"
+    },
+    "time": {
+        "message": "Timp"
+    },
+    "find_this_page_by_following_links": {
+        "message": "Găsește această pagină urmărind legăturile din conținut"
+    },
+    "hint": {
+        "message": "Indiciu"
+    },
+    "hover_the_button": {
+        "message": "Treci cu mouse-ul peste buton"
+    },
+    "reset_game": {
+        "message": "Resetează jocul"
+    },
+    "moves": {
+        "message": "Mutări"
+    },
+    "manifest_description": {
+        "message": "'Wiki Game' este un joc de explorare în care navighezi între pagini wiki pentru a ajunge la un articol aleator."
+    }
+}

@@ -1,17 +1,32 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
+        "target": "es2017",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "strict": true,
-        "noImplicitReturns": true,
-        "noImplicitAny": true,
-        "module": "es6",
-        "moduleResolution": "node",
-        "target": "es6",
-        "allowJs": true,
-        "strictNullChecks": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
-        "jsx": "react"
+        "lib": ["dom", "dom.iterable", "es6"],
+        "allowJs": true,
+        "noEmit": false,
+        "isolatedModules": true,
+        "noFallthroughCasesInSwitch": true,
+        "jsx": "react-jsx",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./*"]
+        }
     },
-    "include": ["./src/**/*", "types.d.ts"]
+    "include": ["./src/**/*", "types.d.ts"],
+    "exclude": ["node_modules"]
 }

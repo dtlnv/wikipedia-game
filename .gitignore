@@ -1,5 +1,6 @@
 .cache/
 coverage/
+dist/
 dist/*
 !dist/index.html
 build/
@@ -16,4 +17,4 @@ ehthumbs.db
 Thumbs.db
 
 key.pem
-wikipedia-game.crx
+wiki-game.crx

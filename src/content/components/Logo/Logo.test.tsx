@@ -1,4 +1,3 @@
-import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import Logo from '.';
@@ -19,7 +18,7 @@ describe('Logo component', () => {
 
         expect(imgElement).toBeInTheDocument();
         expect(imgElement?.getAttribute('src')).toBe('images/logo.png');
-        expect(imgElement?.getAttribute('title')).toBe('Wikipedia Game');
+        expect(imgElement?.getAttribute('title')).toBe('Wiki Game');
     });
 
     it('renders the "in-progress" logo for "game" screen', () => {
@@ -28,7 +27,7 @@ describe('Logo component', () => {
 
         expect(imgElement).toBeInTheDocument();
         expect(imgElement?.getAttribute('src')).toBe('images/logo-inprogress.png');
-        expect(imgElement?.getAttribute('title')).toBe('Wikipedia Game');
+        expect(imgElement?.getAttribute('title')).toBe('Wiki Game');
     });
 
     it('renders the "finish" logo for "finish" screen', () => {
@@ -37,6 +36,6 @@ describe('Logo component', () => {
 
         expect(imgElement).toBeInTheDocument();
         expect(imgElement?.getAttribute('src')).toBe('images/logo-finish.png');
-        expect(imgElement?.getAttribute('title')).toBe('Wikipedia Game');
+        expect(imgElement?.getAttribute('title')).toBe('Wiki Game');
     });
 });
