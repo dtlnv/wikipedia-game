@@ -9,7 +9,7 @@ interface MovesInterface {
 /**
  * Moves component renders the number of moves and the list of visited pages (history) when the "Moves" link is clicked
  */
-const Moves: FC<MovesInterface> = ({ history, startPageTitle, open = false }) => {
+export const Moves: FC<MovesInterface> = ({ history, startPageTitle, open = false }) => {
     const [showHistory, setShowHistory] = useState<boolean>(open);
     const listRef = useRef<HTMLOListElement>(null);
 
@@ -41,5 +41,3 @@ const Moves: FC<MovesInterface> = ({ history, startPageTitle, open = false }) =>
         </div>
     );
 };
-
-export default Moves;

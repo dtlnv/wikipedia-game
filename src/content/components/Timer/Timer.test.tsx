@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, act } from '@testing-library/react';
-import Timer from '.';
+import { Timer } from '.';
 
 // Mock the setInterval and clearInterval functions to control time in tests
 jest.useFakeTimers();

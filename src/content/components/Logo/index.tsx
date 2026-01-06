@@ -7,7 +7,7 @@ interface LogoInterface {
 /**
  * Logo component renders logo image based on the screen prop value (start, game, finish)
  */
-const Logo: FC<LogoInterface> = ({ screen }) => {
+export const Logo: FC<LogoInterface> = ({ screen }) => {
     let logo: string = '';
 
     switch (screen) {
@@ -28,5 +28,3 @@ const Logo: FC<LogoInterface> = ({ screen }) => {
         </div>
     );
 };
-
-export default Logo;

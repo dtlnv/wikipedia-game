@@ -65,12 +65,16 @@ const App = () => {
         };
     }, [isVisible]);
 
+    const startGame = async (game: PartialGameState) => {
+        setGame(game);
+        restrictions();
+    };
+
     const startAction = async () => {
         setLoading(true);
         const game: PartialGameState = await serviceWorkerRequest('gameStart');
         if (game) {
-            setGame(game);
-            restrictions();
+            startGame(game);
             setLoading(false);
         }
     };
@@ -79,6 +83,15 @@ const App = () => {
         setGame({});
         derestrictions();
         serviceWorkerRequest('endGame');
+    };
+
+    const selectArticleAction = async (article: string) => {
+        setLoading(true);
+        const game: PartialGameState = await serviceWorkerRequest('gameStart', { selectedArticle: article });
+        if (game) {
+            startGame(game);
+        }
+        setLoading(false);
     };
 
     const content = (() => {
@@ -90,7 +103,7 @@ const App = () => {
                     <GameScreen game={game} loading={loading} startAction={startAction} endAction={endAction} setGame={setGame} />
                 );
             default:
-                return <StartScreen startAction={startAction} loading={loading} />;
+                return <StartScreen startAction={startAction} loading={loading} selectArticleAction={selectArticleAction} />;
         }
     })();
 

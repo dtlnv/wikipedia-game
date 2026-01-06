@@ -1,4 +1,4 @@
-import { getPageTitle, getRandomPage } from './helpers';
+import { getPageTitle, getRandomPage, getSelectedPage } from './helpers';
 import Storage from './storage';
 
 /**
@@ -14,8 +14,13 @@ class Game {
      * @param sender
      * @returns Full game state
      */
-    async start(sender: any): Promise<PartialGameState> {
-        const target = await getRandomPage(sender);
+    async start(sender: any, selectedArticle?: string): Promise<PartialGameState> {
+        let target;
+        if (selectedArticle) {
+            target = await getSelectedPage(selectedArticle, sender);
+        } else {
+            target = await getRandomPage(sender);
+        }
 
         this._game = {
             target,

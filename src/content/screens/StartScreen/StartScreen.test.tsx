@@ -6,6 +6,7 @@ import StartScreen from '.';
 // Sample test data
 const testProps = {
     startAction: jest.fn(),
+    selectArticleAction: jest.fn(),
     loading: false,
 };
 

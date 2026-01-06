@@ -8,7 +8,7 @@ interface TimerInterface {
 /**
  * Timer component renders the time spent on the game
  */
-const Timer: FC<TimerInterface> = ({ startTime = 0, endTime = 0 }) => {
+export const Timer: FC<TimerInterface> = ({ startTime = 0, endTime = 0 }) => {
     const [currentTime, setCurrentTime] = useState(Date.now()); // Current time state
 
     useEffect(() => {
@@ -43,5 +43,3 @@ const Timer: FC<TimerInterface> = ({ startTime = 0, endTime = 0 }) => {
         </strong>
     );
 };
-
-export default Timer;
