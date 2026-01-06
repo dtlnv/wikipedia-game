@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Moves from '.';
+import { Moves } from '.';
 import * as utils from '../../utils';
 
 // Mock the serviceWorkerRequest

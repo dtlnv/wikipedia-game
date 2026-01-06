@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' är ett utforskningsspel där du navigerar mellan wiki-sidor för att nå en slumpartad artikel."
+    },
+    "hide_search": {
+        "message": "Dölj sök"
+    },
+    "show_search": {
+        "message": "Visa sök"
+    },
+    "find_target_page": {
+        "message": "Hitta målsida"
+    },
+    "start_typing": {
+        "message": "Börja skriva för att söka..."
+    },
+    "selected": {
+        "message": "Vald:"
+    },
+    "make_target": {
+        "message": "Gör denna sida till ett mål"
+    },
+    "no_results": {
+        "message": "Inga resultat hittades"
     }
 }

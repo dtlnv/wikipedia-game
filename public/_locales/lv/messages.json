@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki spēle' ir izpētes spēle, kurā jūs navigējat starp wiki lapām, lai sasniegtu nejaušu rakstu."
+    },
+    "hide_search": {
+        "message": "Paslēpt meklēšanu"
+    },
+    "show_search": {
+        "message": "Rādīt meklēšanu"
+    },
+    "find_target_page": {
+        "message": "Atrast mērķa lapu"
+    },
+    "start_typing": {
+        "message": "Sāciet rakstīt, lai meklētu..."
+    },
+    "selected": {
+        "message": "Atlasīts:"
+    },
+    "make_target": {
+        "message": "Padarīt šo lapu par mērķi"
+    },
+    "no_results": {
+        "message": "Rezultāti nav atrasti"
     }
 }

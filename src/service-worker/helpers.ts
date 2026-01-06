@@ -17,6 +17,32 @@ export async function getRandomPage(sender: chrome.runtime.MessageSender): Promi
 }
 
 /**
+ * Get the URL and title of a selected page to use as the target.
+ * @param title
+ * @param sender
+ * @returns { url: string, title: string }
+ */
+export async function getSelectedPage(
+    title: string,
+    sender: chrome.runtime.MessageSender
+): Promise<{ url: string; title: string } | null> {
+    try {
+        const pageURL = sender.origin + '/wiki/' + encodeURIComponent(title.replace(/ /g, '_'));
+        const res = await fetch(pageURL);
+        if (!res.ok) {
+            return null;
+        }
+
+        const url = decodeURIComponent(res.url);
+        const pageTitle = getPageTitle(url);
+
+        return { url, title: pageTitle };
+    } catch {
+        return null;
+    }
+}
+
+/**
  * Get page title from URL.
  * @param url
  * @returns title: string

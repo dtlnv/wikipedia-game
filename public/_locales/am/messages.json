@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'ዊኪ ጨዋታ' በውስጥ ያሉ የዊኪ ገፆችን በመከተል ወደ የተደረገ ጽሑፍ ማድረሻ የሚደርሱበት የማስተዋወቅ ጨዋታ ነው።"
+    },
+    "hide_search": {
+        "message": "የፍለጋ ክፍል ደብቅ"
+    },
+    "show_search": {
+        "message": "የፍለጋ ክፍል አሳይ"
+    },
+    "find_target_page": {
+        "message": "የመድረሻ ገፅ ያግኙ"
+    },
+    "start_typing": {
+        "message": "ለመፍለግ ማተም ጀምር..."
+    },
+    "selected": {
+        "message": "ተመረጠ:"
+    },
+    "make_target": {
+        "message": "ይህን ገፅ መድረሻ ያድርግ"
+    },
+    "no_results": {
+        "message": "ውጤት አልተገኘም"
     }
 }

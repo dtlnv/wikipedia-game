@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' เป็นเกมสำรวจที่คุณนำทางระหว่างหน้า wiki เพื่อไปยังบทความแบบสุ่ม"
+    },
+    "hide_search": {
+        "message": "ซ่อนการค้นหา"
+    },
+    "show_search": {
+        "message": "แสดงการค้นหา"
+    },
+    "find_target_page": {
+        "message": "ค้นหาหน้าเป้าหมาย"
+    },
+    "start_typing": {
+        "message": "เริ่มพิมพ์เพื่อค้นหา..."
+    },
+    "selected": {
+        "message": "เลือกแล้ว:"
+    },
+    "make_target": {
+        "message": "ทำให้หน้านี้เป็นเป้าหมาย"
+    },
+    "no_results": {
+        "message": "ไม่พบผลลัพธ์"
     }
 }

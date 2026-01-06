@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'विकी गेम' हा एक अन्वेषण खेळ आहे जिथे तुम्ही विकी पृष्ठांमध्ये नेव्हिगेट करून एक यादृच्छिक लेख गाठता."
+    },
+    "hide_search": {
+        "message": "शोध लपवा"
+    },
+    "show_search": {
+        "message": "शोध दाखवा"
+    },
+    "find_target_page": {
+        "message": "लक्ष्य पृष्ठ शोधा"
+    },
+    "start_typing": {
+        "message": "शोधण्यासाठी टायप करायला सुरुवात करा..."
+    },
+    "selected": {
+        "message": "निवडलेले:"
+    },
+    "make_target": {
+        "message": "हे पृष्ठ लक्ष्य बनवा"
+    },
+    "no_results": {
+        "message": "कोणते परिणाम आढळले नाहीत"
     }
 }

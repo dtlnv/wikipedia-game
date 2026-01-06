@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' je raziskovalna igra, v kateri se krmilaš med wiki stranmi, da dosežeš naključni članek."
+    },
+    "hide_search": {
+        "message": "Skrij iskanje"
+    },
+    "show_search": {
+        "message": "Pokaži iskanje"
+    },
+    "find_target_page": {
+        "message": "Najdi ciljno stran"
+    },
+    "start_typing": {
+        "message": "Začni pisati za iskanje..."
+    },
+    "selected": {
+        "message": "Izbrano:"
+    },
+    "make_target": {
+        "message": "Naredi to stran za cilj"
+    },
+    "no_results": {
+        "message": "Nobenih rezultatov"
     }
 }

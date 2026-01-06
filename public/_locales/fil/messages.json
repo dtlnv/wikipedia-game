@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "Ang 'Wiki Game' ay isang exploration game kung saan kang nag-navigate sa pagitan ng wiki pages upang maabot ang isang random na artikulo."
+    },
+    "hide_search": {
+        "message": "Itago ang paghahanap"
+    },
+    "show_search": {
+        "message": "Ipakita ang paghahanap"
+    },
+    "find_target_page": {
+        "message": "Hanapin ang target na pahina"
+    },
+    "start_typing": {
+        "message": "Magsimulang mag-type upang maghanap..."
+    },
+    "selected": {
+        "message": "Napili:"
+    },
+    "make_target": {
+        "message": "Gawing target ang pahinang ito"
+    },
+    "no_results": {
+        "message": "Walang nahanap na resulta"
     }
 }

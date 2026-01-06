@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki ක්‍රීඩාව' යනු ඔබ අහඹු ලेඛනයකට ළඟා වීම සඳහා විකි පිටු අතර සංචාලනය කරන ගවේෂණ ක්‍රීඩාවකි."
+    },
+    "hide_search": {
+        "message": "සෙවීම සඟවන්න"
+    },
+    "show_search": {
+        "message": "සෙවීම පෙන්වන්න"
+    },
+    "find_target_page": {
+        "message": "ඉලක්ක පිටුව සොයා ගන්න"
+    },
+    "start_typing": {
+        "message": "සෙවීමට ටයිප් කිරීම ආරම්භ කරන්න..."
+    },
+    "selected": {
+        "message": "තෝරාගත්:"
+    },
+    "make_target": {
+        "message": "මෙම පිටුව ඉලක්ක බවට පරිවර්තනය කරන්න"
+    },
+    "no_results": {
+        "message": "ප්‍රතිඵල සොයා ගත නොහැක"
     }
 }

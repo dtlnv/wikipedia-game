@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki O'yini' - tasodifiy maqolaga yetish uchun viki sahifalari o'rtasida harakatlanaish kerak bo'ladigan o'zlashtirish o'yinidir."
+    },
+    "hide_search": {
+        "message": "Qidiruvni Yashirish"
+    },
+    "show_search": {
+        "message": "Qidiruvni Ko'rsatish"
+    },
+    "find_target_page": {
+        "message": "Maqsad Sahifasini Topish"
+    },
+    "start_typing": {
+        "message": "Qidirish uchun Yozishni Boshlang..."
+    },
+    "selected": {
+        "message": "Tanlangan:"
+    },
+    "make_target": {
+        "message": "Bu Sahifani Maqsad Qilish"
+    },
+    "no_results": {
+        "message": "Natijalar Topilmadi"
     }
 }

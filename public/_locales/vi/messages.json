@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' là một trò chơi khám phá nơi bạn điều hướng giữa các trang wiki để đến một bài viết ngẫu nhiên."
+    },
+    "hide_search": {
+        "message": "Ẩn tìm kiếm"
+    },
+    "show_search": {
+        "message": "Hiển thị tìm kiếm"
+    },
+    "find_target_page": {
+        "message": "Tìm trang đích"
+    },
+    "start_typing": {
+        "message": "Bắt đầu gõ để tìm kiếm..."
+    },
+    "selected": {
+        "message": "Được chọn:"
+    },
+    "make_target": {
+        "message": "Đặt trang này làm đích"
+    },
+    "no_results": {
+        "message": "Không tìm thấy kết quả"
     }
 }

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Oyunu' sizi təsadüfi məqalələrə çatmaq üçün wiki səhifələri arasında naviqasiya etməli olduğunuz bir kəşfiyyat oyunudur."
+    },
+    "hide_search": {
+        "message": "Axtarışı gizlət"
+    },
+    "show_search": {
+        "message": "Axtarışı göstər"
+    },
+    "find_target_page": {
+        "message": "Hədəf səhifəsini tap"
+    },
+    "start_typing": {
+        "message": "Axtarmaq üçün yazmağa başlayın..."
+    },
+    "selected": {
+        "message": "Seçilmiş:"
+    },
+    "make_target": {
+        "message": "Bu səhifəni hədəf et"
+    },
+    "no_results": {
+        "message": "Nəticə tapılmadı"
     }
 }

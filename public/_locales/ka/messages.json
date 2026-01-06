@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki თამაში' არის კვლების თამაში, სადაც თქვენ ნავიგაცია გააკეთებთ wiki გვერდებს შორის შემთხვევითი სტატიაში მისასვლელად."
+    },
+    "hide_search": {
+        "message": "ძებნის დამალვა"
+    },
+    "show_search": {
+        "message": "ძებნის ჩვენება"
+    },
+    "find_target_page": {
+        "message": "სამიზნე გვერდის პოვნა"
+    },
+    "start_typing": {
+        "message": "დაწყების აკრეფა ძებნისთვის..."
+    },
+    "selected": {
+        "message": "არჩეული:"
+    },
+    "make_target": {
+        "message": "გააკეთე ეს გვერდი სამიზნედ"
+    },
+    "no_results": {
+        "message": "ফলাফল ნencontrado"
     }
 }

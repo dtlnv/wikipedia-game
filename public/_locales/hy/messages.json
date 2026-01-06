@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game'-ը ուսումնասիրական խաղ է, որտեղ դուք նավարկում եք վիկիի էջերի միջև՝ հասնելու պատահական հոդվածի:"
+    },
+    "hide_search": {
+        "message": "Թաքցնել որոնումը"
+    },
+    "show_search": {
+        "message": "Ցույց տալ որոնումը"
+    },
+    "find_target_page": {
+        "message": "Գտեք թիրախային էջը"
+    },
+    "start_typing": {
+        "message": "Սկսեք տպել որ փնտրել..."
+    },
+    "selected": {
+        "message": "Ընտրված:"
+    },
+    "make_target": {
+        "message": "Այս էջը դարձրեք թիրախ"
+    },
+    "no_results": {
+        "message": "Արդյունքներ չգտնվեցին"
     }
 }

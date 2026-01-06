@@ -12,8 +12,8 @@ interface ActionInterface {
 
 const game = new Game();
 
-const gameStart = async ({ sender }: ActionInterface): Promise<Partial<GameState> | null> => {
-    return await game.start(sender);
+const gameStart = async ({ sender, params }: ActionInterface): Promise<Partial<GameState> | null> => {
+    return await game.start(sender, params?.selectedArticle);
 };
 
 const addHint = async ({ params }: ActionInterface): Promise<Partial<GameState> | null> => {

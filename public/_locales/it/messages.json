@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' è un gioco di esplorazione in cui navighi tra pagine wiki per raggiungere un articolo casuale."
+    },
+    "hide_search": {
+        "message": "Nascondi ricerca"
+    },
+    "show_search": {
+        "message": "Mostra ricerca"
+    },
+    "find_target_page": {
+        "message": "Trova pagina di destinazione"
+    },
+    "start_typing": {
+        "message": "Inizia a digitare per cercare..."
+    },
+    "selected": {
+        "message": "Selezionato:"
+    },
+    "make_target": {
+        "message": "Rendi questa pagina un obiettivo"
+    },
+    "no_results": {
+        "message": "Nessun risultato trovato"
     }
 }

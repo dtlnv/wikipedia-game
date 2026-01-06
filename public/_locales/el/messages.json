@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "Το 'Wiki Game' είναι ένα παιχνίδι εξερεύνησης όπου πλοηγείσαι μεταξύ σελίδων wiki για να φτάσεις σε ένα τυχαίο άρθρο."
+    },
+    "hide_search": {
+        "message": "Απόκρυψη αναζήτησης"
+    },
+    "show_search": {
+        "message": "Εμφάνιση αναζήτησης"
+    },
+    "find_target_page": {
+        "message": "Βρες τη σελίδα στόχου"
+    },
+    "start_typing": {
+        "message": "Ξεκίνησε να πληκτρολογείς για αναζήτηση..."
+    },
+    "selected": {
+        "message": "Επιλεγμένο:"
+    },
+    "make_target": {
+        "message": "Κάνε αυτή τη σελίδα στόχο"
+    },
+    "no_results": {
+        "message": "Δεν βρέθηκαν αποτελέσματα"
     }
 }

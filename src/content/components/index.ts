@@ -1,6 +1,5 @@
-import Loader from './Loader';
-import Moves from './Moves';
-import Timer from './Timer';
-import Logo from './Logo';
-
-export { Loader, Moves, Timer, Logo };
+export * from './Loader';
+export * from './Moves';
+export * from './Timer';
+export * from './Logo';
+export * from './Search';

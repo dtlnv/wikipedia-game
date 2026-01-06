@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import Logo from '.';
+import { Logo } from '.';
 
 describe('Logo component', () => {
     beforeAll(() => {

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki گیم' ایک تلاش کی گیم ہے جہاں آپ بے ترتیب مضمون تک پہنچنے کے لیے wiki صفحات کے درمیان نیویگیٹ کرتے ہیں۔"
+    },
+    "hide_search": {
+        "message": "تلاش چھپائیں"
+    },
+    "show_search": {
+        "message": "تلاش دکھائیں"
+    },
+    "find_target_page": {
+        "message": "ہدف کا صفحہ تلاش کریں"
+    },
+    "start_typing": {
+        "message": "تلاش کے لیے ٹائپ کرنا شروع کریں..."
+    },
+    "selected": {
+        "message": "منتخب:"
+    },
+    "make_target": {
+        "message": "اس صفحے کو ہدف بنائیں"
+    },
+    "no_results": {
+        "message": "کوئی نتیجہ نہیں ملا"
     }
 }
