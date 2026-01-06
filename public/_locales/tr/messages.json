@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Oyunu', rastgele bir makaleye ulaşmak için wiki sayfaları arasında gezinen bir keşif oyunudur."
+    },
+    "hide_search": {
+        "message": "Aramayı Gizle"
+    },
+    "show_search": {
+        "message": "Aramayı Göster"
+    },
+    "find_target_page": {
+        "message": "Hedef Sayfayı Bul"
+    },
+    "start_typing": {
+        "message": "Aramak için yazın..."
+    },
+    "selected": {
+        "message": "Seçildi:"
+    },
+    "make_target": {
+        "message": "Bu sayfayı hedef yap"
+    },
+    "no_results": {
+        "message": "Sonuç bulunamadı"
     }
 }

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "「ウィキゲーム」はウィキページ間を移動してランダムな記事に到達するエクスプロレーションゲームです。"
+    },
+    "hide_search": {
+        "message": "検索を非表示"
+    },
+    "show_search": {
+        "message": "検索を表示"
+    },
+    "find_target_page": {
+        "message": "ターゲットページを見つける"
+    },
+    "start_typing": {
+        "message": "検索するには入力を開始してください..."
+    },
+    "selected": {
+        "message": "選択済み："
+    },
+    "make_target": {
+        "message": "このページをターゲットにする"
+    },
+    "no_results": {
+        "message": "結果が見つかりません"
     }
 }

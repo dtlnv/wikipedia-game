@@ -103,10 +103,10 @@ export const Search: FC<SearchProps> = ({ selectArticleAction }) => {
                 <button
                     type='button'
                     onClick={() => setShowSearchBlock(!showSearchBlock)}
-                    title={showSearchBlock ? 'Hide search' : 'Show search'}
+                    title={showSearchBlock ? chrome.i18n.getMessage('hide_search') : chrome.i18n.getMessage('show_search')}
                     data-testid='show-search-button'
                 >
-                    {showSearchBlock ? '× Hide search' : 'Find target page'}
+                    {showSearchBlock ? `× ${chrome.i18n.getMessage('hide_search')}` : chrome.i18n.getMessage('find_target_page')}
                 </button>
             </div>
 
@@ -118,7 +118,7 @@ export const Search: FC<SearchProps> = ({ selectArticleAction }) => {
                             value={query}
                             onChange={handleInputChange}
                             onFocus={() => query.length >= 2 && searchResults.length > 0 && setShowDropdown(true)}
-                            placeholder='Start typing to search...'
+                            placeholder={chrome.i18n.getMessage('start_typing')}
                             className='search-input'
                             autoFocus
                             data-testid='search-input'
@@ -152,16 +152,16 @@ export const Search: FC<SearchProps> = ({ selectArticleAction }) => {
 
                     {selectedArticle && (
                         <div className='selected-article'>
-                            <div className='selected-article-label'>Selected:</div>
+                            <div className='selected-article-label'>{chrome.i18n.getMessage('selected')}</div>
                             <div className='selected-article-title'>{selectedArticle.title}</div>
                             <button type='button' onClick={handleMakeTarget} className='make-target-button'>
-                                Make this page a target
+                                {chrome.i18n.getMessage('make_target')}
                             </button>
                         </div>
                     )}
 
                     {!loading && query.length >= 2 && searchResults.length === 0 && (
-                        <div className='no-results'>No results found</div>
+                        <div className='no-results'>{chrome.i18n.getMessage('no_results')}</div>
                     )}
                 </div>
             )}

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' е истражувачка игра каде што се движиш помеѓу wiki страни за да достигнеш случајна статија."
+    },
+    "hide_search": {
+        "message": "Скрий претрага"
+    },
+    "show_search": {
+        "message": "Прикажи претрага"
+    },
+    "find_target_page": {
+        "message": "Пронајди целна страна"
+    },
+    "start_typing": {
+        "message": "Почни да пишуваш за да пребаруваш..."
+    },
+    "selected": {
+        "message": "Избрано:"
+    },
+    "make_target": {
+        "message": "Направи оваа страна целна"
+    },
+    "no_results": {
+        "message": "Нема пронајдени резултати"
     }
 }

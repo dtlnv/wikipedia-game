@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' היא משחק חקר שבו אתה נווט בין עמודי ויקי כדי להגיע לכתבה אקראית."
+    },
+    "hide_search": {
+        "message": "הסתר חיפוש"
+    },
+    "show_search": {
+        "message": "הצג חיפוש"
+    },
+    "find_target_page": {
+        "message": "מצא את עמוד היעד"
+    },
+    "start_typing": {
+        "message": "התחל להקליד כדי לחפש..."
+    },
+    "selected": {
+        "message": "נבחר:"
+    },
+    "make_target": {
+        "message": "הפוך עמוד זה ליעד"
+    },
+    "no_results": {
+        "message": "לא נמצאו תוצאות"
     }
 }

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' és un joc d'exploració on navegues entre pàgines wiki per arribar a un article aleatori."
+    },
+    "hide_search": {
+        "message": "Amagar cercar"
+    },
+    "show_search": {
+        "message": "Mostrar cercar"
+    },
+    "find_target_page": {
+        "message": "Trobar pàgina objectiu"
+    },
+    "start_typing": {
+        "message": "Comença a escriure per cercar..."
+    },
+    "selected": {
+        "message": "Seleccionat:"
+    },
+    "make_target": {
+        "message": "Convertir aquesta pàgina en objectiu"
+    },
+    "no_results": {
+        "message": "No s'han trobat resultats"
     }
 }

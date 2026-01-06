@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' — это игра-исследование, где вы переходите между страницами вики, чтобы достичь случайной статьи."
+    },
+    "hide_search": {
+        "message": "Скрыть поиск"
+    },
+    "show_search": {
+        "message": "Показать поиск"
+    },
+    "find_target_page": {
+        "message": "Найти целевую страницу"
+    },
+    "start_typing": {
+        "message": "Начните вводить текст для поиска..."
+    },
+    "selected": {
+        "message": "Выбрано:"
+    },
+    "make_target": {
+        "message": "Сделать эту страницу целевой"
+    },
+    "no_results": {
+        "message": "Результаты не найдены"
     }
 }

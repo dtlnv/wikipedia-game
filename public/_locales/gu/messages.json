@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'વિકી ગેમ' એ એક અન્વેષણ ગેમ છે જેમાં તમે રેન્ડમ લેખ સુધી પહોંચવા માટે વિકિ પેજ વચ્ચે નેવિગેટ કરો છો."
+    },
+    "hide_search": {
+        "message": "શોધ છુપાવો"
+    },
+    "show_search": {
+        "message": "શોધ બતાવો"
+    },
+    "find_target_page": {
+        "message": "લક્ષ્ય પાનું શોધો"
+    },
+    "start_typing": {
+        "message": "શોધવા માટે ટાઇપ કરવાનું શરૂ કરો..."
+    },
+    "selected": {
+        "message": "પસંદ કરેલું:"
+    },
+    "make_target": {
+        "message": "આ પાનુંને લક્ષ્ય બનાવો"
+    },
+    "no_results": {
+        "message": "કોઈ પરિણામ નથી મળ્યું"
     }
 }

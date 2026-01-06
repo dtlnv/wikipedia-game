@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki igra' je igra istraživanja gde navigaš između wiki stranica da dostigneš nasumičan članak."
+    },
+    "hide_search": {
+        "message": "Sakrij pretragu"
+    },
+    "show_search": {
+        "message": "Prikaži pretragu"
+    },
+    "find_target_page": {
+        "message": "Pronađi ciljanu stranicu"
+    },
+    "start_typing": {
+        "message": "Počni da kucaš za pretragu..."
+    },
+    "selected": {
+        "message": "Izabrano:"
+    },
+    "make_target": {
+        "message": "Učini ovu stranicu ciljanom"
+    },
+    "no_results": {
+        "message": "Nema rezultata"
     }
 }

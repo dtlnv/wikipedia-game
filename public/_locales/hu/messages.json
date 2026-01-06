@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "A 'Wiki Játék' egy felfedezési játék, ahol wiki oldalak között navigálsz, hogy elérj egy véletlenszerű cikket."
+    },
+    "hide_search": {
+        "message": "Keresés elrejtése"
+    },
+    "show_search": {
+        "message": "Keresés megjelenítése"
+    },
+    "find_target_page": {
+        "message": "Céloldal keresése"
+    },
+    "start_typing": {
+        "message": "Kezdj el gépelni a kereséshez..."
+    },
+    "selected": {
+        "message": "Kiválasztva:"
+    },
+    "make_target": {
+        "message": "Ezt az oldalt célnak jelöli meg"
+    },
+    "no_results": {
+        "message": "Nincs találat"
     }
 }

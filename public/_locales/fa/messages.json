@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "«بازی ویکی» یک بازی کاوشی است که در آن شما بین صفحات ویکی حرکت می‌کنید تا به یک مقاله تصادفی برسید."
+    },
+    "hide_search": {
+        "message": "پنهان کردن جستجو"
+    },
+    "show_search": {
+        "message": "نمایش جستجو"
+    },
+    "find_target_page": {
+        "message": "یافتن صفحه هدف"
+    },
+    "start_typing": {
+        "message": "برای جستجو شروع به تایپ کنید..."
+    },
+    "selected": {
+        "message": "انتخاب شده:"
+    },
+    "make_target": {
+        "message": "این صفحه را به عنوان هدف تنظیم کنید"
+    },
+    "no_results": {
+        "message": "نتیجه‌ای یافت نشد"
     }
 }

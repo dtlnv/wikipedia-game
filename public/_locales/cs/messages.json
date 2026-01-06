@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' je hrou průzkumu, kde se pohybuješ mezi wiki stránkami, aby ses dostal na náhodný článek."
+    },
+    "hide_search": {
+        "message": "Skrýt vyhledávání"
+    },
+    "show_search": {
+        "message": "Zobrazit vyhledávání"
+    },
+    "find_target_page": {
+        "message": "Najít cílovou stránku"
+    },
+    "start_typing": {
+        "message": "Začni psát pro vyhledávání..."
+    },
+    "selected": {
+        "message": "Vybrané:"
+    },
+    "make_target": {
+        "message": "Nastavit tuto stránku jako cíl"
+    },
+    "no_results": {
+        "message": "Nebyly nalezeny žádné výsledky"
     }
 }

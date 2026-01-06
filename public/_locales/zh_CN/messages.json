@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'维基游戏'是一个探索游戏，你需要在维基页面之间导航以到达随机文章。"
+    },
+    "hide_search": {
+        "message": "隐藏搜索"
+    },
+    "show_search": {
+        "message": "显示搜索"
+    },
+    "find_target_page": {
+        "message": "查找目标页面"
+    },
+    "start_typing": {
+        "message": "开始输入以搜索..."
+    },
+    "selected": {
+        "message": "已选择："
+    },
+    "make_target": {
+        "message": "将此页面设为目标"
+    },
+    "no_results": {
+        "message": "未找到结果"
     }
 }

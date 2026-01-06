@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' ni mchezo wa utafiti ambapo unabadilika kati ya kurasa za wiki kufikia makala bila mpangilio."
+    },
+    "hide_search": {
+        "message": "Ficha utafutaji"
+    },
+    "show_search": {
+        "message": "Onyesha utafutaji"
+    },
+    "find_target_page": {
+        "message": "Tafuta ukurasa wa lengo"
+    },
+    "start_typing": {
+        "message": "Anza kuandika kutafuta..."
+    },
+    "selected": {
+        "message": "Umechaguliwa:"
+    },
+    "make_target": {
+        "message": "Fanya ukurasa huu kuwa lengo"
+    },
+    "no_results": {
+        "message": "Hakuna matokeo yaliyopatikana"
     }
 }

@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'لعبة ويكي' هي لعبة استكشاف حيث تتنقل بين صفحات ويكي للوصول إلى مقالة عشوائية."
+    },
+    "hide_search": {
+        "message": "إخفاء البحث"
+    },
+    "show_search": {
+        "message": "عرض البحث"
+    },
+    "find_target_page": {
+        "message": "العثور على الصفحة المستهدفة"
+    },
+    "start_typing": {
+        "message": "ابدأ بالكتابة للبحث..."
+    },
+    "selected": {
+        "message": "المحدد:"
+    },
+    "make_target": {
+        "message": "اجعل هذه الصفحة هدفاً"
+    },
+    "no_results": {
+        "message": "لم يتم العثور على نتائج"
     }
 }

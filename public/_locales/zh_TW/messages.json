@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki 遊戲' 是一款探索遊戲，你需要在 Wiki 頁面之間導航以到達隨機文章。"
+    },
+    "hide_search": {
+        "message": "隱藏搜尋"
+    },
+    "show_search": {
+        "message": "顯示搜尋"
+    },
+    "find_target_page": {
+        "message": "尋找目標頁面"
+    },
+    "start_typing": {
+        "message": "開始輸入以搜尋..."
+    },
+    "selected": {
+        "message": "已選擇："
+    },
+    "make_target": {
+        "message": "將此頁面設為目標"
+    },
+    "no_results": {
+        "message": "找不到結果"
     }
 }

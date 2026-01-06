@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "„Wiki-Spiel“ ist ein Erkundungsspiel, bei dem du zwischen Wiki-Seiten navigierst, um einen zufälligen Artikel zu erreichen."
+    },
+    "hide_search": {
+        "message": "Suche ausblenden"
+    },
+    "show_search": {
+        "message": "Suche anzeigen"
+    },
+    "find_target_page": {
+        "message": "Zielseite finden"
+    },
+    "start_typing": {
+        "message": "Zum Suchen eingeben..."
+    },
+    "selected": {
+        "message": "Ausgewählt:"
+    },
+    "make_target": {
+        "message": "Diese Seite als Ziel festlegen"
+    },
+    "no_results": {
+        "message": "Keine Ergebnisse gefunden"
     }
 }

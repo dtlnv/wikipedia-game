@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' on tutkimuspeli, jossa navigoit wiki-sivujen välillä saavuttaaksesi satunnaisen artikkelin."
+    },
+    "hide_search": {
+        "message": "Piilota haku"
+    },
+    "show_search": {
+        "message": "Näytä haku"
+    },
+    "find_target_page": {
+        "message": "Etsi tavoitesivu"
+    },
+    "start_typing": {
+        "message": "Aloita kirjoittaminen hakua varten..."
+    },
+    "selected": {
+        "message": "Valittu:"
+    },
+    "make_target": {
+        "message": "Tee tästä sivusta tavoite"
+    },
+    "no_results": {
+        "message": "Tuloksia ei löytynyt"
     }
 }

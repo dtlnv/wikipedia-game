@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'위키 게임'은 위키 페이지 간을 탐색하여 무작위 문서에 도달하는 탐험 게임입니다."
+    },
+    "hide_search": {
+        "message": "검색 숨기기"
+    },
+    "show_search": {
+        "message": "검색 표시"
+    },
+    "find_target_page": {
+        "message": "목표 페이지 찾기"
+    },
+    "start_typing": {
+        "message": "검색하려면 입력을 시작하세요..."
+    },
+    "selected": {
+        "message": "선택됨:"
+    },
+    "make_target": {
+        "message": "이 페이지를 목표로 설정"
+    },
+    "no_results": {
+        "message": "결과 없음"
     }
 }

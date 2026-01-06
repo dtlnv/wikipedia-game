@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'ਵਿਕੀ ਗੇਮ' ਇੱਕ ਖੋਜ ਖੇਡ ਹੈ ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਬੇਤਰਤੀਬ ਲੇਖ ਤੱਕ ਪਹੁੰਚਣ ਲਈ ਵਿਕੀ ਪੰਨਿਆਂ ਵਿਚਕਾਰ ਨੇਵੀਗੇਟ ਕਰਦੇ ਹੋ।"
+    },
+    "hide_search": {
+        "message": "ਖੋਜ ਲੁਕਾਓ"
+    },
+    "show_search": {
+        "message": "ਖੋਜ ਦਿਖਾਓ"
+    },
+    "find_target_page": {
+        "message": "ਟੀ targetਰਗੇਟ ਪੰਨਾ ਲੱਭੋ"
+    },
+    "start_typing": {
+        "message": "ਖੋਜ ਲਈ ਟਾਈਪ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ..."
+    },
+    "selected": {
+        "message": "ਚੁਣਿਆ ਗਿਆ:"
+    },
+    "make_target": {
+        "message": "ਇਸ ਪੰਨੇ ਨੂੰ ਟੀ targetਰਗੇਟ ਬਣਾਓ"
+    },
+    "no_results": {
+        "message": "ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਲੱਭੇ"
     }
 }

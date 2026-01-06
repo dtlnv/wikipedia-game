@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki mäng' on uurimismäng, kus navigeerite wiki lehtede vahel, et jõuda juhuslikule artiklile."
+    },
+    "hide_search": {
+        "message": "Peida otsing"
+    },
+    "show_search": {
+        "message": "Kuva otsing"
+    },
+    "find_target_page": {
+        "message": "Leia sihtleht"
+    },
+    "start_typing": {
+        "message": "Alusta otsimiseks kirjutamist..."
+    },
+    "selected": {
+        "message": "Valitud:"
+    },
+    "make_target": {
+        "message": "Määra see leht sihtkohaks"
+    },
+    "no_results": {
+        "message": "Tulemusi ei leitud"
     }
 }

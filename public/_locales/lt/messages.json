@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki žaidimas' yra žvalgybos žaidimas, kuriame naršote wiki puslapius, siekdami pasiekti atsitiktinį straipsnį."
+    },
+    "hide_search": {
+        "message": "Slėpti paiešką"
+    },
+    "show_search": {
+        "message": "Rodyti paiešką"
+    },
+    "find_target_page": {
+        "message": "Rasti tikslo puslapį"
+    },
+    "start_typing": {
+        "message": "Pradėkite rašyti, norėdami ieškoti..."
+    },
+    "selected": {
+        "message": "Pasirinkta:"
+    },
+    "make_target": {
+        "message": "Padaryti šį puslapį tikslu"
+    },
+    "no_results": {
+        "message": "Rezultatų nerasta"
     }
 }

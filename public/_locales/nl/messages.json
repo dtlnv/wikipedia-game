@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' is een verkenningsspel waarbij je tussen wikipagina's navigeert om een willekeurig artikel te bereiken."
+    },
+    "hide_search": {
+        "message": "Zoeken verbergen"
+    },
+    "show_search": {
+        "message": "Zoeken weergeven"
+    },
+    "find_target_page": {
+        "message": "Doelpagina zoeken"
+    },
+    "start_typing": {
+        "message": "Begin te typen om te zoeken..."
+    },
+    "selected": {
+        "message": "Geselecteerd:"
+    },
+    "make_target": {
+        "message": "Maak van deze pagina een doelpagina"
+    },
+    "no_results": {
+        "message": "Geen resultaten gevonden"
     }
 }

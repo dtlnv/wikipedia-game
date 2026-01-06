@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' — це гра-дослідження, в якій ви переходите між вікі-сторінками, щоб досягти випадкової статті."
+    },
+    "hide_search": {
+        "message": "Сховати пошук"
+    },
+    "show_search": {
+        "message": "Показати пошук"
+    },
+    "find_target_page": {
+        "message": "Знайти цільову сторінку"
+    },
+    "start_typing": {
+        "message": "Почніть вводити для пошуку..."
+    },
+    "selected": {
+        "message": "Вибрано:"
+    },
+    "make_target": {
+        "message": "Зробити цю сторінку цільовою"
+    },
+    "no_results": {
+        "message": "Результатів не знайдено"
     }
 }

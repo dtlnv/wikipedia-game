@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' este un joc de explorare în care navighezi între pagini wiki pentru a ajunge la un articol aleator."
+    },
+    "hide_search": {
+        "message": "Ascunde căutarea"
+    },
+    "show_search": {
+        "message": "Afișează căutarea"
+    },
+    "find_target_page": {
+        "message": "Găsește pagina țintă"
+    },
+    "start_typing": {
+        "message": "Începe să scrii pentru a căuta..."
+    },
+    "selected": {
+        "message": "Selectat:"
+    },
+    "make_target": {
+        "message": "Fă această pagină țintă"
+    },
+    "no_results": {
+        "message": "Niciun rezultat găsit"
     }
 }

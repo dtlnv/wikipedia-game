@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Game' adalah permainan eksplorasi di mana Anda menavigasi antar halaman wiki untuk mencapai artikel acak."
+    },
+    "hide_search": {
+        "message": "Sembunyikan pencarian"
+    },
+    "show_search": {
+        "message": "Tampilkan pencarian"
+    },
+    "find_target_page": {
+        "message": "Temukan halaman target"
+    },
+    "start_typing": {
+        "message": "Mulai mengetik untuk mencari..."
+    },
+    "selected": {
+        "message": "Dipilih:"
+    },
+    "make_target": {
+        "message": "Jadikan halaman ini sebagai target"
+    },
+    "no_results": {
+        "message": "Tidak ada hasil yang ditemukan"
     }
 }

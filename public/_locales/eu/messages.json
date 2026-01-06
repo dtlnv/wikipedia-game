@@ -43,5 +43,26 @@
     },
     "manifest_description": {
         "message": "'Wiki Jokoa' wiki orrien artean nabigatzen diren eta ausazko artikulu batera iristeko jokoa da."
+    },
+    "hide_search": {
+        "message": "Bilaketa ezkutatu"
+    },
+    "show_search": {
+        "message": "Bilaketa erakutsi"
+    },
+    "find_target_page": {
+        "message": "Helburu orria bilatu"
+    },
+    "start_typing": {
+        "message": "Bilatzeko idatzi hasi..."
+    },
+    "selected": {
+        "message": "Hautaturik:"
+    },
+    "make_target": {
+        "message": "Orri hau helburu bihurtu"
+    },
+    "no_results": {
+        "message": "Emaitzarik ez"
     }
 }
