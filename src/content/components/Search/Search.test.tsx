@@ -12,6 +12,11 @@ describe('Search component', () => {
 
     beforeAll(() => {
         global.fetch = jest.fn();
+        global.chrome = {
+            i18n: {
+                getMessage: jest.fn(),
+            },
+        } as any;
     });
 
     it('renders the search button initially', () => {
