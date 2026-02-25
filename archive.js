@@ -11,7 +11,7 @@ const archive = archiver('zip', {
     zlib: { level: 9 }, // Compression level (0-9)
 });
 
-archive.on('warning', function (err) {
+archive.on('warning', (err) => {
     if (err.code === 'ENOENT') {
         console.warn(err);
     } else {
@@ -19,7 +19,7 @@ archive.on('warning', function (err) {
     }
 });
 
-archive.on('error', function (err) {
+archive.on('error', (err) => {
     throw err;
 });
 
