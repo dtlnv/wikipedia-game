@@ -1,8 +1,6 @@
 import { type FC, useEffect, useState } from 'react';
 import { Loader, Logo, Moves, Timer } from '../../components';
-import { serviceWorkerRequest } from '../../utils';
-
-const CategoriesSelector = '#catlinks .mw-normal-catlinks ul a, #articleCategories ul.categories li.category a';
+import { getPageCategories, serviceWorkerRequest } from '../../utils';
 
 interface GameScreenInterface {
     game: PartialGameState;
@@ -23,20 +21,11 @@ const GameScreen: FC<GameScreenInterface> = ({ game, loading, startAction, endAc
     }, [loading]);
 
     const hintAction = async () => {
-        // Do it on frontend side because it is impossible to parse html in the service worker (no DOMParser)
         if (!game.target || !game.target.url) {
             return;
         }
 
-        const htmlString = await (await fetch(game.target.url)).text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlString, 'text/html');
-        const categories: string[] = [];
-        // Parse the target page to get categories from the bottom of the page
-        doc.querySelectorAll(CategoriesSelector).forEach((element) => {
-            categories.push(element.textContent);
-        });
-
+        const categories = await getPageCategories(game.target.url);
         const hint = categories.join('; ');
 
         setGame({ ...game, hint }); // Update game state in app

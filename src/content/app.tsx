@@ -107,17 +107,9 @@ const App = () => {
         }
     })();
 
-    const onCloseClick = () => {
-        setIsVisible(false);
-        localStorage.setItem('appVisible', 'false');
-        document.documentElement.classList.remove('wiki-gaming');
-    };
+    const onCloseClick = () => setIsVisible(false);
 
-    const onShowClick = () => {
-        setIsVisible(true);
-        localStorage.setItem('appVisible', 'true');
-        document.documentElement.classList.add('wiki-gaming');
-    };
+    const onShowClick = () => setIsVisible(true);
 
     return isVisible ? (
         <div className='wiki-quiz-app-container'>

@@ -1,13 +1,15 @@
-export function restrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        input.disabled = true;
+const INPUT_SELECTOR = 'input[type=search], input[type=text]';
+
+function setInputsDisabled(disabled: boolean): void {
+    document.querySelectorAll<HTMLInputElement>(INPUT_SELECTOR).forEach((input) => {
+        input.disabled = disabled;
     });
 }
 
+export function restrictions(): void {
+    setInputsDisabled(true);
+}
+
 export function derestrictions(): void {
-    document.querySelectorAll<HTMLInputElement>('input[type=search], input[type=text]').forEach((input) => {
-        if (input.disabled) {
-            input.disabled = false;
-        }
-    });
+    setInputsDisabled(false);
 }
