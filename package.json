@@ -59,7 +59,12 @@
         "nth-check": "^2.0.1",
         "@types/minimatch": "5.1.2",
         "immutable": "^5.1.5",
-        "svgo": "^4.0.1"
+        "svgo": "^4.0.2",
+        "brace-expansion": "^2.1.4",
+        "fast-uri": "^3.1.5",
+        "js-yaml": "^3.15.1",
+        "nanoid": "^3.3.18",
+        "postcss": "^8.5.26"
     },
     "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
